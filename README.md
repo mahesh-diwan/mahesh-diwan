@@ -1,6 +1,5 @@
 <h1 align="center">Hi 👋, I'm Mahesh Diwan</h1>
-<h3 align="center">A computer engineering student with a strong passion for technology and learning. I specialize in building projects that blend AI, machine learning, and web technologies. My recent project, Chat With PDF, showcases my ability to work with frameworks like Streamlit, LangChain, and HuggingFace, creating an interactive tool to extract and analyze data from PDFs. I am skilled in Python, JavaScript, C++, and Java, with experience in both frontend and backend development. Beyond my academic projects, I’m diving into the world of DevOps, learning tools like Docker, Kubernetes, and CI/CD pipelines to streamline development and deployment processes. I’m always eager to collaborate, contribute, and grow as a developer. Feel free to check out my repositories and connect with me!</h3>
-
+<h3 align="center">A computer engineering student with a strong passion for technology and learning. A beginner in Python, JavaScript, C++, and Java, exploring DevOps tools like Docker and Kubernetes. Excited to collaborate, contribute, and grow as a developer.
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/diwanmahesh12" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="diwanmahesh12" height="30" width="40" /></a>
