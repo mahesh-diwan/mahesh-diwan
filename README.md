@@ -14,7 +14,8 @@
 # Blog posts
 
 <!-- BLOG-POST-LIST:START -->
-- [How to Deploy a Node.js App on AWS EC2](https://mahesh1215.hashnode.dev/how-to-deploy-a-nodejs-app-on-aws-ec2)
+- [AWS Resource Tracking](https://mahesh1215.hashnode.dev/automate-aws-resource-tracking-with-ease)
+- [How to Deploy a Node.js App on AWS EC2](https://mahesh1215.hashnode.dev/from-github-to-aws-deploy-your-first-nodejs-app-on-ec2)
 - [Beginner's Guide to CI/CD with Jenkins, SonarQube, and Docker](https://mahesh1215.hashnode.dev/a-beginners-guide-to-setting-up-a-cicd-pipeline-with-jenkins-sonarqube-and-docker-on-aws)
 - [Automating Docker Deployments with Jenkins and Ansible](https://mahesh1215.hashnode.dev/beginners-guide-automating-docker-deployments-with-jenkins-ansible-and-github)
 <!-- BLOG-POST-LIST:END -->
