@@ -5,7 +5,7 @@
 
 - 📝 I regularly write articles on [hashnode](hashnode)
 
-- 📫 How to reach me **diwanmahesh11@gmail.com**
+- 📫 How to reach me **@mahesh-diwan**
 
 - 📄 Know about my experiences [https://drive.google.com/file/d/1ZDAdN9W-YmD-ITgWqAoyM4enDh0Vysw5/view](https://drive.google.com/file/d/1ZDAdN9W-YmD-ITgWqAoyM4enDh0Vysw5/view)
 
