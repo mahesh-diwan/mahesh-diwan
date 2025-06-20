@@ -7,7 +7,7 @@
 
 - 📫 How to reach me [@mahesh-diwan](https://github.com/mahesh-diwan)
 
-- 📄 Know about my experiences [https://drive.google.com/file/d/1ZDAdN9W-YmD-ITgWqAoyM4enDh0Vysw5/view](https://drive.google.com/file/d/1ZDAdN9W-YmD-ITgWqAoyM4enDh0Vysw5/view)
+- 📄 Know about my experiences [https://drive.google.com/file/d/1ZDAdN9W-YmD-ITgWqAoyM4enDh0Vysw5/view](https://drive.google.com/file/d/1geQS4T-8LUhO5CWhEfYIXUQRYfHnChXc/view?usp=drivesdk)
 
 
 
