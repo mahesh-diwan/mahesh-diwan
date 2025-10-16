@@ -7,7 +7,7 @@
 
 - 📫 How to reach me [@mahesh-diwan](https://github.com/mahesh-diwan)
 
-- 📄 Know about my experiences (https://drive.google.com/file/d/1ESvjYzkJb2sQEOJoQZkUF6QQ7E02F8Y-/view?usp=sharing)
+- 📄 Know about my experiences [Resume](https://drive.google.com/file/d/19SMEHXNKspmOOshJnRU4bk5Gwe-wAgRA/view?usp=sharing)
 
 
 <h3 align="left">Connect with me:</h3>
