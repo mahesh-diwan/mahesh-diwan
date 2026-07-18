@@ -38,6 +38,14 @@ def render():
 
     svg_parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">',
+        '<defs>',
+        '  <style>',
+        '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Geist+Mono:wght@400;700&amp;display=swap");',
+        '    text {',
+        '      font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;',
+        '    }',
+        '  </style>',
+        '</defs>',
         '<style>',
         '  .cell { rx: 3; ry: 3; }',
         '  @keyframes slideIn {',
@@ -65,15 +73,15 @@ def render():
             )
 
     legend_y = HEIGHT - 50
-    svg_parts.append(f'<text x="{MARGIN}" y="{legend_y}" fill="#8b949e" font-size="11" font-family="monospace">Less</text>')
+    svg_parts.append(f'<text x="{MARGIN}" y="{legend_y}" fill="#8b949e" font-size="11">Less</text>')
     for i, color in enumerate(PALETTE):
         lx = MARGIN + 35 + i * 18
         svg_parts.append(f'  <rect x="{lx}" y="{legend_y - 9}" width="12" height="12" rx="3" fill="{color}"/>')
-    svg_parts.append(f'<text x="{MARGIN + 35 + len(PALETTE) * 18 + 6}" y="{legend_y}" fill="#8b949e" font-size="11" font-family="monospace">More</text>')
+    svg_parts.append(f'<text x="{MARGIN + 35 + len(PALETTE) * 18 + 6}" y="{legend_y}" fill="#8b949e" font-size="11">More</text>')
 
     svg_parts.append(
         f'<text x="{WIDTH - MARGIN}" y="{legend_y}" fill="#8b949e" font-size="11" '
-        f'font-family="monospace" text-anchor="end">{total:,} contributions in the last year</text>'
+        f'text-anchor="end">{total:,} contributions in the last year</text>'
     )
 
     svg_parts.append('</svg>')
