@@ -9,15 +9,15 @@ from PIL import Image, ImageEnhance, ImageOps
 def prep(input_path, output_path="assets/source-prepped.png"):
     img = Image.open(input_path)
 
-    # Resize for processing
-    img = img.resize((400, 400), Image.LANCZOS)
+    # Resize preserving aspect ratio
+    img.thumbnail((400, 400), Image.LANCZOS)
 
     # Convert to grayscale
     gray = img.convert("L")
 
     # Boost contrast gracefully
     enhancer = ImageEnhance.Contrast(gray)
-    gray = enhancer.enhance(2.0)
+    gray = enhancer.enhance(1.3)
 
     # Auto contrast
     gray = ImageOps.autocontrast(gray, cutoff=2)

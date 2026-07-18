@@ -8,8 +8,10 @@ import numpy as np
 
 RAMP = " .`:-=+*cs#%@"
 
-def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahesh-ascii.svg", width_chars=70):
+def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahesh-ascii.svg", width_chars=70, invert=False):
     img = Image.open(input_path).convert("L")
+
+    ramp = RAMP[::-1] if invert else RAMP
 
     char_w = 8
     char_h = 14
@@ -23,9 +25,9 @@ def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahes
     for row in pixels:
         ascii_row = ""
         for pixel in row:
-            idx = int((pixel / 255) * (len(RAMP) - 1))
-            idx = max(0, min(idx, len(RAMP) - 1))
-            ascii_row += RAMP[idx]
+            idx = int((pixel / 255) * (len(ramp) - 1))
+            idx = max(0, min(idx, len(ramp) - 1))
+            ascii_row += ramp[idx]
         ascii_rows.append(ascii_row)
 
     svg_w = width_chars * char_w + 40
@@ -76,4 +78,6 @@ def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahes
     print(f"Wrote {output_path}")
 
 if __name__ == "__main__":
-    make_ascii()
+    import sys
+    invert = "--invert" in sys.argv
+    make_ascii(invert=invert)
