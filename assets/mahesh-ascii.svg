@@ -11,7 +11,7 @@
   .ascii-text { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }
 </style>
 <clipPath id="clip_0">
-  <rect x="0" y="10" width="0" height="16">
+  <rect x="0" y="10" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.0s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -22,7 +22,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="0.6s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_1">
-  <rect x="0" y="24" width="0" height="16">
+  <rect x="0" y="24" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.08s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -33,7 +33,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="0.6799999999999999s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_2">
-  <rect x="0" y="38" width="0" height="16">
+  <rect x="0" y="38" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.16s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -44,7 +44,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="0.76s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_3">
-  <rect x="0" y="52" width="0" height="16">
+  <rect x="0" y="52" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.24s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -55,7 +55,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="0.84s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_4">
-  <rect x="0" y="66" width="0" height="16">
+  <rect x="0" y="66" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.32s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -66,7 +66,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="0.9199999999999999s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_5">
-  <rect x="0" y="80" width="0" height="16">
+  <rect x="0" y="80" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.4s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -77,7 +77,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.0s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_6">
-  <rect x="0" y="94" width="0" height="16">
+  <rect x="0" y="94" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.48s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -88,7 +88,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.08s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_7">
-  <rect x="0" y="108" width="0" height="16">
+  <rect x="0" y="108" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.56s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -99,7 +99,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.1600000000000001s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_8">
-  <rect x="0" y="122" width="0" height="16">
+  <rect x="0" y="122" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.64s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -110,7 +110,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.24s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_9">
-  <rect x="0" y="136" width="0" height="16">
+  <rect x="0" y="136" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.72s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -121,7 +121,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.3199999999999998s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_10">
-  <rect x="0" y="150" width="0" height="16">
+  <rect x="0" y="150" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.8s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -132,7 +132,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.4s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_11">
-  <rect x="0" y="164" width="0" height="16">
+  <rect x="0" y="164" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.88s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -143,7 +143,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.48s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_12">
-  <rect x="0" y="178" width="0" height="16">
+  <rect x="0" y="178" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.96s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -154,7 +154,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.56s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_13">
-  <rect x="0" y="192" width="0" height="16">
+  <rect x="0" y="192" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.04s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -165,7 +165,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.6400000000000001s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_14">
-  <rect x="0" y="206" width="0" height="16">
+  <rect x="0" y="206" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.12s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -176,7 +176,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.7200000000000002s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_15">
-  <rect x="0" y="220" width="0" height="16">
+  <rect x="0" y="220" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.2s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -187,7 +187,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.7999999999999998s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_16">
-  <rect x="0" y="234" width="0" height="16">
+  <rect x="0" y="234" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.28s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -198,7 +198,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.88s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_17">
-  <rect x="0" y="248" width="0" height="16">
+  <rect x="0" y="248" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.36s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -209,7 +209,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="1.96s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_18">
-  <rect x="0" y="262" width="0" height="16">
+  <rect x="0" y="262" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.44s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -220,7 +220,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.04s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_19">
-  <rect x="0" y="276" width="0" height="16">
+  <rect x="0" y="276" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.52s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -231,7 +231,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.12s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_20">
-  <rect x="0" y="290" width="0" height="16">
+  <rect x="0" y="290" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.6s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -242,7 +242,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.2s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_21">
-  <rect x="0" y="304" width="0" height="16">
+  <rect x="0" y="304" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.68s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -253,7 +253,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.28s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_22">
-  <rect x="0" y="318" width="0" height="16">
+  <rect x="0" y="318" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.76s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -264,7 +264,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.36s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_23">
-  <rect x="0" y="332" width="0" height="16">
+  <rect x="0" y="332" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.84s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -275,7 +275,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.44s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_24">
-  <rect x="0" y="346" width="0" height="16">
+  <rect x="0" y="346" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.92s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -286,7 +286,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.52s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_25">
-  <rect x="0" y="360" width="0" height="16">
+  <rect x="0" y="360" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.0s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -297,7 +297,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.6s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_26">
-  <rect x="0" y="374" width="0" height="16">
+  <rect x="0" y="374" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.08s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -308,7 +308,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.68s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_27">
-  <rect x="0" y="388" width="0" height="16">
+  <rect x="0" y="388" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.16s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -319,7 +319,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.7600000000000002s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_28">
-  <rect x="0" y="402" width="0" height="16">
+  <rect x="0" y="402" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.24s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -330,7 +330,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.8400000000000003s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_29">
-  <rect x="0" y="416" width="0" height="16">
+  <rect x="0" y="416" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.32s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -341,7 +341,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="2.92s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_30">
-  <rect x="0" y="430" width="0" height="16">
+  <rect x="0" y="430" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.4s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -352,7 +352,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="3.0s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_31">
-  <rect x="0" y="444" width="0" height="16">
+  <rect x="0" y="444" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.48s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -363,7 +363,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="3.08s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_32">
-  <rect x="0" y="458" width="0" height="16">
+  <rect x="0" y="458" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.56s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -374,7 +374,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="3.16s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_33">
-  <rect x="0" y="472" width="0" height="16">
+  <rect x="0" y="472" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.64s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -385,7 +385,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="3.24s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_34">
-  <rect x="0" y="486" width="0" height="16">
+  <rect x="0" y="486" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.72s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -396,7 +396,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="3.3200000000000003s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_35">
-  <rect x="0" y="500" width="0" height="16">
+  <rect x="0" y="500" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.8000000000000003s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -407,7 +407,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="3.4000000000000004s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_36">
-  <rect x="0" y="514" width="0" height="16">
+  <rect x="0" y="514" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.88s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -418,7 +418,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="3.48s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_37">
-  <rect x="0" y="528" width="0" height="16">
+  <rect x="0" y="528" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.96s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -429,7 +429,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="3.56s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_38">
-  <rect x="0" y="542" width="0" height="16">
+  <rect x="0" y="542" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="3.04s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
@@ -440,7 +440,7 @@
   <animate attributeName="opacity" from="1" to="0" begin="3.64s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_39">
-  <rect x="0" y="556" width="0" height="16">
+  <rect x="0" y="556" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="3.12s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>

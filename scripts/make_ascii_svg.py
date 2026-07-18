@@ -55,7 +55,7 @@ def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahes
         duration = 0.6
 
         svg_parts.append(f'<clipPath id="{clip_id}">')
-        svg_parts.append(f'  <rect x="0" y="{y - char_h}" width="0" height="{char_h + 2}">')
+        svg_parts.append(f'  <rect x="0" y="{y - char_h}" width="{svg_w}" height="{char_h + 2}">')
         svg_parts.append(f'    <animate attributeName="width" from="0" to="{svg_w}" begin="{delay}s" dur="{duration}s" fill="freeze"/>')
         svg_parts.append(f'  </rect>')
         svg_parts.append(f'</clipPath>')
