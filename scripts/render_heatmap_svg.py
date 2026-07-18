@@ -15,7 +15,7 @@ DAYS = 7
 MARGIN = 24
 
 WIDTH = MARGIN * 2 + WEEKS * (CELL_W + CELL_GAP)
-HEIGHT = MARGIN * 2 + DAYS * (CELL_H + CELL_GAP) + 40
+HEIGHT = MARGIN * 2 + DAYS * (CELL_H + CELL_GAP) + 40 + 32
 
 
 def render():
@@ -57,7 +57,12 @@ def render():
         '    opacity: 0;',
         '  }',
         '</style>',
-        '<rect width="100%" height="100%" fill="#0d1117"/>',
+        '<rect width="100%" height="100%" fill="#0d1117" rx="8"/>',
+        f'<rect x="0" y="0" width="{WIDTH}" height="32" fill="#161b22" rx="8"/>',
+        f'<circle cx="16" cy="16" r="6" fill="#ff5f56"/>',
+        f'<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>',
+        f'<circle cx="56" cy="16" r="6" fill="#27c93f"/>',
+        f'<text x="{WIDTH//2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@contributions:~ $ ./contributions.sh</text>'
     ]
 
     for dow in range(DAYS):
@@ -65,7 +70,7 @@ def render():
             level = grid[dow][week]
             color = PALETTE[min(level, len(PALETTE) - 1)]
             x = MARGIN + week * (CELL_W + CELL_GAP)
-            y = MARGIN + dow * (CELL_H + CELL_GAP)
+            y = MARGIN + dow * (CELL_H + CELL_GAP) + 32
             delay = (dow + week) * 0.015
             svg_parts.append(
                 f'  <rect class="anim-cell cell" x="{x}" y="{y}" width="{CELL_W}" height="{CELL_H}" '

@@ -17,7 +17,7 @@ YELLOW = "#d29922"
 PURPLE = "#a371f7"
 RED = "#f85149"
 
-TITLE = "mahesh-diwan"
+TITLE = "mahesh@neofetch:~ $ whoami"
 LINES = [
     ("Name", "Mahesh Diwan"),
     ("Role", "Computer Engineering Student"),

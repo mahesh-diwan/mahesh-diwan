@@ -31,13 +31,14 @@ def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahes
         ascii_rows.append(ascii_row)
 
     svg_w = width_chars * char_w + 40
-    svg_h = height_chars * char_h + 40
+    svg_h = height_chars * char_h + 40 + 32
 
     svg_parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{svg_w}" height="{svg_h}" viewBox="0 0 {svg_w} {svg_h}">',
         '<defs>',
         '  <style>',
         '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Geist+Mono:wght@400;700&amp;display=swap");',
+        '    text { font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; }',
         '  </style>',
         '  <linearGradient id="ascii-gradient" x1="0%" y1="0%" x2="0%" y2="100%">',
         '    <stop offset="0%" stop-color="#58a6ff" />',
@@ -46,13 +47,18 @@ def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahes
         '  </linearGradient>',
         '</defs>',
         '<rect width="100%" height="100%" fill="#0d1117" rx="8"/>',
+        f'<rect x="0" y="0" width="{svg_w}" height="32" fill="#161b22" rx="8"/>',
+        f'<circle cx="16" cy="16" r="6" fill="#ff5f56"/>',
+        f'<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>',
+        f'<circle cx="56" cy="16" r="6" fill="#27c93f"/>',
+        f'<text x="{svg_w//2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@portrait:~ $ ./avatar.sh</text>',
         '<style>',
-        '  .ascii-text { font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }',
+        '  .ascii-text { font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }',
         '</style>',
     ]
 
     for i, row in enumerate(ascii_rows):
-        y = 24 + i * char_h
+        y = 24 + 32 + i * char_h
         clip_id = f"clip_{i}"
         delay = i * 0.08
         duration = 0.6
