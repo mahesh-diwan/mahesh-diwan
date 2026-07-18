@@ -103,10 +103,10 @@ def render():
 
     svg_parts.append('</svg>')
 
-    with open("info-card.svg", "w") as f:
+    with open("assets/info-card.svg", "w") as f:
         f.write("\n".join(svg_parts))
 
-    print("Wrote info-card.svg")
+    print("Wrote assets/info-card.svg")
 
 
 def escape(text):

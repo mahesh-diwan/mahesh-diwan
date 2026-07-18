@@ -8,11 +8,14 @@ import numpy as np
 
 RAMP = " .`:-=+*cs#%@"
 
-def make_ascii(input_path="source-prepped.png", output_path="mahesh-ascii.svg", width_chars=70):
+def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahesh-ascii.svg", width_chars=70):
     img = Image.open(input_path).convert("L")
 
+    char_w = 8
+    char_h = 14
     w, h = img.size
-    height_chars = int((h / w) * width_chars * 0.5)
+    # Correct aspect ratio calculations based on font width/height
+    height_chars = int((h / w) * width_chars * (char_w / char_h))
     img = img.resize((width_chars, height_chars), Image.LANCZOS)
     pixels = np.array(img)
 
@@ -25,16 +28,21 @@ def make_ascii(input_path="source-prepped.png", output_path="mahesh-ascii.svg", 
             ascii_row += RAMP[idx]
         ascii_rows.append(ascii_row)
 
-    char_w = 8
-    char_h = 14
     svg_w = width_chars * char_w + 40
     svg_h = height_chars * char_h + 40
 
     svg_parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{svg_w}" height="{svg_h}" viewBox="0 0 {svg_w} {svg_h}">',
-        '<rect width="100%" height="100%" fill="#0d1117"/>',
+        '<defs>',
+        '  <linearGradient id="ascii-gradient" x1="0%" y1="0%" x2="0%" y2="100%">',
+        '    <stop offset="0%" stop-color="#58a6ff" />',
+        '    <stop offset="50%" stop-color="#ab7df8" />',
+        '    <stop offset="100%" stop-color="#3fb950" />',
+        '  </linearGradient>',
+        '</defs>',
+        '<rect width="100%" height="100%" fill="#0d1117" rx="8"/>',
         '<style>',
-        '  .ascii-text { font-family: monospace; font-size: 12px; fill: #c9d1d9; }',
+        '  .ascii-text { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }',
         '</style>',
     ]
 

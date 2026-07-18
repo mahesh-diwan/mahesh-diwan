@@ -6,7 +6,7 @@ Run once per photo: python scripts/prep_photo.py source-photo.jpg
 import sys
 from PIL import Image, ImageEnhance, ImageOps
 
-def prep(input_path, output_path="source-prepped.png"):
+def prep(input_path, output_path="assets/source-prepped.png"):
     img = Image.open(input_path)
 
     # Resize for processing
@@ -15,9 +15,9 @@ def prep(input_path, output_path="source-prepped.png"):
     # Convert to grayscale
     gray = img.convert("L")
 
-    # Boost contrast
+    # Boost contrast gracefully
     enhancer = ImageEnhance.Contrast(gray)
-    gray = enhancer.enhance(2.5)
+    gray = enhancer.enhance(2.0)
 
     # Auto contrast
     gray = ImageOps.autocontrast(gray, cutoff=2)

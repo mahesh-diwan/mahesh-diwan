@@ -6,22 +6,19 @@
 <br>
 
 <h3><code>mahesh@github ~ $ ./contributions.sh</code></h3>
-<img src="./assets/contrib-heatmap.svg" width="860" />
+<img src="./assets/contrib-heatmap.svg" width="860" alt="Contribution Heatmap" />
 
 <br><br>
 
 <h3><code>mahesh@github ~ $ whoami</code></h3>
-<table>
-  <tr>
-    <td valign="top"><img src="./assets/mahesh-ascii.svg" width="370" /></td>
-    <td valign="top"><img src="./assets/info-card.svg" width="490" /></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="./assets/mahesh-ascii.svg" width="370" alt="ASCII Portrait" style="max-width: 100%; margin: 10px;" />
+  <img src="./assets/info-card.svg" width="490" alt="Info Card" style="max-width: 100%; margin: 10px;" />
+</p>
 
 <br>
 
 <h3><code>mahesh@github ~ $ cat about.md</code></h3>
-
 <p align="center">
   A computer engineering student with a strong passion for technology and learning.<br>
   Currently exploring <b>Kubernetes, Jenkins, and Terraform</b>.
@@ -30,30 +27,28 @@
 <br>
 
 <h3><code>mahesh@github ~ $ ls socials/</code></h3>
-
-<p align="left">
+<p align="center">
   <a href="https://twitter.com/diwanmahesh12" target="blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="diwanmahesh12" height="30" width="40" />
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="diwanmahesh12" height="30" width="40" />
   </a>
   <a href="https://linkedin.com/in/mahesh-d-31aa5820b" target="blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mahesh-d-31aa5820b" height="30" width="40" />
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mahesh-d-31aa5820b" height="30" width="40" />
   </a>
   <a href="https://instagram.com/mahesh_diwan1" target="blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="mahesh_diwan1" height="30" width="40" />
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="mahesh_diwan1" height="30" width="40" />
   </a>
   <a href="https://hashnode.com/@mahesh-diwan" target="blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hashnode.svg" alt="@mahesh-diwan" height="30" width="40" />
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hashnode.svg" alt="@mahesh-diwan" height="30" width="40" />
   </a>
   <a href="https://www.hackerrank.com/mahesh_diwan" target="blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="mahesh_diwan" height="30" width="40" />
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="mahesh_diwan" height="30" width="40" />
   </a>
 </p>
 
 <br>
 
 <h3><code>mahesh@github ~ $ ls tools/</code></h3>
-
-<p align="left">
+<p align="center">
   <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/>
   </a>
@@ -89,27 +84,28 @@
 <br>
 
 <h3><code>mahesh@github ~ $ ls projects/</code></h3>
-
-<table>
-  <tr>
-    <td>
-      <a href="https://github.com/mahesh-diwan/DeskTap">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=mahesh-diwan&repo=DeskTap&theme=github_dark&hide_border=true" />
-      </a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/mahesh-diwan/DeskTap">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=mahesh-diwan&repo=DeskTap&theme=github_dark&hide_border=true" alt="DeskTap" />
+  </a>
+</p>
 
 <br>
 
 <h3><code>mahesh@github ~ $ cat blog_posts.md</code></h3>
 
-<!-- BLOG-POST-LIST:START -->
-- [AWS Resource Tracking](https://mahesh1215.hashnode.dev/automate-aws-resource-tracking-with-ease)
-- [How to Deploy a Node.js App on AWS EC2](https://mahesh1215.hashnode.dev/from-github-to-aws-deploy-your-first-nodejs-app-on-ec2)
-- [Beginner's Guide to CI/CD with Jenkins, SonarQube, and Docker](https://mahesh1215.hashnode.dev/a-beginners-guide-to-setting-up-a-cicd-pipeline-with-jenkins-sonarqube-and-docker-on-aws)
-- [Automating Docker Deployments with Jenkins and Ansible](https://mahesh1215.hashnode.dev/beginners-guide-automating-docker-deployments-with-jenkins-ansible-and-github)
-<!-- BLOG-POST-LIST:END -->
+<table align="center" style="border: none; border-collapse: collapse;">
+  <tr>
+    <td align="left" style="border: none;">
+      <!-- BLOG-POST-LIST:START -->
+      - [AWS Resource Tracking](https://mahesh1215.hashnode.dev/automate-aws-resource-tracking-with-ease)
+      - [How to Deploy a Node.js App on AWS EC2](https://mahesh1215.hashnode.dev/from-github-to-aws-deploy-your-first-nodejs-app-on-ec2)
+      - [Beginner's Guide to CI/CD with Jenkins, SonarQube, and Docker](https://mahesh1215.hashnode.dev/a-beginners-guide-to-setting-up-a-cicd-pipeline-with-jenkins-sonarqube-and-docker-on-aws)
+      - [Automating Docker Deployments with Jenkins and Ansible](https://mahesh1215.hashnode.dev/beginners-guide-automating-docker-deployments-with-jenkins-ansible-and-github)
+      <!-- BLOG-POST-LIST:END -->
+    </td>
+  </tr>
+</table>
 
 <br><br>
 

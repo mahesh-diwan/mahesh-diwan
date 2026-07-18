@@ -78,10 +78,10 @@ def render():
 
     svg_parts.append('</svg>')
 
-    with open("contrib-heatmap.svg", "w") as f:
+    with open("assets/contrib-heatmap.svg", "w") as f:
         f.write("\n".join(svg_parts))
 
-    print("Wrote contrib-heatmap.svg")
+    print("Wrote assets/contrib-heatmap.svg")
 
 
 if __name__ == "__main__":
