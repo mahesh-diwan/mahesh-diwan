@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="632" viewBox="0 0 600 632">
 <defs>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Geist+Mono:wght@400;700&amp;display=swap");
+    text { font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; }
   </style>
   <linearGradient id="ascii-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
     <stop offset="0%" stop-color="#58a6ff" />
@@ -10,447 +11,452 @@
   </linearGradient>
 </defs>
 <rect width="100%" height="100%" fill="#0d1117" rx="8"/>
+<rect x="0" y="0" width="600" height="32" fill="#161b22" rx="8"/>
+<circle cx="16" cy="16" r="6" fill="#ff5f56"/>
+<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>
+<circle cx="56" cy="16" r="6" fill="#27c93f"/>
+<text x="300" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@portrait:~ $ ./avatar.sh</text>
 <style>
-  .ascii-text { font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }
+  .ascii-text { font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }
 </style>
 <clipPath id="clip_0">
-  <rect x="0" y="10" width="600" height="16">
+  <rect x="0" y="42" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.0s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="24" class="ascii-text" clip-path="url(#clip_0)">............`.   ...  `::... `.`-:``::::-:`::::-:..`:-::-+cc*csc=:-::-</text>
+<text x="20" y="56" class="ascii-text" clip-path="url(#clip_0)">............`.   ...  `::... `.`-:``::::-:`::::-:..`:-::-+cc*csc=:-::-</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.0s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="20;20" begin="0.0s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="52;52" begin="0.0s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="0.6s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_1">
-  <rect x="0" y="24" width="600" height="16">
+  <rect x="0" y="56" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.08s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="38" class="ascii-text" clip-path="url(#clip_1)">............`  ..  .``:```````:--:``````:`-=---:``:+=--`--:-``:=-``:::</text>
+<text x="20" y="70" class="ascii-text" clip-path="url(#clip_1)">............`  ..  .``:```````:--:``````:`-=---:``:+=--`--:-``:=-``:::</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.08s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="34;34" begin="0.08s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="66;66" begin="0.08s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="0.6799999999999999s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_2">
-  <rect x="0" y="38" width="600" height="16">
+  <rect x="0" y="70" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.16s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="52" class="ascii-text" clip-path="url(#clip_2)">````````...`:  .    `.`:`::::::``:`````::`:---:::::::--:=-`.``::::::::</text>
+<text x="20" y="84" class="ascii-text" clip-path="url(#clip_2)">````````...`:  .    `.`:`::::::``:`````::`:---:::::::--:=-`.``::::::::</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.16s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="48;48" begin="0.16s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="80;80" begin="0.16s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="0.76s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_3">
-  <rect x="0" y="52" width="600" height="16">
+  <rect x="0" y="84" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.24s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="66" class="ascii-text" clip-path="url(#clip_3)">````````````. :.    ...````````. .   -:.::````-:.:. .```:::-:::-:``.``</text>
+<text x="20" y="98" class="ascii-text" clip-path="url(#clip_3)">````````````. :.    ...````````. .   -:.::````-:.:. .```:::-:::-:``.``</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.24s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="62;62" begin="0.24s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="94;94" begin="0.24s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="0.84s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_4">
-  <rect x="0" y="66" width="600" height="16">
+  <rect x="0" y="98" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.32s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="80" class="ascii-text" clip-path="url(#clip_4)">```````````..:`  .   .......```. ... .`.:```.:---:`..````....`::-`````</text>
+<text x="20" y="112" class="ascii-text" clip-path="url(#clip_4)">```````````..:`  .   .......```. ... .`.:```.:---:`..````....`::-`````</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.32s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="76;76" begin="0.32s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="108;108" begin="0.32s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="0.9199999999999999s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_5">
-  <rect x="0" y="80" width="600" height="16">
+  <rect x="0" y="112" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.4s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="94" class="ascii-text" clip-path="url(#clip_5)">```````````````..    ..........`:.................```.```.``..``:::::`</text>
+<text x="20" y="126" class="ascii-text" clip-path="url(#clip_5)">```````````````..    ..........`:.................```.```.``..``:::::`</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.4s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="90;90" begin="0.4s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="122;122" begin="0.4s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.0s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_6">
-  <rect x="0" y="94" width="600" height="16">
+  <rect x="0" y="126" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.48s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="108" class="ascii-text" clip-path="url(#clip_6)">```````````.`.``````.........  :--:``..``:-==:`::`.```````:`..``......</text>
+<text x="20" y="140" class="ascii-text" clip-path="url(#clip_6)">```````````.`.``````.........  :--:``..``:-==:`::`.```````:`..``......</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.48s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="104;104" begin="0.48s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="136;136" begin="0.48s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.08s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_7">
-  <rect x="0" y="108" width="600" height="16">
+  <rect x="0" y="140" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.56s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="122" class="ascii-text" clip-path="url(#clip_7)">``````````````:`.````:``.     .:-===+`.:-+*=:...`:::::`````..`........</text>
+<text x="20" y="154" class="ascii-text" clip-path="url(#clip_7)">``````````````:`.````:``.     .:-===+`.:-+*=:...`:::::`````..`........</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.56s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="118;118" begin="0.56s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="150;150" begin="0.56s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.1600000000000001s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_8">
-  <rect x="0" y="122" width="600" height="16">
+  <rect x="0" y="154" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.64s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="136" class="ascii-text" clip-path="url(#clip_8)">``::`::``::```::.`````::::`::``:----: ..`:`.``.  :*-===`--::::``::````</text>
+<text x="20" y="168" class="ascii-text" clip-path="url(#clip_8)">``::`::``::```::.`````::::`::``:----: ..`:`.``.  :*-===`--::::``::````</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.64s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="132;132" begin="0.64s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="164;164" begin="0.64s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.24s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_9">
-  <rect x="0" y="136" width="600" height="16">
+  <rect x="0" y="168" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.72s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="150" class="ascii-text" clip-path="url(#clip_9)">````:````::```..`````````::----:::`:.  ``.  ```.-:`..-=::``----:=-:---</text>
+<text x="20" y="182" class="ascii-text" clip-path="url(#clip_9)">````:````::```..`````````::----:::`:.  ``.  ```.-:`..-=::``----:=-:---</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.72s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="146;146" begin="0.72s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="178;178" begin="0.72s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.3199999999999998s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_10">
-  <rect x="0" y="150" width="600" height="16">
+  <rect x="0" y="182" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.8s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="164" class="ascii-text" clip-path="url(#clip_10)">`...`....``.`````.```::```.`:::``-:`.::``  ``:` `    -=`...=-==-==--==</text>
+<text x="20" y="196" class="ascii-text" clip-path="url(#clip_10)">`...`....``.`````.```::```.`:::``-:`.::``  ``:` `    -=`...=-==-==--==</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.8s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="160;160" begin="0.8s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="192;192" begin="0.8s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.4s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_11">
-  <rect x="0" y="164" width="600" height="16">
+  <rect x="0" y="196" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.88s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="178" class="ascii-text" clip-path="url(#clip_11)">...`..   .... ..      .```....`. ..`::+*=--`..`     .==*=`..=-===-----</text>
+<text x="20" y="210" class="ascii-text" clip-path="url(#clip_11)">...`..   .... ..      .```....`. ..`::+*=--`..`     .==*=`..=-===-----</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.88s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="174;174" begin="0.88s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="206;206" begin="0.88s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.48s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_12">
-  <rect x="0" y="178" width="600" height="16">
+  <rect x="0" y="210" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="0.96s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="192" class="ascii-text" clip-path="url(#clip_12)">-:`..                   .``..  . ..`: .-+=-:`--`    ::+=    .c**==----</text>
+<text x="20" y="224" class="ascii-text" clip-path="url(#clip_12)">-:`..                   .``..  . ..`: .-+=-:`--`    ::+=    .c**==----</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="0.96s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="188;188" begin="0.96s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="220;220" begin="0.96s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.56s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_13">
-  <rect x="0" y="192" width="600" height="16">
+  <rect x="0" y="224" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.04s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="206" class="ascii-text" clip-path="url(#clip_13)">+++-`.. .`.              ..```::.``+*--c=.   :=`   .-++-`::::*++==-:``</text>
+<text x="20" y="238" class="ascii-text" clip-path="url(#clip_13)">+++-`.. .`.              ..```::.``+*--c=.   :=`   .-++-`::::*++==-:``</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.04s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="202;202" begin="1.04s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="234;234" begin="1.04s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.6400000000000001s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_14">
-  <rect x="0" y="206" width="600" height="16">
+  <rect x="0" y="238" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.12s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="220" class="ascii-text" clip-path="url(#clip_14)">====+===+*+:                .`::::`*sc%#+c+===-.  .-:::-======:--:--::</text>
+<text x="20" y="252" class="ascii-text" clip-path="url(#clip_14)">====+===+*+:                .`::::`*sc%#+c+===-.  .-:::-======:--:--::</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.12s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="216;216" begin="1.12s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="248;248" begin="1.12s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.7200000000000002s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_15">
-  <rect x="0" y="220" width="600" height="16">
+  <rect x="0" y="252" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.2s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="234" class="ascii-text" clip-path="url(#clip_15)">==:`--:--=+=:`.   .            .`. ==``:*cc*+=` .:-=::---==++-:-=+++++</text>
+<text x="20" y="266" class="ascii-text" clip-path="url(#clip_15)">==:`--:--=+=:`.   .            .`. ==``:*cc*+=` .:-=::---==++-:-=+++++</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.2s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="230;230" begin="1.2s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="262;262" begin="1.2s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.7999999999999998s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_16">
-  <rect x="0" y="234" width="600" height="16">
+  <rect x="0" y="266" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.28s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="248" class="ascii-text" clip-path="url(#clip_16)">**++++===:=+===:.:-:.   .`-+**==*+s=`:`.-++-::.`===++=` .++c- `=------</text>
+<text x="20" y="280" class="ascii-text" clip-path="url(#clip_16)">**++++===:=+===:.:-:.   .`-+**==*+s=`:`.-++-::.`===++=` .++c- `=------</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.28s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="244;244" begin="1.28s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="276;276" begin="1.28s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.88s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_17">
-  <rect x="0" y="248" width="600" height="16">
+  <rect x="0" y="280" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.36s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="262" class="ascii-text" clip-path="url(#clip_17)">+++++++=:-:-:.:----:--+c#%@@@@@@%@@s----``:::` :-::`-:   =-=`. :=-::::</text>
+<text x="20" y="294" class="ascii-text" clip-path="url(#clip_17)">+++++++=:-:-:.:----:--+c#%@@@@@@%@@s----``:::` :-::`-:   =-=`. :=-::::</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.36s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="258;258" begin="1.36s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="290;290" begin="1.36s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="1.96s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_18">
-  <rect x="0" y="262" width="600" height="16">
+  <rect x="0" y="294" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.44s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="276" class="ascii-text" clip-path="url(#clip_18)">==+++++=+-`--:++===c#%@@@@%%@%%##%%+.:-:```:`:+*s*+:`````:::-==-------</text>
+<text x="20" y="308" class="ascii-text" clip-path="url(#clip_18)">==+++++=+-`--:++===c#%@@@@%%@%%##%%+.:-:```:`:+*s*+:`````:::-==-------</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.44s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="272;272" begin="1.44s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="304;304" begin="1.44s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.04s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_19">
-  <rect x="0" y="276" width="600" height="16">
+  <rect x="0" y="308" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.52s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="290" class="ascii-text" clip-path="url(#clip_19)">---===+++=-+*+++++c%@@%%%%%@%%#%@%%* ``````.:csc#@@s-`:::-::::----=---</text>
+<text x="20" y="322" class="ascii-text" clip-path="url(#clip_19)">---===+++=-+*+++++c%@@%%%%%@%%#%@%%* ``````.:csc#@@s-`:::-::::----=---</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.52s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="286;286" begin="1.52s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="318;318" begin="1.52s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.12s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_20">
-  <rect x="0" y="290" width="600" height="16">
+  <rect x="0" y="322" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.6s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="304" class="ascii-text" clip-path="url(#clip_20)">---=+=+-`==-===+c%@@%%%%%%#ss#s@%%@s..`:`. :ss#%%%%@%+````:::::::::::-</text>
+<text x="20" y="336" class="ascii-text" clip-path="url(#clip_20)">---=+=+-`==-===+c%@@%%%%%%#ss#s@%%@s..`:`. :ss#%%%%@%+````:::::::::::-</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.6s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="300;300" begin="1.6s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="332;332" begin="1.6s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.2s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_21">
-  <rect x="0" y="304" width="600" height="16">
+  <rect x="0" y="336" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.68s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="318" class="ascii-text" clip-path="url(#clip_21)">  -+--=. :=+==*#%%%%%###s%ccsss%s*+s: ....+###@%#%%@@@s*+=-:::::::::::</text>
+<text x="20" y="350" class="ascii-text" clip-path="url(#clip_21)">  -+--=. :=+==*#%%%%%###s%ccsss%s*+s: ....+###@%#%%@@@s*+=-:::::::::::</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.68s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="314;314" begin="1.68s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="346;346" begin="1.68s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.28s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_22">
-  <rect x="0" y="318" width="600" height="16">
+  <rect x="0" y="350" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.76s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="332" class="ascii-text" clip-path="url(#clip_22)">=-+**=--:.:+c#%%##ssscc*+sscssc%%c+**``.`c##%%##%@%%%%@@ccc*+---::::::</text>
+<text x="20" y="364" class="ascii-text" clip-path="url(#clip_22)">=-+**=--:.:+c#%%##ssscc*+sscssc%%c+**``.`c##%%##%@%%%%@@ccc*+---::::::</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.76s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="328;328" begin="1.76s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="360;360" begin="1.76s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.36s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_23">
-  <rect x="0" y="332" width="600" height="16">
+  <rect x="0" y="364" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.84s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="346" class="ascii-text" clip-path="url(#clip_23)">+*++*++*+==s@@%#%sscc*===cccscc##cs*c+.=#c+c%%s%%%#%%%%%s**cccccc+++==</text>
+<text x="20" y="378" class="ascii-text" clip-path="url(#clip_23)">+*++*++*+==s@@%#%sscc*===cccscc##cs*c+.=#c+c%%s%%%#%%%%%s**cccccc+++==</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.84s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="342;342" begin="1.84s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="374;374" begin="1.84s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.44s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_24">
-  <rect x="0" y="346" width="600" height="16">
+  <rect x="0" y="378" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="1.92s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="360" class="ascii-text" clip-path="url(#clip_24)">++***c**cs%%%%%%%%%#s*=-=*cssscs#ssss+*%++%%%*#%##%%%%##c*********c*cc</text>
+<text x="20" y="392" class="ascii-text" clip-path="url(#clip_24)">++***c**cs%%%%%%%%%#s*=-=*cssscs#ssss+*%++%%%*#%##%%%%##c*********c*cc</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.92s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="356;356" begin="1.92s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="388;388" begin="1.92s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.52s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_25">
-  <rect x="0" y="360" width="600" height="16">
+  <rect x="0" y="392" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.0s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="374" class="ascii-text" clip-path="url(#clip_25)">===+css#@@%%%#ssccsc=:`:**csssss#sssscc++s%#*s%s#%####sc*c*cccccsssccs</text>
+<text x="20" y="406" class="ascii-text" clip-path="url(#clip_25)">===+css#@@%%%#ssccsc=:`:**csssss#sssscc++s%#*s%s#%####sc*c*cccccsssccs</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.0s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="370;370" begin="2.0s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="402;402" begin="2.0s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.6s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_26">
-  <rect x="0" y="374" width="600" height="16">
+  <rect x="0" y="406" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.08s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="388" class="ascii-text" clip-path="url(#clip_26)">*+==s#%@%######c*+--:  `*cscssss##ssc**cs##cc%s#%%%%%##sccs######sss##</text>
+<text x="20" y="420" class="ascii-text" clip-path="url(#clip_26)">*+==s#%@%######c*+--:  `*cscssss##ssc**cs##cc%s#%%%%%##sccs######sss##</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.08s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="384;384" begin="2.08s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="416;416" begin="2.08s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.68s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_27">
-  <rect x="0" y="388" width="600" height="16">
+  <rect x="0" y="420" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.16s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="402" class="ascii-text" clip-path="url(#clip_27)">***c####%##ssc+=+===.. .cscsssscs#sssss###ccss#####%#cc############sss</text>
+<text x="20" y="434" class="ascii-text" clip-path="url(#clip_27)">***c####%##ssc+=+===.. .cscsssscs#sssss###ccss#####%#cc############sss</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.16s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="398;398" begin="2.16s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="430;430" begin="2.16s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.7600000000000002s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_28">
-  <rect x="0" y="402" width="600" height="16">
+  <rect x="0" y="434" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.24s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="416" class="ascii-text" clip-path="url(#clip_28)">***%##%%%#sc+=-=-=+`....+*csss**c##s###%s**ss#%###scc*c#########%%%%##</text>
+<text x="20" y="448" class="ascii-text" clip-path="url(#clip_28)">***%##%%%#sc+=-=-=+`....+*csss**c##s###%s**ss#%###scc*c#########%%%%##</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.24s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="412;412" begin="2.24s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="444;444" begin="2.24s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.8400000000000003s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_29">
-  <rect x="0" y="416" width="600" height="16">
+  <rect x="0" y="448" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.32s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="430" class="ascii-text" clip-path="url(#clip_29)">++c%@%%@%%#*=cs++++ccss*=+*s%#ccc######s**s#%@%%%%%#s##########%##s#s#</text>
+<text x="20" y="462" class="ascii-text" clip-path="url(#clip_29)">++c%@%%@%%#*=cs++++ccss*=+*s%#ccc######s**s#%@%%%%%#s##########%##s#s#</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.32s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="426;426" begin="2.32s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="458;458" begin="2.32s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="2.92s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_30">
-  <rect x="0" y="430" width="600" height="16">
+  <rect x="0" y="462" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.4s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="444" class="ascii-text" clip-path="url(#clip_30)">ss%%@%%@@%@ss#*:**++cscc==+***cccss###c+*c#%%%@@@%%#ssss#sss####sssss#</text>
+<text x="20" y="476" class="ascii-text" clip-path="url(#clip_30)">ss%%@%%@@%@ss#*:**++cscc==+***cccss###c+*c#%%%@@@%%#ssss#sss####sssss#</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.4s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="440;440" begin="2.4s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="472;472" begin="2.4s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.0s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_31">
-  <rect x="0" y="444" width="600" height="16">
+  <rect x="0" y="476" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.48s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="458" class="ascii-text" clip-path="url(#clip_31)">+s@%%@@%@@@%s#**#s:.`:s#==+**ccc**cc*+++c#%%%%%%%%scsssssss#s#ssssssss</text>
+<text x="20" y="490" class="ascii-text" clip-path="url(#clip_31)">+s@%%@@%@@@%s#**#s:.`:s#==+**ccc**cc*+++c#%%%%%%%%scsssssss#s#ssssssss</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.48s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="454;454" begin="2.48s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="486;486" begin="2.48s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.08s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_32">
-  <rect x="0" y="458" width="600" height="16">
+  <rect x="0" y="490" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.56s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="472" class="ascii-text" clip-path="url(#clip_32)">-**+*s#%%#%%==-**cs*`-c#*===cccc=+====+s#%%%#%%%#c*csssssssssss#ss####</text>
+<text x="20" y="504" class="ascii-text" clip-path="url(#clip_32)">-**+*s#%%#%%==-**cs*`-c#*===cccc=+====+s#%%%#%%%#c*csssssssssss#ss####</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.56s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="468;468" begin="2.56s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="500;500" begin="2.56s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.16s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_33">
-  <rect x="0" y="472" width="600" height="16">
+  <rect x="0" y="504" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.64s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="486" class="ascii-text" clip-path="url(#clip_33)">:=` :cs%%#++--:```:-::::*-+*+++===+*css@@%%%%##%**#*ccssssssscc****++=</text>
+<text x="20" y="518" class="ascii-text" clip-path="url(#clip_33)">:=` :cs%%#++--:```:-::::*-+*+++===+*css@@%%%%##%**#*ccssssssscc****++=</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.64s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="482;482" begin="2.64s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="514;514" begin="2.64s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.24s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_34">
-  <rect x="0" y="486" width="600" height="16">
+  <rect x="0" y="518" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.72s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="500" class="ascii-text" clip-path="url(#clip_34)">+:  .+s###:`:`::``..... +=`-----*#@@@@%%%%@@%%s**%#+++****+*++===---:`</text>
+<text x="20" y="532" class="ascii-text" clip-path="url(#clip_34)">+:  .+s###:`:`::``..... +=`-----*#@@@@%%%%@@%%s**%#+++****+*++===---:`</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.72s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="496;496" begin="2.72s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="528;528" begin="2.72s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.3200000000000003s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_35">
-  <rect x="0" y="500" width="600" height="16">
+  <rect x="0" y="532" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.8000000000000003s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="514" class="ascii-text" clip-path="url(#clip_35)">`... :css%- ..  `.....  *#+`:-*#@@@%%%@%#sss#c**c#@#c++**++===----::::</text>
+<text x="20" y="546" class="ascii-text" clip-path="url(#clip_35)">`... :css%- ..  `.....  *#+`:-*#@@@%%%@%#sss#c**c#@#c++**++===----::::</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.8000000000000003s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="510;510" begin="2.8000000000000003s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="542;542" begin="2.8000000000000003s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.4000000000000004s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_36">
-  <rect x="0" y="514" width="600" height="16">
+  <rect x="0" y="546" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.88s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="528" class="ascii-text" clip-path="url(#clip_36)">....  c##@s`.``.`-++:-==s##ss#%@@@@%%%#%##csss*:-+*cs**++==--::::::::-</text>
+<text x="20" y="560" class="ascii-text" clip-path="url(#clip_36)">....  c##@s`.``.`-++:-==s##ss#%@@@@%%%#%##csss*:-+*cs**++==--::::::::-</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.88s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="524;524" begin="2.88s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="556;556" begin="2.88s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.48s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_37">
-  <rect x="0" y="528" width="600" height="16">
+  <rect x="0" y="560" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="2.96s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="542" class="ascii-text" clip-path="url(#clip_37)">....  *sc*=-:`.``-=c###%#ssssc*+####sccscsscc+``::-+*sc+--=::::::+*-+#</text>
+<text x="20" y="574" class="ascii-text" clip-path="url(#clip_37)">....  *sc*=-:`.``-=c###%#ssssc*+####sccscsscc+``::-+*sc+--=::::::+*-+#</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="2.96s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="538;538" begin="2.96s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="570;570" begin="2.96s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.56s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_38">
-  <rect x="0" y="542" width="600" height="16">
+  <rect x="0" y="574" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="3.04s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="556" class="ascii-text" clip-path="url(#clip_38)">.... .::-`...`---=:``...:````.. `=++=-::``.  .-*+c#%c+s*--::`::::+s#%%</text>
+<text x="20" y="588" class="ascii-text" clip-path="url(#clip_38)">.... .::-`...`---=:``...:````.. `=++=-::``.  .-*+c#%c+s*--::`::::+s#%%</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="3.04s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="552;552" begin="3.04s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="584;584" begin="3.04s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.64s" dur="0.1s" fill="freeze"/>
 </circle>
 <clipPath id="clip_39">
-  <rect x="0" y="556" width="600" height="16">
+  <rect x="0" y="588" width="600" height="16">
     <animate attributeName="width" from="0" to="600" begin="3.12s" dur="0.6s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="570" class="ascii-text" clip-path="url(#clip_39)">......`:`..`:-+-.....`--:`.    `+*cccc*+:.  ...=s#s#@=*#=::``:-:=s#%%#</text>
+<text x="20" y="602" class="ascii-text" clip-path="url(#clip_39)">......`:`..`:-+-.....`--:`.    `+*cccc*+:.  ...=s#s#@=*#=::``:-:=s#%%#</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="3.12s" dur="0.6s" fill="freeze"/>
-  <animate attributeName="cy" values="566;566" begin="3.12s" dur="0.6s" fill="freeze"/>
+  <animate attributeName="cy" values="598;598" begin="3.12s" dur="0.6s" fill="freeze"/>
   <animate attributeName="opacity" from="1" to="0" begin="3.72s" dur="0.1s" fill="freeze"/>
 </circle>
 </svg>
