@@ -36,6 +36,9 @@ def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahes
     svg_parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{svg_w}" height="{svg_h}" viewBox="0 0 {svg_w} {svg_h}">',
         '<defs>',
+        '  <style>',
+        '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Geist+Mono:wght@400;700&amp;display=swap");',
+        '  </style>',
         '  <linearGradient id="ascii-gradient" x1="0%" y1="0%" x2="0%" y2="100%">',
         '    <stop offset="0%" stop-color="#58a6ff" />',
         '    <stop offset="50%" stop-color="#ab7df8" />',
@@ -44,7 +47,7 @@ def make_ascii(input_path="assets/source-prepped.png", output_path="assets/mahes
         '</defs>',
         '<rect width="100%" height="100%" fill="#0d1117" rx="8"/>',
         '<style>',
-        '  .ascii-text { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }',
+        '  .ascii-text { font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }',
         '</style>',
     ]
 

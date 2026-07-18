@@ -46,6 +46,14 @@ LINES = [
 def render():
     svg_parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">',
+        '<defs>',
+        '  <style>',
+        '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Geist+Mono:wght@400;700&amp;display=swap");',
+        '    text {',
+        '      font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;',
+        '    }',
+        '  </style>',
+        '</defs>',
         f'<rect width="100%" height="100%" fill="{BG}" rx="8"/>',
     ]
 
@@ -66,7 +74,7 @@ def render():
     svg_parts.append(f'<circle cx="16" cy="16" r="6" fill="#ff5f56"/>')
     svg_parts.append(f'<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>')
     svg_parts.append(f'<circle cx="56" cy="16" r="6" fill="#27c93f"/>')
-    svg_parts.append(f'<text x="{WIDTH//2}" y="22" fill="#8b949e" font-size="12" font-family="monospace" text-anchor="middle">{TITLE}</text>')
+    svg_parts.append(f'<text x="{WIDTH//2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">{TITLE}</text>')
 
     # Content lines
     y = 56
@@ -80,22 +88,22 @@ def render():
         if key.startswith("  "):
             k = key.strip()
             svg_parts.append(
-                f'<text x="28" y="{y}" fill="{ACCENT}" font-size="12" font-family="monospace" font-weight="bold"{style}>{k}</text>'
+                f'<text x="28" y="{y}" fill="{ACCENT}" font-size="12" font-weight="bold"{style}>{k}</text>'
             )
             if value:
                 svg_parts.append(
-                    f'<text x="110" y="{y}" fill="{FG}" font-size="12" font-family="monospace"{style}>{escape(value)}</text>'
+                    f'<text x="110" y="{y}" fill="{FG}" font-size="12"{style}>{escape(value)}</text>'
                 )
         elif value == "":
             svg_parts.append(
-                f'<text x="20" y="{y}" fill="{GREEN}" font-size="13" font-family="monospace" font-weight="bold"{style}>{escape(key)}</text>'
+                f'<text x="20" y="{y}" fill="{GREEN}" font-size="13" font-weight="bold"{style}>{escape(key)}</text>'
             )
         else:
             svg_parts.append(
-                f'<text x="20" y="{y}" fill="{YELLOW}" font-size="12" font-family="monospace" font-weight="bold"{style}>{escape(key)}</text>'
+                f'<text x="20" y="{y}" fill="{YELLOW}" font-size="12" font-weight="bold"{style}>{escape(key)}</text>'
             )
             svg_parts.append(
-                f'<text x="110" y="{y}" fill="{FG}" font-size="12" font-family="monospace"{style}>{escape(value)}</text>'
+                f'<text x="110" y="{y}" fill="{FG}" font-size="12"{style}>{escape(value)}</text>'
             )
 
         y += 20
