@@ -82,7 +82,7 @@
   <rect class="anim-cell cell" x="279" y="41" width="14" height="14" fill="#161b22" style="animation-delay: 0.240s"/>
   <rect class="anim-cell cell" x="296" y="41" width="14" height="14" fill="#161b22" style="animation-delay: 0.255s"/>
   <rect class="anim-cell cell" x="313" y="41" width="14" height="14" fill="#161b22" style="animation-delay: 0.270s"/>
-  <rect class="anim-cell cell" x="330" y="41" width="14" height="14" fill="#26a641" style="animation-delay: 0.285s"/>
+  <rect class="anim-cell cell" x="330" y="41" width="14" height="14" fill="#006d32" style="animation-delay: 0.285s"/>
   <rect class="anim-cell cell" x="347" y="41" width="14" height="14" fill="#161b22" style="animation-delay: 0.300s"/>
   <rect class="anim-cell cell" x="364" y="41" width="14" height="14" fill="#161b22" style="animation-delay: 0.315s"/>
   <rect class="anim-cell cell" x="381" y="41" width="14" height="14" fill="#161b22" style="animation-delay: 0.330s"/>
@@ -390,5 +390,5 @@
   <rect x="131" y="148" width="12" height="12" rx="3" fill="#39d353"/>
   <rect x="149" y="148" width="12" height="12" rx="3" fill="#69f0a0"/>
 <text x="173" y="157" fill="#8b949e" font-size="11" font-family="monospace">More</text>
-<text x="925" y="157" fill="#8b949e" font-size="11" font-family="monospace" text-anchor="end">43 contributions in the last year</text>
+<text x="925" y="157" fill="#8b949e" font-size="11" font-family="monospace" text-anchor="end">42 contributions in the last year</text>
 </svg>
