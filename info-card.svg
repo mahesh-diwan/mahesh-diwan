@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="420" viewBox="0 0 490 420">
+<rect width="100%" height="100%" fill="#0d1117" rx="8"/>
+<rect x="0" y="0" width="490" height="32" fill="#161b22" rx="8"/>
+<circle cx="16" cy="16" r="6" fill="#ff5f56"/>
+<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>
+<circle cx="56" cy="16" r="6" fill="#27c93f"/>
+<text x="245" y="22" fill="#8b949e" font-size="12" font-family="monospace" text-anchor="middle">mahesh-diwan</text>
+<text x="20" y="56" fill="#d29922" font-size="12" font-family="monospace" font-weight="bold">Name</text>
+<text x="110" y="56" fill="#c9d1d9" font-size="12" font-family="monospace">Mahesh Diwan</text>
+<text x="20" y="76" fill="#d29922" font-size="12" font-family="monospace" font-weight="bold">Role</text>
+<text x="110" y="76" fill="#c9d1d9" font-size="12" font-family="monospace">Computer Engineering Student</text>
+<text x="20" y="96" fill="#d29922" font-size="12" font-family="monospace" font-weight="bold">Focus</text>
+<text x="110" y="96" fill="#c9d1d9" font-size="12" font-family="monospace">DevOps | Cloud | Automation</text>
+<text x="20" y="116" fill="#d29922" font-size="12" font-family="monospace" font-weight="bold">Location</text>
+<text x="110" y="116" fill="#c9d1d9" font-size="12" font-family="monospace">India</text>
+<text x="20" y="144" fill="#3fb950" font-size="13" font-family="monospace" font-weight="bold">Learning</text>
+<text x="28" y="164" fill="#58a6ff" font-size="12" font-family="monospace" font-weight="bold">Now</text>
+<text x="110" y="164" fill="#c9d1d9" font-size="12" font-family="monospace">Kubernetes, Jenkins, Terraform</text>
+<text x="28" y="184" fill="#58a6ff" font-size="12" font-family="monospace" font-weight="bold">Stack</text>
+<text x="110" y="184" fill="#c9d1d9" font-size="12" font-family="monospace">Python, JavaScript, C++, Java, Go</text>
+<text x="20" y="212" fill="#3fb950" font-size="13" font-family="monospace" font-weight="bold">Tools</text>
+<text x="28" y="232" fill="#58a6ff" font-size="12" font-family="monospace" font-weight="bold">Cloud</text>
+<text x="110" y="232" fill="#c9d1d9" font-size="12" font-family="monospace">AWS</text>
+<text x="28" y="252" fill="#58a6ff" font-size="12" font-family="monospace" font-weight="bold">Container</text>
+<text x="110" y="252" fill="#c9d1d9" font-size="12" font-family="monospace">Docker, Kubernetes</text>
+<text x="28" y="272" fill="#58a6ff" font-size="12" font-family="monospace" font-weight="bold">CI/CD</text>
+<text x="110" y="272" fill="#c9d1d9" font-size="12" font-family="monospace">Jenkins, GitHub Actions</text>
+<text x="28" y="292" fill="#58a6ff" font-size="12" font-family="monospace" font-weight="bold">OS</text>
+<text x="110" y="292" fill="#c9d1d9" font-size="12" font-family="monospace">Linux</text>
+<text x="28" y="312" fill="#58a6ff" font-size="12" font-family="monospace" font-weight="bold">VCS</text>
+<text x="110" y="312" fill="#c9d1d9" font-size="12" font-family="monospace">Git, Bash</text>
+<text x="20" y="340" fill="#3fb950" font-size="13" font-family="monospace" font-weight="bold">Projects</text>
+<text x="28" y="360" fill="#58a6ff" font-size="12" font-family="monospace" font-weight="bold">DeskTap</text>
+<text x="110" y="360" fill="#c9d1d9" font-size="12" font-family="monospace">github.com/mahesh-diwan/DeskTap</text>
+<text x="20" y="388" fill="#d29922" font-size="12" font-family="monospace" font-weight="bold">Blog</text>
+<text x="110" y="388" fill="#c9d1d9" font-size="12" font-family="monospace">mahesh1215.hashnode.dev</text>
+<text x="20" y="408" fill="#d29922" font-size="12" font-family="monospace" font-weight="bold">Resume</text>
+<text x="110" y="408" fill="#c9d1d9" font-size="12" font-family="monospace">drive.google.com/... (see profile)</text>
+</svg>
