@@ -58,7 +58,5 @@ def prep(input_path, output_path="assets/source-prepped.png"):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python prep_photo.py <photo.jpg>")
-        sys.exit(1)
-    prep(sys.argv[1])
+    photo = sys.argv[1] if len(sys.argv) > 1 else "assets/portrait.jpg"
+    prep(photo)
