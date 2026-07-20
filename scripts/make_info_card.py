@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
+"""Generate a neofetch-style info card SVG.
+
+Renders terminal-style profile information (name, role, stack, tools,
+projects, blog) as an SVG with staggered fade-slide animations.
+
+Set ``STATIC=1`` env var for a frozen frame (no animation).
+
+Usage::
+
+    STATIC=1 python scripts/make_info_card.py
 """
-Generate a neofetch-style info card SVG.
-Set STATIC=1 for a frozen frame (no animation).
-"""
+
 import os
 
 STATIC = os.environ.get("STATIC", "0") == "1"
@@ -44,37 +52,47 @@ LINES = [
 
 
 def render():
+    """Build the info-card SVG and write it to ``assets/info-card.svg``.
+
+    Iterates over ``LINES``, rendering section headers in green,
+    key-value pairs in yellow/accent, and indented values in foreground.
+    Animations are skipped when ``STATIC`` is ``True``.
+    """
     svg_parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">',
-        '<defs>',
-        '  <style>',
+        "<defs>",
+        "  <style>",
         '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Geist+Mono:wght@400;700&amp;display=swap");',
-        '    text {',
+        "    text {",
         '      font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;',
-        '    }',
-        '  </style>',
-        '</defs>',
+        "    }",
+        "  </style>",
+        "</defs>",
         f'<rect width="100%" height="100%" fill="{BG}" rx="8"/>',
     ]
 
     if not STATIC:
-        svg_parts.append('<style>')
-        svg_parts.append('  @keyframes fadeSlide {')
-        svg_parts.append('    from { opacity: 0; transform: translateX(-10px); }')
-        svg_parts.append('    to   { opacity: 1; transform: translateX(0); }')
-        svg_parts.append('  }')
-        svg_parts.append('  .line {')
-        svg_parts.append('    animation: fadeSlide 0.35s ease-out forwards;')
-        svg_parts.append('    opacity: 0;')
-        svg_parts.append('  }')
-        svg_parts.append('</style>')
+        svg_parts.append("<style>")
+        svg_parts.append("  @keyframes fadeSlide {")
+        svg_parts.append("    from { opacity: 0; transform: translateX(-10px); }")
+        svg_parts.append("    to   { opacity: 1; transform: translateX(0); }")
+        svg_parts.append("  }")
+        svg_parts.append("  .line {")
+        svg_parts.append("    animation: fadeSlide 0.35s ease-out forwards;")
+        svg_parts.append("    opacity: 0;")
+        svg_parts.append("  }")
+        svg_parts.append("</style>")
 
     # Title bar
-    svg_parts.append(f'<rect x="0" y="0" width="{WIDTH}" height="32" fill="#161b22" rx="8"/>')
+    svg_parts.append(
+        f'<rect x="0" y="0" width="{WIDTH}" height="32" fill="#161b22" rx="8"/>'
+    )
     svg_parts.append(f'<circle cx="16" cy="16" r="6" fill="#ff5f56"/>')
     svg_parts.append(f'<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>')
     svg_parts.append(f'<circle cx="56" cy="16" r="6" fill="#27c93f"/>')
-    svg_parts.append(f'<text x="{WIDTH//2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">{TITLE}</text>')
+    svg_parts.append(
+        f'<text x="{WIDTH // 2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">{TITLE}</text>'
+    )
 
     # Content lines
     y = 56
@@ -84,7 +102,7 @@ def render():
             y += 8
             continue
 
-        style = '' if STATIC else f' class="line" style="animation-delay: {delay:.2f}s"'
+        style = "" if STATIC else f' class="line" style="animation-delay: {delay:.2f}s"'
         if key.startswith("  "):
             k = key.strip()
             svg_parts.append(
@@ -109,7 +127,7 @@ def render():
         y += 20
         delay += 0.08
 
-    svg_parts.append('</svg>')
+    svg_parts.append("</svg>")
 
     with open("assets/info-card.svg", "w") as f:
         f.write("\n".join(svg_parts))
@@ -118,6 +136,14 @@ def render():
 
 
 def escape(text):
+    """Escape XML special characters for safe SVG embedding.
+
+    Args:
+        text: Raw string to escape.
+
+    Returns:
+        Escaped string with ``&``, ``<``, ``>`` replaced.
+    """
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 

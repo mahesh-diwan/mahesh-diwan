@@ -13,6 +13,17 @@ from rembg import remove
 
 
 def prep(input_path, output_path="assets/source-prepped.png"):
+    """Remove background and enhance contrast for ASCII conversion.
+
+    Applies rembg background removal, OpenCV CLAHE local contrast
+    enhancement, composites onto white, converts to grayscale, and
+    autocontrasts. Output is resized to max 400x400 preserving aspect ratio.
+
+    Args:
+        input_path: Path to source photo (JPEG/PNG).
+        output_path: Where to write the prepped grayscale PNG.
+            Defaults to ``assets/source-prepped.png``.
+    """
     # Load image
     img = Image.open(input_path).convert("RGBA")
 

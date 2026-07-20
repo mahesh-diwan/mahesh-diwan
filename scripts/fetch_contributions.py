@@ -4,6 +4,7 @@ Scrape public GitHub contribution calendar.
 Handles both old SVG rect structure and new HTML table structure.
 No token needed — reads the public HTML fragment.
 """
+
 import json
 import os
 import re
@@ -18,6 +19,16 @@ URL = f"https://github.com/users/{USERNAME}/contributions"
 
 
 def fetch():
+    """Scrape the public GitHub contribution calendar and save to JSON.
+
+    Fetches ``https://github.com/users/{USERNAME}/contributions``, parses
+    the HTML (handling both 2023+ table structure and older SVG rect
+    layout, with regex fallback), and writes ``data/contributions.json``
+    containing per-day levels, streaks, and monthly totals.
+
+    Raises:
+        requests.HTTPError: If the GitHub page returns a non-2xx status.
+    """
     os.makedirs("data", exist_ok=True)
 
     headers = {
@@ -32,7 +43,9 @@ def fetch():
     days = []
 
     # Try new HTML table structure first (2023+)
-    table_cells = soup.find_all("td", class_=lambda x: x and "ContributionCalendar-day" in x)
+    table_cells = soup.find_all(
+        "td", class_=lambda x: x and "ContributionCalendar-day" in x
+    )
 
     if table_cells:
         print(f"Found {len(table_cells)} cells in new table structure")
@@ -59,7 +72,9 @@ def fetch():
             days.append({"date": date, "level": int(level)})
 
     if not days:
-        print("WARNING: No contribution data found. GitHub may have changed their page structure.")
+        print(
+            "WARNING: No contribution data found. GitHub may have changed their page structure."
+        )
         print("Response preview (first 1000 chars):")
         print(resp.text[:1000])
 
@@ -112,7 +127,9 @@ def fetch():
     with open("data/contributions.json", "w") as f:
         json.dump(data, f, indent=2)
 
-    print(f"Fetched {len(days)} days, total={total}, longest_streak={longest_streak}, current_streak={current_streak}")
+    print(
+        f"Fetched {len(days)} days, total={total}, longest_streak={longest_streak}, current_streak={current_streak}"
+    )
 
 
 if __name__ == "__main__":

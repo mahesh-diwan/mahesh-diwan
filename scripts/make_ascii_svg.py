@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
-"""
-Convert prepped image to animated ASCII SVG.
+"""Convert a prepped grayscale image to an animated ASCII-art SVG.
+
+Reads a grayscale PNG, maps pixel brightness to ASCII characters, and
+writes an SVG with per-row clip-path reveal animation and a moving cursor.
+
+Usage::
+
+    python scripts/make_ascii_svg.py [--invert]
 """
 
 import sys
@@ -16,6 +22,19 @@ def make_ascii(
     width_chars=70,
     invert=False,
 ):
+    """Generate an animated ASCII SVG from a grayscale image.
+
+    Each row is revealed via a clip-path animation with a moving cursor
+    dot, producing a terminal "typing" effect.
+
+    Args:
+        input_path: Path to the prepped grayscale PNG.
+        output_path: Where to write the output SVG.
+        width_chars: Character width of the ASCII grid. Height is
+            computed to preserve aspect ratio.
+        invert: If True, reverse the luminance ramp (light-on-dark
+            becomes dark-on-light).
+    """
     img = Image.open(input_path).convert("L")
 
     ramp = RAMP[::-1] if invert else RAMP

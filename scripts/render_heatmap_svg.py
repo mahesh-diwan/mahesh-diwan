@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
+"""Render GitHub contribution data as an animated SVG heatmap.
+
+Reads ``data/contributions.json`` (produced by ``fetch_contributions.py``)
+and writes an animated heatmap SVG to ``assets/contrib-heatmap.svg``.
+
+Each cell slides in with a staggered CSS animation. Includes a legend
+and total contribution count.
+
+Usage::
+
+    python scripts/render_heatmap_svg.py
 """
-Render contributions.json as an animated SVG heatmap.
-"""
+
 import json
 import os
 
@@ -19,6 +29,14 @@ HEIGHT = MARGIN * 2 + DAYS * (CELL_H + CELL_GAP) + 40 + 32
 
 
 def render():
+    """Build the contribution heatmap SVG from JSON data.
+
+    Reads contribution days, maps them to a week/day grid, and writes
+    an SVG with animated cells and a Less/More legend.
+
+    Raises:
+        FileNotFoundError: If ``data/contributions.json`` does not exist.
+    """
     os.makedirs("data", exist_ok=True)
     with open("data/contributions.json") as f:
         data = json.load(f)
@@ -29,6 +47,7 @@ def render():
     grid = [[0] * WEEKS for _ in range(DAYS)]
     for d in days:
         from datetime import datetime
+
         dt = d["date"]
         date_obj = datetime.strptime(dt, "%Y-%m-%d")
         week = (date_obj - datetime.strptime(days[0]["date"], "%Y-%m-%d")).days // 7
@@ -38,31 +57,31 @@ def render():
 
     svg_parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">',
-        '<defs>',
-        '  <style>',
+        "<defs>",
+        "  <style>",
         '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Geist+Mono:wght@400;700&amp;display=swap");',
-        '    text {',
+        "    text {",
         '      font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;',
-        '    }',
-        '  </style>',
-        '</defs>',
-        '<style>',
-        '  .cell { rx: 3; ry: 3; }',
-        '  @keyframes slideIn {',
-        '    from { opacity: 0; transform: translateY(-12px); }',
-        '    to   { opacity: 1; transform: translateY(0); }',
-        '  }',
-        '  .anim-cell {',
-        '    animation: slideIn 0.4s ease-out forwards;',
-        '    opacity: 0;',
-        '  }',
-        '</style>',
+        "    }",
+        "  </style>",
+        "</defs>",
+        "<style>",
+        "  .cell { rx: 3; ry: 3; }",
+        "  @keyframes slideIn {",
+        "    from { opacity: 0; transform: translateY(-12px); }",
+        "    to   { opacity: 1; transform: translateY(0); }",
+        "  }",
+        "  .anim-cell {",
+        "    animation: slideIn 0.4s ease-out forwards;",
+        "    opacity: 0;",
+        "  }",
+        "</style>",
         '<rect width="100%" height="100%" fill="#0d1117" rx="8"/>',
         f'<rect x="0" y="0" width="{WIDTH}" height="32" fill="#161b22" rx="8"/>',
         f'<circle cx="16" cy="16" r="6" fill="#ff5f56"/>',
         f'<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>',
         f'<circle cx="56" cy="16" r="6" fill="#27c93f"/>',
-        f'<text x="{WIDTH//2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@contributions:~ $ ./contributions.sh</text>'
+        f'<text x="{WIDTH // 2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@contributions:~ $ ./contributions.sh</text>',
     ]
 
     for dow in range(DAYS):
@@ -78,18 +97,24 @@ def render():
             )
 
     legend_y = HEIGHT - 50
-    svg_parts.append(f'<text x="{MARGIN}" y="{legend_y}" fill="#8b949e" font-size="11">Less</text>')
+    svg_parts.append(
+        f'<text x="{MARGIN}" y="{legend_y}" fill="#8b949e" font-size="11">Less</text>'
+    )
     for i, color in enumerate(PALETTE):
         lx = MARGIN + 35 + i * 18
-        svg_parts.append(f'  <rect x="{lx}" y="{legend_y - 9}" width="12" height="12" rx="3" fill="{color}"/>')
-    svg_parts.append(f'<text x="{MARGIN + 35 + len(PALETTE) * 18 + 6}" y="{legend_y}" fill="#8b949e" font-size="11">More</text>')
+        svg_parts.append(
+            f'  <rect x="{lx}" y="{legend_y - 9}" width="12" height="12" rx="3" fill="{color}"/>'
+        )
+    svg_parts.append(
+        f'<text x="{MARGIN + 35 + len(PALETTE) * 18 + 6}" y="{legend_y}" fill="#8b949e" font-size="11">More</text>'
+    )
 
     svg_parts.append(
         f'<text x="{WIDTH - MARGIN}" y="{legend_y}" fill="#8b949e" font-size="11" '
         f'text-anchor="end">{total:,} contributions in the last year</text>'
     )
 
-    svg_parts.append('</svg>')
+    svg_parts.append("</svg>")
 
     with open("assets/contrib-heatmap.svg", "w") as f:
         f.write("\n".join(svg_parts))
