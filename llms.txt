@@ -1,0 +1,14 @@
+Mahesh Diwan — DevOps Engineer
+================================
+
+Cloud infrastructure specialist focused on AWS, container orchestration (Docker, Kubernetes), and CI/CD automation (Jenkins, GitHub Actions). Proficient in Python, Bash, and Go for infrastructure tooling.
+
+Primary skills: AWS, Docker, Kubernetes, Terraform, Jenkins, Python, Bash, Go, Prometheus, Nginx, Git, Linux.
+
+Published technical blog at mahesh1215.hashnode.dev covering AWS deployment, CI/CD pipelines, and Docker automation.
+
+GitHub profile features auto-generated ASCII art portrait, contribution heatmap, neofetch-style info card, and terminal-themed layout — all maintained by daily GitHub Actions workflows.
+
+Portfolio: https://mahesh1215.hashnode.dev/
+LinkedIn: https://linkedin.com/in/mahesh-diwan
+GitHub: https://github.com/mahesh-diwan

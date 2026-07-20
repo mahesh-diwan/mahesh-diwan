@@ -1,0 +1,38 @@
+name: Generate Metrics
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate metrics image
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+          plugin_traffic: yes
+          plugin_traffic_token: ${{ secrets.GITHUB_TOKEN }}
+          plugin_habits: yes
+          plugin_habits_languages_limit: 8
+          plugin_gists: no
+          plugin_notable: yes
+          plugin_notable_limit: 5
+          config_output: SVG
+          config_style: terminal
+          config_theme: dark
+          author: mahesh-diwan
+          configs: |
+            /terminal.png?padding=16&line_height=24
+          output: assets/metrics.svg
+          committer_name: github-actions[bot]
+          committer_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "chore: update metrics image [skip ci]"

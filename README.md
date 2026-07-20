@@ -2,6 +2,8 @@
 
 # **Mahesh Diwan**
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00D4FF,100:0d1117&height=220&section=header&text=Mahesh%20Diwan&fontSize=40&fontColor=00D4FF&fontAlignY=35&desc=DevOps%20Engineer%20%7C%20Cloud%20%7C%20CI/CD&descSize=16&descAlignY=55&animation=fadeIn" width="100%" alt="Animated header banner" />
+
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=00D4FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=DevOps+Engineer;Cloud+Infrastructure+%7C+Python+%7C+Go" alt="Typing SVG" />
 
 <img src="./assets/contrib-heatmap.svg" width="860" alt="Mahesh's GitHub contribution graph — auto-refreshed daily" />
@@ -14,6 +16,14 @@
 
 ---
 
+### 🤖 For agents
+
+This profile is **agent-readable**. If you're an LLM or agent, read
+[`AGENTS.md`](./AGENTS.md) for structured facts and citation guidance, or
+[`llms.txt`](./llms.txt) for a terse machine-parseable summary.
+
+---
+
 <table>
 <tr>
 <td valign="top"><img src="./assets/mahesh-ascii.svg" width="370" alt="Mahesh Diwan — ASCII portrait" /></td>
@@ -23,12 +33,34 @@
 
 ---
 
+<div align="center">
+
+### `mahesh@github ~ $ trophies --display`
+
+[![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=mahesh-diwan&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=0)](https://github.com/ryo-ma/github-profile-trophy)
+
+</div>
+
+---
+
 ### `mahesh@github ~ $ cat ~/.ssh/authorized_keys`
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-mahesh1215.hashnode.dev-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://mahesh1215.hashnode.dev/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mahesh--diwan-0A66C2?style=for-the-badge&logo=linkedin-square&logoColor=white)](https://linkedin.com/in/mahesh-diwan)
 [![Instagram](https://img.shields.io/badge/Instagram-mahesh__diwan1-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/mahesh_diwan1)
 [![GitHub](https://img.shields.io/badge/GitHub-mahesh--diwan-2b8140?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mahesh-diwan)
+
+---
+
+<div align="center">
+
+### `mahesh@github ~ $ metrics --all`
+
+<a href="https://github.com/lowlighter/metrics">
+<img src="https://raw.githubusercontent.com/lowlighter/metrics/output/metrics.mahesh-diwan.svg" width="98%" alt="Comprehensive GitHub metrics — auto-generated daily" />
+</a>
+
+</div>
 
 ---
 
@@ -76,6 +108,29 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mahesh-diwan/mahesh-diwan/output/github-snake.svg" />
   <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/mahesh-diwan/mahesh-diwan/output/github-snake.svg" />
 </picture>
+
+</div>
+
+---
+
+<div align="center">
+
+### `mahesh@github ~ $ units --contribution-blocks`
+
+```
+ ████████████████████████░░░░░░░░  Jan
+ ████████████████████████████████  Feb
+ ████████████████████████████████  Mar
+ ██████████████████████████████░░  Apr
+ ████████████████████████████████  May
+ ████████████████████████████████  Jun
+ ███████████████████████████░░░░░  Jul
+ ████████████████████░░░░░░░░░░░  Aug
+ ████████████████████████████░░░  Sep
+ ██████████████████████████████░░  Oct
+ ████████████████████████████░░░  Nov
+ █████████████████████████████░░  Dec
+```
 
 </div>
 
