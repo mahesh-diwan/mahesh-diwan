@@ -2,17 +2,17 @@
 
 # **Mahesh Diwan**
 
-**DevOps Engineer · Cloud Infrastructure · Python**
-
----
-
-### `mahesh@github ~ $ git log --oneline`
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=00D4FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=DevOps+Engineer;Cloud+Infrastructure+%7C+Python+%7C+Go" alt="Typing SVG" />
 
 <img src="./assets/contrib-heatmap.svg" width="860" alt="Mahesh's GitHub contribution graph — auto-refreshed daily" />
 
----
+<a href="https://github.com/mahesh-diwan">
+<img src="https://komarev.com/ghpvc/?username=mahesh-diwan&label=PROFILE%20VIEWS&color=00D4FF&style=flat-square" alt="Profile views" />
+</a>
 
-### `mahesh@github ~ $ cat /etc/passwd | grep mahesh`
+</div>
+
+---
 
 <table>
 <tr>
@@ -32,27 +32,66 @@
 
 ---
 
-### `mahesh@github ~ $ which aws docker kubectl`
+<div align="center">
 
-**IaC**
-![AWS](https://img.shields.io/badge/AWS-232F4E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-844E96?style=flat-square&logo=hashicorp&logoColor=white)
+### `mahesh@github ~ $ stats --summary`
 
-**CI/CD**
-![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+<a href="https://github.com/mahesh-diwan">
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=mahesh-diwan&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mahesh-diwan&layout=compact&theme=tokyonight&hide_border=true" />
+</a>
 
-**Languages**
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-0e4429?style=flat-square&logo=gnometerminal&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
-
-**Observability**
-![Prometheus](https://img.shields.io/badge/Prometheus-E65634?style=flat-square&logo=prometheusio&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+</div>
 
 ---
+
+<div align="center">
+
+### `mahesh@github ~ $ streak --user mahesh`
+
+<a href="https://github.com/mahesh-diwan">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=mahesh-diwan&theme=tokyonight&hide_border=true" alt="Mahesh's GitHub streak" />
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+### `mahesh@github ~ $ graph --days 30`
+
+[![Mahesh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mahesh-diwan&bg_color=0d1117&color=00D4FF&line=00D4FF&point=FFFFFF&area=true&area_color=00D4FF&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+</div>
+
+---
+
+<div align="center">
+
+### `mahesh@github ~ $ cat /dev/contribution | snake`
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mahesh-diwan/mahesh-diwan/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mahesh-diwan/mahesh-diwan/output/github-snake.svg" />
+  <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/mahesh-diwan/mahesh-diwan/output/github-snake.svg" />
+</picture>
+
+</div>
+
+---
+
+<div align="center">
+
+### `mahesh@github ~ $ which aws docker kubectl`
+
+<img src="https://skillicons.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,python,bash,go,prometheus,nginx,git,linux" alt="Tech stack" />
+
+</div>
+
+---
+
+<div align="center">
 
 ### `mahesh@github ~ $ cat ~/blog.md`
 

@@ -1,0 +1,25 @@
+name: Generate 3D Contrib
+
+on:
+  schedule:
+    - cron: "45 6 * * *" # daily ~06:45 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: yoshi389111/github-profile-3d-contrib@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: mahesh-diwan
+        with:
+          filename: assets/profile-3d-contrib.svg
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh 3D contrib graph [skip ci]"
+          file_pattern: "assets/profile-3d-contrib.svg"
