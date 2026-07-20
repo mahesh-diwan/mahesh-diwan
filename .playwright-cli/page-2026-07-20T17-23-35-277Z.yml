@@ -1,0 +1,390 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fmahesh-diwan
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E&source=header
+            - button "Appearance settings" [disabled] [ref=e58]:
+              - img
+  - main [ref=e61]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic:
+          - generic:
+            - generic:
+              - img "@mahesh-diwan"
+            - generic:
+              - strong: mahesh-diwan
+              - generic:
+                - generic:
+                  - link "Follow":
+                    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fmahesh-diwan
+      - navigation "User profile" [ref=e68]:
+        - link "Overview" [ref=e69] [cursor=pointer]:
+          - /url: /mahesh-diwan
+          - img [ref=e70]
+          - text: Overview
+        - link "Repositories 26" [ref=e72] [cursor=pointer]:
+          - /url: /mahesh-diwan?tab=repositories
+          - img [ref=e73]
+          - text: Repositories
+          - generic "26" [ref=e75]
+        - link "Projects" [ref=e76] [cursor=pointer]:
+          - /url: /mahesh-diwan?tab=projects
+          - img [ref=e77]
+          - text: Projects
+        - link "Packages" [ref=e79] [cursor=pointer]:
+          - /url: /mahesh-diwan?tab=packages
+          - img [ref=e80]
+          - text: Packages
+        - link "Stars 6" [ref=e82] [cursor=pointer]:
+          - /url: /mahesh-diwan?tab=stars
+          - img [ref=e83]
+          - text: Stars
+          - generic "6" [ref=e85]
+    - generic [ref=e87]:
+      - generic [ref=e89]:
+        - generic:
+          - generic:
+            - generic:
+              - img "@mahesh-diwan"
+            - generic:
+              - generic:
+                - strong: mahesh-diwan
+            - generic:
+              - generic:
+                - generic:
+                  - link "Follow":
+                    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fmahesh-diwan
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - link "View mahesh-diwan's full-sized avatar" [ref=e93] [cursor=pointer]:
+              - /url: https://avatars.githubusercontent.com/u/91125460?v=4
+              - img "View mahesh-diwan's full-sized avatar" [ref=e94]
+            - heading "MaheshDiwan mahesh-diwan" [level=1] [ref=e96]:
+              - generic [ref=e97]: MaheshDiwan
+              - generic [ref=e98]: mahesh-diwan
+          - generic [ref=e99]:
+            - link "Follow" [ref=e106] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fmahesh-diwan
+            - generic [ref=e107]:
+              - generic [ref=e109]:
+                - link "1 follower" [ref=e110] [cursor=pointer]:
+                  - /url: https://github.com/mahesh-diwan?tab=followers
+                  - img [ref=e111]
+                  - text: 1 follower
+                - text: ·
+                - link "0 following" [ref=e113] [cursor=pointer]:
+                  - /url: https://github.com/mahesh-diwan?tab=following
+              - list
+          - generic [ref=e114]:
+            - heading "Achievements" [level=2] [ref=e115]:
+              - link "Achievements" [ref=e116] [cursor=pointer]:
+                - /url: /mahesh-diwan?tab=achievements
+            - 'link "Achievement: Pair Extraordinaire" [ref=e118] [cursor=pointer]':
+              - /url: /mahesh-diwan?achievement=pair-extraordinaire&tab=achievements
+              - 'img "Achievement: Pair Extraordinaire" [ref=e119]'
+          - button "Block or report user" [ref=e121] [cursor=pointer]:
+            - generic [ref=e123]: Block or report user
+      - generic [ref=e126]:
+        - generic [ref=e128]:
+          - generic [ref=e130]:
+            - link "mahesh-diwan" [ref=e131] [cursor=pointer]:
+              - /url: /mahesh-diwan/mahesh-diwan
+            - generic [ref=e132]: /
+            - text: README.md
+          - article [ref=e133]:
+            - generic [ref=e134]:
+              - generic [ref=e135]:
+                - heading "Mahesh Diwan" [level=1] [ref=e136]:
+                  - strong [ref=e137]: Mahesh Diwan
+                - 'link "Permalink: Mahesh Diwan" [ref=e138] [cursor=pointer]':
+                  - /url: "#mahesh-diwan"
+                  - img [ref=e139]
+              - paragraph [ref=e141]:
+                - strong [ref=e142]: DevOps Engineer · Cloud Infrastructure · Python
+              - separator [ref=e143]
+              - generic [ref=e144]:
+                - heading "mahesh@github ~ $ git log --oneline" [level=3] [ref=e145]:
+                  - code [ref=e146]: mahesh@github ~ $ git log --oneline
+                - 'link "Permalink: mahesh@github ~ $ git log --oneline" [ref=e147] [cursor=pointer]':
+                  - /url: "#maheshgithub---git-log---oneline"
+                  - img [ref=e148]
+              - link "Mahesh's GitHub contribution graph — auto-refreshed daily" [ref=e150] [cursor=pointer]:
+                - /url: /mahesh-diwan/mahesh-diwan/blob/main/assets/contrib-heatmap.svg
+                - img "Mahesh's GitHub contribution graph — auto-refreshed daily" [ref=e151]
+              - separator [ref=e152]
+              - generic [ref=e153]:
+                - heading "mahesh@github ~ $ cat /etc/passwd | grep mahesh" [level=3] [ref=e154]:
+                  - code [ref=e155]: mahesh@github ~ $ cat /etc/passwd | grep mahesh
+                - 'link "Permalink: mahesh@github ~ $ cat /etc/passwd | grep mahesh" [ref=e156] [cursor=pointer]':
+                  - /url: "#maheshgithub---cat-etcpasswd--grep-mahesh"
+                  - img [ref=e157]
+              - table [ref=e160]:
+                - rowgroup [ref=e161]:
+                  - row "Mahesh Diwan — ASCII portrait Mahesh Diwan — experience, stack, highlights" [ref=e162]:
+                    - cell "Mahesh Diwan — ASCII portrait" [ref=e163]:
+                      - link "Mahesh Diwan — ASCII portrait" [ref=e164] [cursor=pointer]:
+                        - /url: /mahesh-diwan/mahesh-diwan/blob/main/assets/mahesh-ascii.svg
+                        - img "Mahesh Diwan — ASCII portrait" [ref=e165]
+                    - cell "Mahesh Diwan — experience, stack, highlights" [ref=e166]:
+                      - link "Mahesh Diwan — experience, stack, highlights" [ref=e167] [cursor=pointer]:
+                        - /url: /mahesh-diwan/mahesh-diwan/blob/main/assets/info-card.svg
+                        - img "Mahesh Diwan — experience, stack, highlights" [ref=e168]
+              - separator [ref=e169]
+              - generic [ref=e170]:
+                - heading "mahesh@github ~ $ cat ~/.ssh/authorized_keys" [level=3] [ref=e171]:
+                  - code [ref=e172]: mahesh@github ~ $ cat ~/.ssh/authorized_keys
+                - 'link "Permalink: mahesh@github ~ $ cat ~/.ssh/authorized_keys" [ref=e173] [cursor=pointer]':
+                  - /url: "#maheshgithub---cat-sshauthorized_keys"
+                  - img [ref=e174]
+              - paragraph [ref=e176]:
+                - link "Portfolio" [ref=e177] [cursor=pointer]:
+                  - /url: https://mahesh1215.hashnode.dev/
+                  - img "Portfolio" [ref=e178]
+                - link "LinkedIn" [ref=e179] [cursor=pointer]:
+                  - /url: https://linkedin.com/in/mahesh-diwan
+                  - img "LinkedIn" [ref=e180]
+                - link "Instagram" [ref=e181] [cursor=pointer]:
+                  - /url: https://www.instagram.com/mahesh_diwan1
+                  - img "Instagram" [ref=e182]
+                - link "GitHub" [ref=e183] [cursor=pointer]:
+                  - /url: https://github.com/mahesh-diwan
+                  - img "GitHub" [ref=e184]
+              - separator [ref=e185]
+              - generic [ref=e186]:
+                - heading "mahesh@github ~ $ which aws docker kubectl" [level=3] [ref=e187]:
+                  - code [ref=e188]: mahesh@github ~ $ which aws docker kubectl
+                - 'link "Permalink: mahesh@github ~ $ which aws docker kubectl" [ref=e189] [cursor=pointer]':
+                  - /url: "#maheshgithub---which-aws-docker-kubectl"
+                  - img [ref=e190]
+              - paragraph [ref=e192]:
+                - strong [ref=e193]: IaC
+                - link "AWS" [ref=e194] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/df004d8ce52848f20ba338b78f8b729a0bdaf26a1b662f4600fccd2c2063825d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4157532d3233324634453f7374796c653d666c61742d737175617265266c6f676f3d616d617a6f6e7765627365727669636573266c6f676f436f6c6f723d7768697465
+                  - img "AWS" [ref=e195]
+                - link "Terraform" [ref=e196] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/f1ec9c49e889302997c91bf6869bd54e7d5361771fe58736a8afc5cb3fdac54b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5465727261666f726d2d3834344539363f7374796c653d666c61742d737175617265266c6f676f3d6861736869636f7270266c6f676f436f6c6f723d7768697465
+                  - img "Terraform" [ref=e197]
+              - paragraph [ref=e198]:
+                - strong [ref=e199]: CI/CD
+                - link "Jenkins" [ref=e200] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/3b3676b639c31685c5cc1971106a9f1dc2050f69e0d16ec841fd0b9fcd5f0f18/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a656e6b696e732d4432343933393f7374796c653d666c61742d737175617265266c6f676f3d6a656e6b696e73266c6f676f436f6c6f723d7768697465
+                  - img "Jenkins" [ref=e201]
+                - link "Docker" [ref=e202] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/60eb2b57aa706fb9f82149695e18d28a1a47450cc80e3a74b15060f4d47c18d0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f636b65722d3234393645443f7374796c653d666c61742d737175617265266c6f676f3d646f636b6572266c6f676f436f6c6f723d7768697465
+                  - img "Docker" [ref=e203]
+                - link "Kubernetes" [ref=e204] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/4370dbc64111067f6aa490ded8419981e1483d59de57085ad9fd326d48a890ef/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4b756265726e657465732d3332364345353f7374796c653d666c61742d737175617265266c6f676f3d6b756265726e65746573266c6f676f436f6c6f723d7768697465
+                  - img "Kubernetes" [ref=e205]
+              - paragraph [ref=e206]:
+                - strong [ref=e207]: Languages
+                - link "Python" [ref=e208] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/f86361c44594c99e6bc8adce37f8af8623e419c170dfcbd18bffc3544ea154ef/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d3337373641423f7374796c653d666c61742d737175617265266c6f676f3d707974686f6e266c6f676f436f6c6f723d7768697465
+                  - img "Python" [ref=e209]
+                - link "Bash" [ref=e210] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/d08dae8758106fd501fe57b5f677032c40ded4cc1f788825cf8d364a5c951b92/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f426173682d3065343432393f7374796c653d666c61742d737175617265266c6f676f3d676e6f6d657465726d696e616c266c6f676f436f6c6f723d7768697465
+                  - img "Bash" [ref=e211]
+                - link "Go" [ref=e212] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/bba8ea78971ac2f413bd727e772c7e6a19751e697029bda4b31f23e9c7a31fb7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f476f2d3030414444383f7374796c653d666c61742d737175617265266c6f676f3d676f266c6f676f436f6c6f723d7768697465
+                  - img "Go" [ref=e213]
+              - paragraph [ref=e214]:
+                - strong [ref=e215]: Observability
+                - link "Prometheus" [ref=e216] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/676a8c5f637a5b45d90c2d7c00940a001be6325b7fe9e9f2823b4889289a5a9b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50726f6d6574686575732d4536353633343f7374796c653d666c61742d737175617265266c6f676f3d70726f6d657468657573696f266c6f676f436f6c6f723d7768697465
+                  - img "Prometheus" [ref=e217]
+                - link "Nginx" [ref=e218] [cursor=pointer]:
+                  - /url: https://camo.githubusercontent.com/ec80f452ca8fcdadc211dfcf3aa7a77bc0b2929679b74033d6e751a6a839c6ba/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e67696e782d3030393633393f7374796c653d666c61742d737175617265266c6f676f3d6e67696e78266c6f676f436f6c6f723d7768697465
+                  - img "Nginx" [ref=e219]
+              - separator [ref=e220]
+              - generic [ref=e221]:
+                - heading "mahesh@github ~ $ cat ~/blog.md" [level=3] [ref=e222]:
+                  - code [ref=e223]: mahesh@github ~ $ cat ~/blog.md
+                - 'link "Permalink: mahesh@github ~ $ cat ~/blog.md" [ref=e224] [cursor=pointer]':
+                  - /url: "#maheshgithub---cat-blogmd"
+                  - img [ref=e225]
+              - table [ref=e228]:
+                - rowgroup [ref=e229]:
+                  - row "Post Topic" [ref=e230]:
+                    - columnheader "Post" [ref=e231]
+                    - columnheader "Topic" [ref=e232]
+                - rowgroup [ref=e233]:
+                  - row "AWS Resource Tracking Automating AWS resource inventory" [ref=e234]:
+                    - cell "AWS Resource Tracking" [ref=e235]:
+                      - link "AWS Resource Tracking" [ref=e236] [cursor=pointer]:
+                        - /url: https://mahesh1215.hashnode.dev/automate-aws-resource-tracking-with-ease
+                    - cell "Automating AWS resource inventory" [ref=e237]
+                  - row "Deploy Node.js on EC2 GitHub to AWS deployment pipeline" [ref=e238]:
+                    - cell "Deploy Node.js on EC2" [ref=e239]:
+                      - link "Deploy Node.js on EC2" [ref=e240] [cursor=pointer]:
+                        - /url: https://mahesh1215.hashnode.dev/from-github-to-aws-deploy-your-first-nodejs-app-on-ec2
+                    - cell "GitHub to AWS deployment pipeline" [ref=e241]
+                  - row "CI/CD with Jenkins, SonarQube, Docker Full pipeline on AWS" [ref=e242]:
+                    - cell "CI/CD with Jenkins, SonarQube, Docker" [ref=e243]:
+                      - link "CI/CD with Jenkins, SonarQube, Docker" [ref=e244] [cursor=pointer]:
+                        - /url: https://mahesh1215.hashnode.dev/a-beginners-guide-to-setting-up-a-cicd-pipeline-with-jenkins-sonarqube-and-docker-on-aws
+                    - cell "Full pipeline on AWS" [ref=e245]
+                  - row "Docker Deployments with Jenkins & Ansible Automated container deployments" [ref=e246]:
+                    - cell "Docker Deployments with Jenkins & Ansible" [ref=e247]:
+                      - link "Docker Deployments with Jenkins & Ansible" [ref=e248] [cursor=pointer]:
+                        - /url: https://mahesh1215.hashnode.dev/beginners-guide-automating-docker-deployments-with-jenkins-ansible-and-github
+                    - cell "Automated container deployments" [ref=e249]
+        - generic [ref=e251]:
+          - heading "Popular repositories Loading" [level=2] [ref=e252]:
+            - text: Popular repositories
+            - generic [ref=e253]: Loading
+            - status
+          - list [ref=e254]:
+            - listitem [ref=e255]:
+              - generic [ref=e257]:
+                - generic [ref=e258]:
+                  - link "DeskTap" [ref=e260] [cursor=pointer]:
+                    - /url: /mahesh-diwan/DeskTap
+                  - generic [ref=e262]: Public
+                - paragraph [ref=e263]:
+                  - text: Forked from
+                  - link "JustinGamer191/Holo" [ref=e264] [cursor=pointer]:
+                    - /url: /JustinGamer191/Holo
+                - paragraph [ref=e265]
+                - paragraph [ref=e266]:
+                  - generic [ref=e267]: Rust
+                  - link "stars 4" [ref=e269] [cursor=pointer]:
+                    - /url: /mahesh-diwan/DeskTap/stargazers
+                    - img "stars" [ref=e270]
+                    - text: "4"
+                  - link "fork 1" [ref=e272] [cursor=pointer]:
+                    - /url: /mahesh-diwan/DeskTap/forks
+                    - img "fork" [ref=e273]
+                    - text: "1"
+            - listitem [ref=e275]:
+              - generic [ref=e277]:
+                - generic [ref=e278]:
+                  - link "spectre" [ref=e280] [cursor=pointer]:
+                    - /url: /mahesh-diwan/spectre
+                  - generic [ref=e282]: Public
+                - paragraph [ref=e283]: A beginner-level tool that allows users to chat with PDF documents. This project demonstrates basic concepts in document processing and text-based interactions with PDFs.
+                - paragraph [ref=e284]:
+                  - generic [ref=e285]: Python
+                  - link "star 1" [ref=e287] [cursor=pointer]:
+                    - /url: /mahesh-diwan/spectre/stargazers
+                    - img "star" [ref=e288]
+                    - text: "1"
+            - listitem [ref=e290]:
+              - generic [ref=e292]:
+                - generic [ref=e293]:
+                  - link "kibana" [ref=e295] [cursor=pointer]:
+                    - /url: /mahesh-diwan/kibana
+                  - generic [ref=e297]: Public
+                - paragraph [ref=e298]:
+                  - text: Forked from
+                  - link "elastic/kibana" [ref=e299] [cursor=pointer]:
+                    - /url: /elastic/kibana
+                - paragraph [ref=e300]: Your window into all of your data
+                - paragraph [ref=e301]:
+                  - generic [ref=e302]: TypeScript
+                  - link "star 1" [ref=e304] [cursor=pointer]:
+                    - /url: /mahesh-diwan/kibana/stargazers
+                    - img "star" [ref=e305]
+                    - text: "1"
+            - listitem [ref=e307]:
+              - generic [ref=e309]:
+                - generic [ref=e310]:
+                  - link "News3" [ref=e312] [cursor=pointer]:
+                    - /url: /mahesh-diwan/News3
+                  - generic [ref=e314]: Public
+                - paragraph [ref=e315]: A beginner-level web application that integrates web scraping, API usage, and frontend-backend communication to deliver news updates. This project explores basic concepts in full-stack development …
+                - paragraph [ref=e316]:
+                  - generic [ref=e317]: CSS
+            - listitem [ref=e319]:
+              - generic [ref=e321]:
+                - generic [ref=e322]:
+                  - link "mahesh-diwan" [ref=e324] [cursor=pointer]:
+                    - /url: /mahesh-diwan/mahesh-diwan
+                  - generic [ref=e326]: Public
+                - paragraph [ref=e327]
+                - paragraph [ref=e328]:
+                  - generic [ref=e329]: Python
+            - listitem [ref=e331]:
+              - generic [ref=e333]:
+                - generic [ref=e334]:
+                  - link "AWS-Resource-Tracker" [ref=e336] [cursor=pointer]:
+                    - /url: /mahesh-diwan/AWS-Resource-Tracker
+                  - generic [ref=e338]: Public
+                - paragraph [ref=e339]: The AWS Resource Tracker is a simple Bash script designed to report usage statistics for various AWS resources. This script utilizes the AWS CLI to gather information about AWS S3 buckets, EC2 inst…
+                - paragraph [ref=e340]:
+                  - generic [ref=e341]: Shell
+        - img "Loading" [ref=e347]
+  - contentinfo [ref=e350]:
+    - heading "Footer" [level=2] [ref=e351]
+    - generic [ref=e352]:
+      - generic [ref=e353]:
+        - link "GitHub Homepage" [ref=e354] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e355]
+        - generic [ref=e357]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e358]:
+        - heading "Footer navigation" [level=3] [ref=e359]
+        - list "Footer navigation" [ref=e360]:
+          - listitem [ref=e361]:
+            - link "Terms" [ref=e362] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e363]:
+            - link "Privacy" [ref=e364] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e365]:
+            - link "Security" [ref=e366] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e367]:
+            - link "Status" [ref=e368] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e369]:
+            - link "Community" [ref=e370] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e371]:
+            - link "Docs" [ref=e372] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e373]:
+            - link "Contact" [ref=e374] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e375]:
+            - button "Manage cookies" [ref=e377] [cursor=pointer]
+          - listitem [ref=e378]:
+            - button "Do not share my personal information" [ref=e380] [cursor=pointer]
