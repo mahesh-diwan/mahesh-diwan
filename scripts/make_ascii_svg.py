@@ -6,11 +6,11 @@ writes an SVG with per-row clip-path reveal animation and a moving cursor.
 
 Usage::
 
-    python scripts/make_ascii_svg.py [--invert]
+    python scripts/make_ascii_svg.py
 """
 
-import sys
 from PIL import Image
+import numpy as np
 
 RAMP = " .`:-=+*cs#%@"
 

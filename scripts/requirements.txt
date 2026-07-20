@@ -1,6 +1,6 @@
 requests==2.32.3
 beautifulsoup4==4.12.3
-# portrait generation (local only):
+# portrait generation:
 pillow
 numpy
 opencv-python

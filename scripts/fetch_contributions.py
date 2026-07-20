@@ -8,7 +8,6 @@ No token needed — reads the public HTML fragment.
 import json
 import os
 import re
-import sys
 from datetime import datetime, timezone
 
 import requests

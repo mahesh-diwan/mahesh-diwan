@@ -14,6 +14,7 @@ Usage::
 
 import json
 import os
+from datetime import datetime
 
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
@@ -46,8 +47,6 @@ def render():
 
     grid = [[0] * WEEKS for _ in range(DAYS)]
     for d in days:
-        from datetime import datetime
-
         dt = d["date"]
         date_obj = datetime.strptime(dt, "%Y-%m-%d")
         week = (date_obj - datetime.strptime(days[0]["date"], "%Y-%m-%d")).days // 7
