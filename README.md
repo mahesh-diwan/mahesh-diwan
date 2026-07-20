@@ -1,67 +1,57 @@
 <div align="center">
 
-<!-- Header -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Hi+%F0%9F%91%8B%2C+I'm+Mahesh+Diwan;Computer+Engineering+Student;DevOps+%7C+Cloud+%7C+Automation" alt="Typing SVG" />
+<!-- hero: monochrome ASCII portrait (types in) beside a neofetch-style info panel -->
 
-<!-- Contribution Heatmap -->
-<h3><code>mahesh@github ~ $ ./contributions.sh</code></h3>
-<img src="./assets/contrib-heatmap.svg" width="860" alt="Contribution Heatmap" />
+<!-- animated contribution graph: real data, boxes reveal cell by cell -->
 
-<!-- Portrait + Info Card -->
-<h3><code>mahesh@github ~ $ whoami</code></h3>
+### `mahesh@github ~ $ ./contributions.sh`
+
+<img src="./assets/contrib-heatmap.svg" width="860" alt="Mahesh's GitHub contribution graph — auto-refreshed daily" />
+
+<br>
+
+### `mahesh@github ~ $ whoami`
+
 <table>
-  <tr>
-    <td><img src="./assets/mahesh-ascii.svg" width="370" alt="ASCII Portrait" /></td>
-    <td><img src="./assets/info-card.svg" width="490" alt="Info Card" /></td>
-  </tr>
+<tr>
+<td valign="top"><img src="./assets/mahesh-ascii.svg" width="370" alt="Mahesh Diwan — ASCII portrait" /></td>
+<td valign="top"><img src="./assets/info-card.svg" width="490" alt="Mahesh Diwan — experience, stack, highlights" /></td>
+</tr>
 </table>
 
-<!-- Bio -->
-<h3><code>mahesh@github ~ $ cat about.md</code></h3>
-<p>I'm a DevOps & Cloud Infrastructure Engineer.</p>
-<ul align="left">
-  <li>Automating container runtimes and cloud resources</li>
-  <li>Zero-downtime deployments on AWS EKS/ECS</li>
-  <li>Terraform module configurations</li>
-  <li>CI/CD pipeline automation</li>
-</ul>
+<br>
 
-<!-- Socials -->
-<h3><code>mahesh@github ~ $ ls socials/</code></h3>
-<p>
-  <a href="https://x.com/mahesh_diwan1" target="_blank"><img src="https://simpleicons.org/icons/twitter.svg" width="30" height="30" alt="Twitter" /></a>
-  <a href="https://www.linkedin.com/in/mahesh-diwan/" target="_blank"><img src="https://simpleicons.org/icons/linkedin.svg" width="30" height="30" alt="LinkedIn" /></a>
-  <a href="https://www.instagram.com/mahesh_diwan1" target="_blank"><img src="https://simpleicons.org/icons/instagram.svg" width="30" height="30" alt="Instagram" /></a>
-  <a href="https://mahesh1215.hashnode.dev/" target="_blank"><img src="https://simpleicons.org/icons/hashnode.svg" width="30" height="30" alt="Hashnode" /></a>
-</p>
+### `mahesh@github ~ $ ./links.sh`
 
-<!-- Tools -->
-<h3><code>mahesh@github ~ $ ls tools/</code></h3>
-<p>
-  <img src="https://simpleicons.org/icons/amazonwebservices.svg" width="30" height="30" alt="AWS" title="AWS" />
-  <img src="https://simpleicons.org/icons/bash.svg" width="30" height="30" alt="Bash" title="Bash" />
-  <img src="https://simpleicons.org/icons/cpp.svg" width="30" height="30" alt="C++" title="C++" />
-  <img src="https://simpleicons.org/icons/docker.svg" width="30" height="30" alt="Docker" title="Docker" />
-  <img src="https://simpleicons.org/icons/git.svg" width="30" height="30" alt="Git" title="Git" />
-  <img src="https://simpleicons.org/icons/golang.svg" width="30" height="30" alt="Go" title="Go" />
-  <img src="https://simpleicons.org/icons/jenkins.svg" width="30" height="30" alt="Jenkins" title="Jenkins" />
-  <img src="https://simpleicons.org/icons/kubernetes.svg" width="30" height="30" alt="Kubernetes" title="Kubernetes" />
-  <img src="https://simpleicons.org/icons/linux.svg" width="30" height="30" alt="Linux" title="Linux" />
-  <img src="https://simpleicons.org/icons/python.svg" width="30" height="30" alt="Python" title="Python" />
-  <img src="https://simpleicons.org/icons/terraform.svg" width="30" height="30" alt="Terraform" title="Terraform" />
-  <img src="https://simpleicons.org/icons/prometheus.svg" width="30" height="30" alt="Prometheus" title="Prometheus" />
-  <img src="https://simpleicons.org/icons/nginx.svg" width="30" height="30" alt="Nginx" title="Nginx" />
-</p>
+<p><b>DevOps Engineer · Cloud Infrastructure Specialist · Pythonista</b></p>
 
-<!-- Blog Posts -->
-<h3><code>mahesh@github ~ $ cat blog_posts.md</code></h3>
-<ul>
-  <li><a href="https://mahesh1215.hashnode.dev/automate-aws-resource-tracking-with-ease">AWS Resource Tracking</a></li>
-  <li><a href="https://mahesh1215.hashnode.dev/from-github-to-aws-deploy-your-first-nodejs-app-on-ec2">Node.js App on AWS EC2</a></li>
-  <li><a href="https://mahesh1215.hashnode.dev/a-beginners-guide-to-setting-up-a-cicd-pipeline-with-jenkins-sonarqube-and-docker-on-aws">CI/CD with Jenkins, SonarQube, Docker</a></li>
-  <li><a href="https://mahesh1215.hashnode.dev/beginners-guide-automating-docker-deployments-with-jenkins-ansible-and-github">Docker Deployments with Jenkins & Ansible</a></li>
-</ul>
+[![Portfolio](https://img.shields.io/badge/Portfolio-mahesh1215.hashnode.dev-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://mahesh1215.hashnode.dev/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mahesh-diwan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mahesh-diwan)
+[![Instagram](https://img.shields.io/badge/Instagram-mahesh__diwan1-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/mahesh_diwan1)
+[![GitHub](https://img.shields.io/badge/GitHub-mahesh--diwan-2b8140?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mahesh-diwan)
 
-<p><sub>Generated with Python + SVG. Heatmap auto-refreshes daily via GitHub Actions.</sub></p>
+<br>
+
+### `mahesh@github ~ $ cat tools.md`
+
+![AWS](https://img.shields.io/badge/AWS-232F4E?style=flat-square&logo=amazonwebservices&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-844E96?style=flat-square&logo=hashicorp&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-0e4429?style=flat-square&logo=gnometerminal&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E65634?style=flat-square&logo=prometheusio&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+
+<br>
+
+### `mahesh@github ~ $ cat blog.md`
+
+- [AWS Resource Tracking](https://mahesh1215.hashnode.dev/automate-aws-resource-tracking-with-ease)
+- [Deploy Node.js App on AWS EC2](https://mahesh1215.hashnode.dev/from-github-to-aws-deploy-your-first-nodejs-app-on-ec2)
+- [CI/CD with Jenkins, SonarQube, Docker](https://mahesh1215.hashnode.dev/a-beginners-guide-to-setting-up-a-cicd-pipeline-with-jenkins-sonarqube-and-docker-on-aws)
+- [Docker Deployments with Jenkins & Ansible](https://mahesh1215.hashnode.dev/beginners-guide-automating-docker-deployments-with-jenkins-ansible-and-github)
 
 </div>
