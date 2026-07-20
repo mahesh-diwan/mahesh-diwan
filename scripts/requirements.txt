@@ -3,3 +3,5 @@ beautifulsoup4==4.12.3
 # portrait generation (local only):
 pillow
 numpy
+opencv-python
+rembg
