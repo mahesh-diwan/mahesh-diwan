@@ -8,7 +8,7 @@ Uses rembg for background removal + OpenCV CLAHE for local contrast.
 import sys
 import cv2
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageOps
 from rembg import remove
 
 
@@ -60,8 +60,6 @@ def prep(input_path, output_path="assets/source-prepped.png"):
     gray.thumbnail((400, 400), Image.LANCZOS)
 
     # Final autocontrast
-    from PIL import ImageOps
-
     gray = ImageOps.autocontrast(gray, cutoff=2)
 
     gray.save(output_path)

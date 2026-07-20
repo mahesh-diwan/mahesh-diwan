@@ -11,7 +11,6 @@ Usage::
 
 import sys
 from PIL import Image
-import numpy as np
 
 RAMP = " .`:-=+*cs#%@"
 
@@ -20,7 +19,6 @@ def make_ascii(
     input_path="assets/source-prepped.png",
     output_path="assets/mahesh-ascii.svg",
     width_chars=70,
-    invert=False,
 ):
     """Generate an animated ASCII SVG from a grayscale image.
 
@@ -32,12 +30,10 @@ def make_ascii(
         output_path: Where to write the output SVG.
         width_chars: Character width of the ASCII grid. Height is
             computed to preserve aspect ratio.
-        invert: If True, reverse the luminance ramp (light-on-dark
-            becomes dark-on-light).
     """
     img = Image.open(input_path).convert("L")
 
-    ramp = RAMP[::-1] if invert else RAMP
+    ramp = RAMP
 
     char_w = 8
     char_h = 14
@@ -128,7 +124,4 @@ def make_ascii(
 
 
 if __name__ == "__main__":
-    import sys
-
-    invert = "--invert" in sys.argv
-    make_ascii(invert=invert)
+    make_ascii()
