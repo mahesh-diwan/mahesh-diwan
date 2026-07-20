@@ -26,7 +26,7 @@
 ### `mahesh@github ~ $ cat ~/.ssh/authorized_keys`
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-mahesh1215.hashnode.dev-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://mahesh1215.hashnode.dev/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mahesh-diwan-0A66C2?style=for-the-badge&logo=linkedin-square&logoColor=white)](https://linkedin.com/in/mahesh-diwan)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mahesh--diwan-0A66C2?style=for-the-badge&logo=linkedin-square&logoColor=white)](https://linkedin.com/in/mahesh-diwan)
 [![Instagram](https://img.shields.io/badge/Instagram-mahesh__diwan1-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/mahesh_diwan1)
 [![GitHub](https://img.shields.io/badge/GitHub-mahesh--diwan-2b8140?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mahesh-diwan)
 
