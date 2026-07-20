@@ -61,6 +61,7 @@ def make_ascii(
         "  <style>",
         '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Geist+Mono:wght@400;700&amp;display=swap");',
         '    text { font-family: "Geist Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; }',
+        "    .ascii-text { font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }",
         "  </style>",
         '  <linearGradient id="ascii-gradient" x1="0%" y1="0%" x2="0%" y2="100%">',
         '    <stop offset="0%" stop-color="#58a6ff" />',
@@ -74,9 +75,6 @@ def make_ascii(
         f'<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>',
         f'<circle cx="56" cy="16" r="6" fill="#27c93f"/>',
         f'<text x="{svg_w // 2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@portrait:~ $ ./avatar.sh</text>',
-        "<style>",
-        "  .ascii-text { font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }",
-        "</style>",
     ]
 
     for i, row in enumerate(ascii_rows):
