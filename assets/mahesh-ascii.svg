@@ -264,7 +264,7 @@
     <animate attributeName="width" from="0" to="600" begin="1.3199999999999998s" dur="0.5s" fill="freeze"/>
   </rect>
 </clipPath>
-<text x="20" y="364" class="ascii-text" clip-path="url(#clip_22)">@@@@@@@@%@@%###sc*+=+::`.=-:=--ss-`-=.. .+c*cc*+s%#cs%%##@%@@@@@@@@@@@</text>
+<text x="20" y="364" class="ascii-text" clip-path="url(#clip_22)">@@@@@@@@%@@%###sc*+=+::`.=-:=--ss-`-=.. .+cccc*+s%#cs%%##@%@@@@@@@@@@@</text>
 <circle r="2" fill="#58a6ff" opacity="0">
   <animate attributeName="cx" from="20" to="580" begin="1.3199999999999998s" dur="0.5s" fill="freeze"/>
   <animate attributeName="cy" values="360;360" begin="1.3199999999999998s" dur="0.5s" fill="freeze"/>
