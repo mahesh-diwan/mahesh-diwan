@@ -105,16 +105,6 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 <div align="center">
 
-### `mahesh@github ~ $ contrib3d --render`
-
-<img src="./assets/profile-3d-contrib.svg" width="80%" alt="3D contribution graph — auto-generated daily" />
-
-</div>
-
----
-
-<div align="center">
-
 ### `mahesh@github ~ $ units --contribution-blocks`
 
 ```
