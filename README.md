@@ -42,20 +42,8 @@ This profile is **agent-readable**. If you're an LLM or agent, read
   &nbsp;&nbsp;
   <a href="https://github.com/mahesh-diwan"><img src="https://skillicons.dev/icons?i=github" alt="GitHub" /></a>
   &nbsp;&nbsp;
-  <a href="https://mahesh1215.hashnode.dev/"><b>Blog</b></a>
+  <a href="https://mahesh1215.hashnode.dev/"><img src="https://img.shields.io/badge/Blog-000000?style=flat&logo=hashnode&logoColor=white" alt="Blog" /></a>
 </p>
-
----
-
-<div align="center">
-
-### `mahesh@github ~ $ metrics --all`
-
-<a href="https://github.com/lowlighter/metrics">
-<img src="./assets/metrics.svg" width="98%" alt="Comprehensive GitHub metrics — auto-generated daily" />
-</a>
-
-</div>
 
 ---
 
@@ -74,11 +62,9 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 <div align="center">
 
-### `mahesh@github ~ $ streak --user mahesh`
+### `mahesh@github ~ $ trophy --rank`
 
-<a href="https://github.com/mahesh-diwan">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=mahesh-diwan&theme=tokyonight&hide_border=true" alt="Mahesh's GitHub streak" />
-</a>
+[![trophy](https://github-profile-trophy.vercel.app/?username=mahesh-diwan&theme=tokyonight&no-frame=true&column=7)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
@@ -135,7 +121,7 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 ### `mahesh@github ~ $ which aws docker kubectl`
 
-<img src="https://skillicons.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,githubactions,python,bash,go,prometheus,grafana,nginx,ansible,git,linux,ubuntu" alt="Tech stack" />
+<img src="https://skillicons.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,githubactions,python,bash,go,prometheus,grafana,nginx,ansible,git,linux,ubuntu&perline=8" alt="Tech stack" />
 
 </div>
 
