@@ -2,7 +2,7 @@ name: Generate Metrics
 
 on:
   schedule:
-    - cron: "17 6 * * *"
+    - cron: "22 6 * * *" # 06:22 UTC — staggered from profile-art (06:17)
   workflow_dispatch:
 
 permissions:
@@ -34,6 +34,8 @@ jobs:
           configs: |
             /terminal.png?padding=16&line_height=24
           output: assets/metrics.svg
-          committer_name: github-actions[bot]
-          committer_email: github-actions[bot]@users.noreply.github.com
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
           commit_message: "chore: update metrics image [skip ci]"
+          file_pattern: "assets/metrics.svg"

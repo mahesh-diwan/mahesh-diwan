@@ -17,12 +17,9 @@ jobs:
         with:
           github_user_name: mahesh-diwan
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?color_schema=dark
-      - uses: peaceiris/actions-gh-pages@v4
+            assets/github-snake.svg
+            assets/github-snake-dark.svg?color_schema=dark
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
-          destination_branch: output
-          destination_dir: .
-          keep_files: true
+          commit_message: "chore: refresh snake animation [skip ci]"
+          file_pattern: "assets/github-snake*.svg"

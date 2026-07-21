@@ -47,7 +47,7 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ metrics --all`
 
 <a href="https://github.com/lowlighter/metrics">
-<img src="https://raw.githubusercontent.com/lowlighter/metrics/output/metrics.mahesh-diwan.svg" width="98%" alt="Comprehensive GitHub metrics — auto-generated daily" />
+<img src="./assets/metrics.svg" width="98%" alt="Comprehensive GitHub metrics — auto-generated daily" />
 </a>
 
 </div>
@@ -94,10 +94,20 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ cat /dev/contribution | snake`
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mahesh-diwan/mahesh-diwan/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mahesh-diwan/mahesh-diwan/output/github-snake.svg" />
-  <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/mahesh-diwan/mahesh-diwan/output/github-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
+  <img alt="GitHub Contribution Snake" src="./assets/github-snake.svg" />
 </picture>
+
+</div>
+
+---
+
+<div align="center">
+
+### `mahesh@github ~ $ contrib3d --render`
+
+<img src="./assets/profile-3d-contrib.svg" width="80%" alt="3D contribution graph — auto-generated daily" />
 
 </div>
 
