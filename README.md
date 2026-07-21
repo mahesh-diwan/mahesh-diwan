@@ -35,10 +35,15 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 ### `mahesh@github ~ $ cat ~/.ssh/authorized_keys`
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-mahesh1215.hashnode.dev-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://mahesh1215.hashnode.dev/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mahesh--diwan-0A66C2?style=for-the-badge&logo=linkedin-square&logoColor=white)](https://linkedin.com/in/mahesh-diwan)
-[![Instagram](https://img.shields.io/badge/Instagram-mahesh__diwan1-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/mahesh_diwan1)
-[![GitHub](https://img.shields.io/badge/GitHub-mahesh--diwan-2b8140?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mahesh-diwan)
+<p align="center">
+  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" /></a>
+  &nbsp;&nbsp;
+  <a href="https://www.instagram.com/mahesh_diwan1"><img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" /></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/mahesh-diwan"><img src="https://skillicons.dev/icons?i=github" alt="GitHub" /></a>
+  &nbsp;&nbsp;
+  <a href="https://mahesh1215.hashnode.dev/"><b>Blog</b></a>
+</p>
 
 ---
 
@@ -130,7 +135,7 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 ### `mahesh@github ~ $ which aws docker kubectl`
 
-<img src="https://skillicons.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,python,bash,go,prometheus,nginx,git,linux" alt="Tech stack" />
+<img src="https://skillicons.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,githubactions,python,bash,go,prometheus,grafana,nginx,ansible,git,linux,ubuntu" alt="Tech stack" />
 
 </div>
 
