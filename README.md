@@ -51,16 +51,6 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 <div align="center">
 
-### `mahesh@github ~ $ trophy --rank`
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=mahesh-diwan&theme=tokyonight&no-frame=true&column=7)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
----
-
-<div align="center">
-
 ### `mahesh@github ~ $ graph --days 30`
 
 [![Mahesh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mahesh-diwan&bg_color=0d1117&color=00D4FF&line=00D4FF&point=FFFFFF&area=true&area_color=00D4FF&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
@@ -74,8 +64,7 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ cat /dev/contribution | snake`
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-colorful.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
   <img alt="GitHub Contribution Snake" src="./assets/github-snake.svg" />
 </picture>
 
