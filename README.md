@@ -85,7 +85,7 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ cat /dev/contribution | snake`
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-colorful.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
   <img alt="GitHub Contribution Snake" src="./assets/github-snake.svg" />
 </picture>
@@ -98,20 +98,56 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 ### `mahesh@github ~ $ units --contribution-blocks`
 
-```
- ████████████████████████░░░░░░░░  Jan
- ████████████████████████████████  Feb
- ████████████████████████████████  Mar
- ██████████████████████████████░░  Apr
- ████████████████████████████████  May
- ████████████████████████████████  Jun
- ███████████████████████████░░░░░  Jul
- ████████████████████░░░░░░░░░░░  Aug
- ████████████████████████████░░░  Sep
- ██████████████████████████████░░  Oct
- ████████████████████████████░░░  Nov
- █████████████████████████████░░  Dec
-```
+<table>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Jan</td>
+<td style="padding:2px 4px;background:#ec407a;color:#fff;font-family:monospace;font-size:12px">████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Feb</td>
+<td style="padding:2px 4px;background:#ab47bc;color:#fff;font-family:monospace;font-size:12px">████████████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Mar</td>
+<td style="padding:2px 4px;background:#7e57c2;color:#fff;font-family:monospace;font-size:12px">████████████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Apr</td>
+<td style="padding:2px 4px;background:#5c6bc0;color:#fff;font-family:monospace;font-size:12px">████████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">May</td>
+<td style="padding:2px 4px;background:#ec407a;color:#fff;font-family:monospace;font-size:12px">████████████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Jun</td>
+<td style="padding:2px 4px;background:#ab47bc;color:#fff;font-family:monospace;font-size:12px">████████████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Jul</td>
+<td style="padding:2px 4px;background:#7e57c2;color:#fff;font-family:monospace;font-size:12px">██████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Aug</td>
+<td style="padding:2px 4px;background:#5c6bc0;color:#fff;font-family:monospace;font-size:12px">████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Sep</td>
+<td style="padding:2px 4px;background:#ec407a;color:#fff;font-family:monospace;font-size:12px">███████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Oct</td>
+<td style="padding:2px 4px;background:#ab47bc;color:#fff;font-family:monospace;font-size:12px">█████████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Nov</td>
+<td style="padding:2px 4px;background:#7e57c2;color:#fff;font-family:monospace;font-size:12px">███████████████████████████</td>
+</tr>
+<tr>
+<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Dec</td>
+<td style="padding:2px 4px;background:#5c6bc0;color:#fff;font-family:monospace;font-size:12px">████████████████████████████</td>
+</tr>
+</table>
 
 </div>
 
