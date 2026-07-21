@@ -36,13 +36,15 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ cat ~/.ssh/authorized_keys`
 
 <p align="center">
-  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" /></a>
+  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://cdn.simpleicons.org/linkedin/0A66C2" width="32" alt="LinkedIn" /></a>
   &nbsp;&nbsp;
-  <a href="https://www.instagram.com/mahesh_diwan1"><img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" /></a>
+  <a href="https://github.com/mahesh-diwan"><img src="https://cdn.simpleicons.org/github/181717" width="32" alt="GitHub" /></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/mahesh-diwan"><img src="https://skillicons.dev/icons?i=github" alt="GitHub" /></a>
+  <a href="https://x.com/mahesh_diwan1/"><img src="https://cdn.simpleicons.org/x/000000" width="32" alt="X / Twitter" /></a>
   &nbsp;&nbsp;
-  <a href="https://mahesh1215.hashnode.dev/"><img src="https://img.shields.io/badge/-Blog-161b22?style=flat-square&logo=hashnode&logoColor=00D4FF&labelColor=161b22" alt="Blog" /></a>
+  <a href="https://www.instagram.com/mahesh_diwan1"><img src="https://cdn.simpleicons.org/instagram/E4405F" width="32" alt="Instagram" /></a>
+  &nbsp;&nbsp;
+  <a href="https://mahesh1215.hashnode.dev/"><img src="https://cdn.simpleicons.org/hashnode/2962FF" width="32" alt="Blog" /></a>
 </p>
 
 ---
