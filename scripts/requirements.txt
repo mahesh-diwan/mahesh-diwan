@@ -4,4 +4,4 @@ beautifulsoup4==4.12.3
 pillow
 numpy
 opencv-python
-rembg
+rembg[cpu]
