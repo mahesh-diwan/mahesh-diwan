@@ -84,16 +84,6 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 <div align="center">
 
-### `mahesh@github ~ $ uptime --stats`
-
-<img src="./assets/metrics.svg" width="700" alt="GitHub metrics — achievements, traffic, habits" />
-
-</div>
-
----
-
-<div align="center">
-
 ### `mahesh@github ~ $ cat ~/blog.md`
 
 | Post                                                                                                                                                              | Topic                             |
