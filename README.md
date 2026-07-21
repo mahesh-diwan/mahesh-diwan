@@ -33,16 +33,6 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 ---
 
-<div align="center">
-
-### `mahesh@github ~ $ trophies --display`
-
-[![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=mahesh-diwan&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=0)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
----
-
 ### `mahesh@github ~ $ cat ~/.ssh/authorized_keys`
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-mahesh1215.hashnode.dev-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://mahesh1215.hashnode.dev/)

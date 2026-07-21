@@ -19,6 +19,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
+          plugin_achievements: yes
           plugin_traffic: yes
           plugin_traffic_token: ${{ secrets.GITHUB_TOKEN }}
           plugin_habits: yes
