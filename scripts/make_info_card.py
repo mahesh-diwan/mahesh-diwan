@@ -28,7 +28,7 @@ RED = "#f85149"
 TITLE = "mahesh@neofetch:~ $ whoami"
 LINES = [
     ("Name", "Mahesh Diwan"),
-    ("Role", "Computer Engineering Student"),
+    ("Role", "DevOps Engineer"),
     ("Focus", "DevOps | Cloud | Automation"),
     ("Location", "India"),
     ("", ""),
@@ -83,16 +83,7 @@ def render():
         svg_parts.append("  }")
         svg_parts.append("</style>")
 
-    # Title bar
-    svg_parts.append(
-        f'<rect x="0" y="0" width="{WIDTH}" height="32" fill="#161b22" rx="8"/>'
-    )
-    svg_parts.append(f'<circle cx="16" cy="16" r="6" fill="#ff5f56"/>')
-    svg_parts.append(f'<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>')
-    svg_parts.append(f'<circle cx="56" cy="16" r="6" fill="#27c93f"/>')
-    svg_parts.append(
-        f'<text x="{WIDTH // 2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">{TITLE}</text>'
-    )
+    _add_title_bar(svg_parts, TITLE, WIDTH)
 
     # Content lines
     y = 56
@@ -133,6 +124,19 @@ def render():
         f.write("\n".join(svg_parts))
 
     print("Wrote assets/info-card.svg")
+
+
+def _add_title_bar(parts, title, width):
+    """Append terminal-style title bar SVG elements."""
+    parts.append(
+        f'<rect x="0" y="0" width="{width}" height="32" fill="#161b22" rx="8"/>'
+    )
+    parts.append('<circle cx="16" cy="16" r="6" fill="#ff5f56"/>')
+    parts.append('<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>')
+    parts.append('<circle cx="56" cy="16" r="6" fill="#27c93f"/>')
+    parts.append(
+        f'<text x="{width // 2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">{escape(title)}</text>'
+    )
 
 
 def escape(text):

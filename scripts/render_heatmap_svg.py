@@ -42,14 +42,21 @@ def render():
     with open("data/contributions.json") as f:
         data = json.load(f)
 
-    days = data["days"]
+    days = data.get("days", [])
     total = data.get("total_contributions", 0)
+
+    if not days:
+        print("No contribution data; writing empty heatmap")
+        days = []
+        base_date = datetime.now()
+    else:
+        base_date = datetime.strptime(days[0]["date"], "%Y-%m-%d")
 
     grid = [[0] * WEEKS for _ in range(DAYS)]
     for d in days:
         dt = d["date"]
         date_obj = datetime.strptime(dt, "%Y-%m-%d")
-        week = (date_obj - datetime.strptime(days[0]["date"], "%Y-%m-%d")).days // 7
+        week = (date_obj - base_date).days // 7
         dow = date_obj.weekday()
         if 0 <= week < WEEKS and 0 <= dow < DAYS:
             grid[dow][week] = d["level"]

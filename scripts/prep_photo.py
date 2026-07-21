@@ -5,6 +5,7 @@ Run once per photo: python scripts/prep_photo.py source-photo.jpg
 Uses rembg for background removal + OpenCV CLAHE for local contrast.
 """
 
+import os
 import sys
 import cv2
 import numpy as np
@@ -67,5 +68,9 @@ def prep(input_path, output_path="assets/source-prepped.png"):
 
 
 if __name__ == "__main__":
-    photo = sys.argv[1] if len(sys.argv) > 1 else "assets/portrait.jpg"
+    photo = (
+        sys.argv[1]
+        if len(sys.argv) > 1
+        else os.environ.get("INPUT_PHOTO", "assets/portrait.jpg")
+    )
     prep(photo)
