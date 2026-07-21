@@ -74,65 +74,6 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 <div align="center">
 
-### `mahesh@github ~ $ units --contribution-blocks`
-
-<table>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Jan</td>
-<td style="padding:2px 4px;background:#ec407a;color:#fff;font-family:monospace;font-size:12px">████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Feb</td>
-<td style="padding:2px 4px;background:#ab47bc;color:#fff;font-family:monospace;font-size:12px">████████████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Mar</td>
-<td style="padding:2px 4px;background:#7e57c2;color:#fff;font-family:monospace;font-size:12px">████████████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Apr</td>
-<td style="padding:2px 4px;background:#5c6bc0;color:#fff;font-family:monospace;font-size:12px">████████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">May</td>
-<td style="padding:2px 4px;background:#ec407a;color:#fff;font-family:monospace;font-size:12px">████████████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Jun</td>
-<td style="padding:2px 4px;background:#ab47bc;color:#fff;font-family:monospace;font-size:12px">████████████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Jul</td>
-<td style="padding:2px 4px;background:#7e57c2;color:#fff;font-family:monospace;font-size:12px">██████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Aug</td>
-<td style="padding:2px 4px;background:#5c6bc0;color:#fff;font-family:monospace;font-size:12px">████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Sep</td>
-<td style="padding:2px 4px;background:#ec407a;color:#fff;font-family:monospace;font-size:12px">███████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Oct</td>
-<td style="padding:2px 4px;background:#ab47bc;color:#fff;font-family:monospace;font-size:12px">█████████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Nov</td>
-<td style="padding:2px 4px;background:#7e57c2;color:#fff;font-family:monospace;font-size:12px">███████████████████████████</td>
-</tr>
-<tr>
-<td align="center" style="padding:2px 4px;background:#161b22;color:#8b949e;font-family:monospace;font-size:12px">Dec</td>
-<td style="padding:2px 4px;background:#5c6bc0;color:#fff;font-family:monospace;font-size:12px">████████████████████████████</td>
-</tr>
-</table>
-
-</div>
-
----
-
-<div align="center">
-
 ### `mahesh@github ~ $ which aws docker kubectl`
 
 <img src="https://i.icoziv.workers.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,githubactions,python,bash,go,prometheus,grafana,nginx,ansible,git,linux,ubuntu&perline=8" alt="Tech stack" />
