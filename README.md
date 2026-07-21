@@ -36,15 +36,15 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ cat ~/.ssh/authorized_keys`
 
 <p align="center">
-  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://cdn.simpleicons.org/linkedin/0A66C2" width="32" alt="LinkedIn" /></a>
+  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=linkedin" width="32" alt="LinkedIn" /></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/mahesh-diwan"><img src="https://cdn.simpleicons.org/github/181717" width="32" alt="GitHub" /></a>
+  <a href="https://github.com/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=github" width="32" alt="GitHub" /></a>
   &nbsp;&nbsp;
-  <a href="https://x.com/mahesh_diwan1/"><img src="https://cdn.simpleicons.org/x/000000" width="32" alt="X / Twitter" /></a>
+  <a href="https://x.com/mahesh_diwan1/"><img src="https://i.icoziv.workers.dev/icons?i=twitter" width="32" alt="X / Twitter" /></a>
   &nbsp;&nbsp;
-  <a href="https://www.instagram.com/mahesh_diwan1"><img src="https://cdn.simpleicons.org/instagram/E4405F" width="32" alt="Instagram" /></a>
+  <a href="https://www.instagram.com/mahesh_diwan1"><img src="https://i.icoziv.workers.dev/icons?i=instagram" width="32" alt="Instagram" /></a>
   &nbsp;&nbsp;
-  <a href="https://mahesh1215.hashnode.dev/"><img src="https://cdn.simpleicons.org/hashnode/2962FF" width="32" alt="Blog" /></a>
+  <a href="https://mahesh1215.hashnode.dev/"><img src="https://i.icoziv.workers.dev/icons?i=hashnode" width="32" alt="Blog" /></a>
 </p>
 
 ---
@@ -135,7 +135,7 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 ### `mahesh@github ~ $ which aws docker kubectl`
 
-<img src="https://skillicons.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,githubactions,python,bash,go,prometheus,grafana,nginx,ansible,git,linux,ubuntu&perline=8" alt="Tech stack" />
+<img src="https://i.icoziv.workers.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,githubactions,python,bash,go,prometheus,grafana,nginx,ansible,git,linux,ubuntu&perline=8" alt="Tech stack" />
 
 </div>
 
