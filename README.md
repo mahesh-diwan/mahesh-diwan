@@ -42,21 +42,8 @@ This profile is **agent-readable**. If you're an LLM or agent, read
   &nbsp;&nbsp;
   <a href="https://github.com/mahesh-diwan"><img src="https://skillicons.dev/icons?i=github" alt="GitHub" /></a>
   &nbsp;&nbsp;
-  <a href="https://mahesh1215.hashnode.dev/"><img src="https://img.shields.io/badge/Blog-000000?style=flat&logo=hashnode&logoColor=white" alt="Blog" /></a>
+  <a href="https://mahesh1215.hashnode.dev/"><img src="https://img.shields.io/badge/-Blog-161b22?style=flat-square&logo=hashnode&logoColor=00D4FF&labelColor=161b22" alt="Blog" /></a>
 </p>
-
----
-
-<div align="center">
-
-### `mahesh@github ~ $ stats --summary`
-
-<a href="https://github.com/mahesh-diwan">
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=mahesh-diwan&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mahesh-diwan&layout=compact&theme=tokyonight&hide_border=true" />
-</a>
-
-</div>
 
 ---
 
