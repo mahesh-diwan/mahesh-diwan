@@ -33,9 +33,9 @@ jobs:
           author: mahesh-diwan
           configs: |
             /terminal.png?padding=16&line_height=24
-          output: assets/metrics.svg
-
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update metrics image [skip ci]"
-          file_pattern: "assets/metrics.svg"
+          filename: assets/metrics.svg
+          output_action: commit
+          output_condition: always
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_branch: main
+          committer_message: "chore: update metrics image [skip ci]"
