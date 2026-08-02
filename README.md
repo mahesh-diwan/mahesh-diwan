@@ -114,7 +114,10 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ profile --recent-releases`
 
 <!-- RECENT_RELEASES:START -->
-<!-- Auto-updated by GitHub Actions • Last updated: 2026-08-02 -->
+| Repo | Release | Date |
+|------|---------|------|
+| [flexfetch](https://github.com/mahesh-diwan/flexfetch) | [v0.16.0](https://github.com/mahesh-diwan/flexfetch/releases/tag/v0.16.0) | 2026-07-31 |
+
 <!-- RECENT_RELEASES:END -->
 
 > 🔄 **Auto-updated daily** via GitHub Actions — shows latest releases across all repos
