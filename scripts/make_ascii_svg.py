@@ -12,6 +12,8 @@ Usage::
 from PIL import Image
 import numpy as np
 
+from svg_builder import svg_header, title_bar, background_rect, escape, BG
+
 RAMP = " .`:-=+*cs#%@"
 
 
@@ -56,25 +58,22 @@ def make_ascii(
     svg_h = height_chars * char_h + 40 + 32
 
     svg_parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{svg_w}" height="{svg_h}" viewBox="0 0 {svg_w} {svg_h}">',
-        "<defs>",
-        "  <style>",
-        '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Fragment+Mono:wght@400;500;700&amp;display=swap");',
-        '    text { font-family: "Fragment Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace; }',
-        "    .ascii-text { font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }",
-        "  </style>",
-        '  <linearGradient id="ascii-gradient" x1="0%" y1="0%" x2="0%" y2="100%">',
-        '    <stop offset="0%" stop-color="#58a6ff" />',
-        '    <stop offset="50%" stop-color="#ab7df8" />',
-        '    <stop offset="100%" stop-color="#3fb950" />',
-        "  </linearGradient>",
-        "</defs>",
-        '<rect width="100%" height="100%" fill="#0d1117" rx="8"/>',
-        f'<rect x="0" y="0" width="{svg_w}" height="32" fill="#161b22" rx="8"/>',
-        f'<circle cx="16" cy="16" r="6" fill="#ff5f56"/>',
-        f'<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>',
-        f'<circle cx="56" cy="16" r="6" fill="#27c93f"/>',
-        f'<text x="{svg_w // 2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@portrait:~ $ ./avatar.sh</text>',
+        svg_header(
+            svg_w,
+            svg_h,
+            extra_defs=(
+                "  <style>\n"
+                "    .ascii-text { font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }\n"
+                "  </style>\n"
+                '  <linearGradient id="ascii-gradient" x1="0%" y1="0%" x2="0%" y2="100%">\n'
+                '    <stop offset="0%" stop-color="#58a6ff" />\n'
+                '    <stop offset="50%" stop-color="#ab7df8" />\n'
+                '    <stop offset="100%" stop-color="#3fb950" />\n'
+                "  </linearGradient>"
+            ),
+        ),
+        background_rect(svg_w, svg_h),
+        title_bar(svg_w, "mahesh@portrait:~ $ ./avatar.sh"),
     ]
 
     for i, row in enumerate(ascii_rows):
@@ -93,9 +92,7 @@ def make_ascii(
         svg_parts.append(f"  </rect>")
         svg_parts.append(f"</clipPath>")
 
-        escaped_row = (
-            row.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-        )
+        escaped_row = escape(row)
         svg_parts.append(
             f'<text x="20" y="{y}" class="ascii-text" clip-path="url(#{clip_id})">{escaped_row}</text>'
         )

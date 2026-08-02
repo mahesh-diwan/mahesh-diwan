@@ -13,15 +13,23 @@ Usage::
 
 import os
 
+from svg_builder import (
+    svg_header,
+    title_bar,
+    background_rect,
+    THEME,
+    escape,
+)
+
 STATIC = os.environ.get("STATIC", "0") == "1"
 
 WIDTH = 490
 HEIGHT = 420
-BG = "#0d1117"
-FG = "#c9d1d9"
-ACCENT = "#58a6ff"
-GREEN = "#3fb950"
-YELLOW = "#d29922"
+BG = THEME["BG"]
+FG = THEME["FG"]
+ACCENT = THEME["ACCENT"]
+GREEN = THEME["GREEN"]
+YELLOW = THEME["YELLOW"]
 
 TITLE = "mahesh@neofetch:~ $ whoami"
 LINES = [
@@ -57,16 +65,8 @@ def render():
     Animations are skipped when ``STATIC`` is ``True``.
     """
     svg_parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">',
-        "<defs>",
-        "  <style>",
-        '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Fragment+Mono:wght@400;500;700&amp;display=swap");',
-        "    text {",
-        '      font-family: "Fragment Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;',
-        "    }",
-        "  </style>",
-        "</defs>",
-        f'<rect width="100%" height="100%" fill="{BG}" rx="8"/>',
+        svg_header(WIDTH, HEIGHT),
+        background_rect(WIDTH, HEIGHT),
     ]
 
     if not STATIC:
@@ -81,7 +81,7 @@ def render():
         svg_parts.append("  }")
         svg_parts.append("</style>")
 
-    _add_title_bar(svg_parts, TITLE, WIDTH)
+    svg_parts.append(title_bar(WIDTH, TITLE))
 
     # Content lines
     y = 56
@@ -122,31 +122,6 @@ def render():
         f.write("\n".join(svg_parts))
 
     print("Wrote assets/info-card.svg")
-
-
-def _add_title_bar(parts, title, width):
-    """Append terminal-style title bar SVG elements."""
-    parts.append(
-        f'<rect x="0" y="0" width="{width}" height="32" fill="#161b22" rx="8"/>'
-    )
-    parts.append('<circle cx="16" cy="16" r="6" fill="#ff5f56"/>')
-    parts.append('<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>')
-    parts.append('<circle cx="56" cy="16" r="6" fill="#27c93f"/>')
-    parts.append(
-        f'<text x="{width // 2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">{escape(title)}</text>'
-    )
-
-
-def escape(text):
-    """Escape XML special characters for safe SVG embedding.
-
-    Args:
-        text: Raw string to escape.
-
-    Returns:
-        Escaped string with ``&``, ``<``, ``>`` replaced.
-    """
-    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
 if __name__ == "__main__":

@@ -16,6 +16,8 @@ import json
 import os
 from datetime import datetime
 
+from svg_builder import svg_header, title_bar, background_rect
+
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
 CELL_W = 14
@@ -62,30 +64,23 @@ def render():
             grid[dow][week] = d["level"]
 
     svg_parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">',
-        "<defs>",
-        "  <style>",
-        '    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Fragment+Mono:wght@400;500;700&amp;display=swap");',
-        "    text {",
-        '      font-family: "Fragment Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;',
-        "    }",
-        "    .cell { rx: 3; ry: 3; }",
-        "    @keyframes slideIn {",
-        "      from { opacity: 0; transform: translateY(-12px); }",
-        "      to   { opacity: 1; transform: translateY(0); }",
-        "    }",
-        "    .anim-cell {",
-        "      animation: slideIn 0.4s ease-out forwards;",
-        "      opacity: 0;",
-        "    }",
-        "  </style>",
-        "</defs>",
-        '<rect width="100%" height="100%" fill="#0d1117" rx="8"/>',
-        f'<rect x="0" y="0" width="{WIDTH}" height="32" fill="#161b22" rx="8"/>',
-        f'<circle cx="16" cy="16" r="6" fill="#ff5f56"/>',
-        f'<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>',
-        f'<circle cx="56" cy="16" r="6" fill="#27c93f"/>',
-        f'<text x="{WIDTH // 2}" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@contributions:~ $ ./contributions.sh</text>',
+        svg_header(
+            WIDTH,
+            HEIGHT,
+            extra_defs=(
+                "    .cell { rx: 3; ry: 3; }\n"
+                "    @keyframes slideIn {\n"
+                "      from { opacity: 0; transform: translateY(-12px); }\n"
+                "      to   { opacity: 1; transform: translateY(0); }\n"
+                "    }\n"
+                "    .anim-cell {\n"
+                "      animation: slideIn 0.4s ease-out forwards;\n"
+                "      opacity: 0;\n"
+                "    }"
+            ),
+        ),
+        background_rect(WIDTH, HEIGHT),
+        title_bar(WIDTH, "mahesh@contributions:~ $ ./contributions.sh"),
     ]
 
     for dow in range(DAYS):
