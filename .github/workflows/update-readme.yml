@@ -1,0 +1,172 @@
+name: Update README dynamic sections
+
+on:
+  schedule:
+    - cron: "35 6 * * *" # ~06:35 UTC daily (after other workflows)
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install PyGithub requests
+
+      - name: Fetch recent releases
+        id: releases
+        run: |
+          python << 'EOF'
+          import os
+          from github import Github
+
+          token = os.getenv('GITHUB_TOKEN')
+          g = Github(token)
+          user = g.get_user('mahesh-diwan')
+
+          releases_list = []
+          for repo in user.get_repos(type='public'):
+              try:
+                  rels = repo.get_releases()
+                  if rels.totalCount > 0:
+                      latest = rels[0]
+                      releases_list.append({
+                          'repo': repo.name,
+                          'url': latest.html_url,
+                          'tag': latest.tag_name,
+                          'title': latest.title or latest.tag_name,
+                          'date': latest.published_at.strftime('%Y-%m-%d')
+                      })
+              except:
+                  pass
+
+          # Sort by date descending, take top 8
+          releases_list.sort(key=lambda x: x['date'], reverse=True)
+          releases_list = releases_list[:8]
+
+          # Generate markdown table
+          if releases_list:
+              md = "| Repo | Release | Date |\n|------|---------|------|\n"
+              for r in releases_list:
+                  md += f"| [{r['repo']}](https://github.com/mahesh-diwan/{r['repo']}) | [{r['title']}]({r['url']}) | {r['date']} |\n"
+          else:
+              md = "*No recent releases found*"
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              print(f'releases_md<<EOF', file=f)
+              print(md, file=f)
+              print('EOF', file=f)
+          EOF
+
+      - name: Fetch recent blog posts
+        id: blog
+        run: |
+          python << 'EOF'
+          import requests
+          import re
+
+          # Fetch Hashnode RSS feed
+          try:
+              resp = requests.get('https://mahesh1215.hashnode.dev/rss.xml', timeout=10)
+              if resp.status_code == 200:
+                  # Parse XML for recent posts
+                  from xml.etree import ElementTree as ET
+                  root = ET.fromstring(resp.content)
+                  
+                  items = root.findall('.//item')
+                  posts = []
+                  for item in items[:6]:
+                      title = item.find('title').text
+                      link = item.find('link').text
+                      pub_date = item.find('pubDate').text
+                      # Format date
+                      from email.utils import parsedate_to_datetime
+                      dt = parsedate_to_datetime(pub_date)
+                      date_str = dt.strftime('%Y-%m-%d')
+                      posts.append({'title': title, 'link': link, 'date': date_str})
+                  
+                  if posts:
+                      md = "| Post | Date |\n|------|------|\n"
+                      for p in posts:
+                          md += f"| [{p['title']}]({p['link']}) | {p['date']} |\n"
+                  else:
+                      md = "*No recent posts found*"
+              else:
+                  md = "*Unable to fetch blog feed*"
+          except Exception as e:
+              md = f"*Blog feed unavailable: {str(e)[:50]}*"
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              print(f'blog_md<<EOF', file=f)
+              print(md, file=f)
+              print('EOF', file=f)
+          EOF
+
+      - name: Update README
+        run: |
+          python << 'PYEOF'
+          import os
+          import re
+
+          readme_path = 'README.md'
+          with open(readme_path, 'r') as f:
+              content = f.read()
+
+          # Update recent releases section
+          releases_md = os.getenv('RELEASES_MD', '')
+          content = re.sub(
+              r'<!-- RECENT_RELEASES:START -->.*?<!-- RECENT_RELEASES:END -->',
+              f'<!-- RECENT_RELEASES:START -->\n{releases_md}\n<!-- RECENT_RELEASES:END -->',
+              content,
+              flags=re.DOTALL
+          )
+
+          # Update recent blog section
+          blog_md = os.getenv('BLOG_MD', '')
+          content = re.sub(
+              r'<!-- RECENT_BLOG:START -->.*?<!-- RECENT_BLOG:END -->',
+              f'<!-- RECENT_BLOG:START -->\n{blog_md}\n<!-- RECENT_BLOG:END -->',
+              content,
+              flags=re.DOTALL
+          )
+
+          # Update last updated timestamp
+          from datetime import datetime
+          now = datetime.utcnow().strftime('%Y-%m-%d')
+          content = re.sub(
+              r'Last updated: \d{4}-\d{2}-\d{2}',
+              f'Last updated: {now}',
+              content
+          )
+
+          with open(readme_path, 'w') as f:
+              f.write(content)
+
+          print("README updated successfully")
+          PYEOF
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASES_MD: ${{ steps.releases.outputs.releases_md }}
+          BLOG_MD: ${{ steps.blog.outputs.blog_md }}
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update README dynamic sections [skip ci]"
+          file_pattern: "README.md"
+          commit_options: "--no-verify"
