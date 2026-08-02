@@ -40,17 +40,17 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ cat ~/.ssh/authorized_keys`
 
 <p align="center">
-  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=linkedin" width="32" alt="LinkedIn" /></a>
+  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=linkedin&width=32&radius=8" alt="LinkedIn" /></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=github" width="32" alt="GitHub" /></a>
+  <a href="https://github.com/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=github&width=32&radius=8" alt="GitHub" /></a>
   &nbsp;&nbsp;
-  <a href="https://x.com/mahesh_diwan1/"><img src="https://i.icoziv.workers.dev/icons?i=twitter" width="32" alt="X / Twitter" /></a>
+  <a href="https://x.com/mahesh_diwan1/"><img src="https://i.icoziv.workers.dev/icons?i=twitter&width=32&radius=8" alt="X / Twitter" /></a>
   &nbsp;&nbsp;
-  <a href="https://www.instagram.com/mahesh_diwan1"><img src="https://i.icoziv.workers.dev/icons?i=instagram" width="32" alt="Instagram" /></a>
+  <a href="https://www.instagram.com/mahesh_diwan1"><img src="https://i.icoziv.workers.dev/icons?i=instagram&width=32&radius=8" alt="Instagram" /></a>
   &nbsp;&nbsp;
-  <a href="https://mahesh1215.hashnode.dev/"><img src="https://i.icoziv.workers.dev/icons?i=hashnode" width="32" alt="Blog" /></a>
+   <a href="https://mahesh1215.hashnode.dev/"><img src="https://i.icoziv.workers.dev/icons?i=hashnode&width=32&radius=8" alt="Blog" /></a>
   &nbsp;&nbsp;
-  <a href="mailto:diwanmahesh11@gmail.com"><img src="https://i.icoziv.workers.dev/icons?i=gmail" width="32" alt="Email" /></a>
+  <a href="mailto:diwanmahesh11@gmail.com"><img src="https://i.icoziv.workers.dev/icons?i=gmail&width=32&radius=8" alt="Email" /></a>
 </p>
 
 ---
@@ -122,6 +122,45 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 ---
 
+### `mahesh@github ~ $ quests --list`
+
+```text
+╔═══════════════════════════════════════════════════════════════╗
+║  DEVOPS ESCAPE ROOM — 3 QUESTS, 100 XP TOTAL                   ║
+╠═══════════════════════════════════════════════════════════════╣
+║  🔒 CI Puzzle      — 25 XP   ⬜                                  ║
+║  🔍 Easter Hunt    — 10 XP   ⬜                                  ║
+║  🏆 Streak Master  — 50 XP   [In Progress]                        ║
+║                                                               ║
+║  Total: 0 / 85 XP   │   Level: 1 (Newbie)                      ║
+╚═══════════════════════════════════════════════════════════════╝
+```
+
+<details>
+<summary>🎮 <b>Quest 1: CI Pipeline Puzzle</b> — What runs twice daily at 06:17 & 18:17 UTC?</summary>
+<br>
+
+> I generate SVGs with staggered animations and retry on failure,<br>
+> My font is Fragment Mono, my colors are precise and rare.<br>
+> What workflow am I?
+
+<details><summary>💡 Hint</summary>
+Check `.opencode/plan.md` for the workflow name, or `cat .github/workflows/update-profile-art.yml`
+</details>
+
+<details><summary>✅ Answer</summary>
+`update-profile-art.yml` — generates ASCII portrait, heatmap, and info card with retry logic and SVG validation.
+</details>
+</details>
+
+<details>
+<summary>🔍 <b>Quest 2: Easter Egg Hunt</b> — Find 3 hidden `<details>` blocks</summary>
+<br>
+Look closely — Easter eggs are hidden in the projects table, tech icons, and footer social links sections. Click each to reveal!
+</details>
+
+---
+
 ### `mahesh@github ~ $ profile --projects --featured`
 
 | Project                                                                                                      | Type                  | Description                                                                       | Stack                           |
@@ -133,13 +172,20 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 | [**DeskTap**](https://github.com/mahesh-diwan/DeskTap)                                                       | Acoustic Utility      | Desk tap detection via microphone, 4-zone ML classification, configurable actions | Tauri v2, SvelteKit, Rust       |
 | [**distilbert-goemotions-distillation**](https://github.com/mahesh-diwan/distilbert-goemotions-distillation) | ML Research           | DistilBERT knowledge distillation on GoEmotions (58 classes), ablation configs    | Python, PyTorch, Docker         |
 
+<details>
+<summary>🥚 <b>Easter Egg #1/3</b>: The hidden repo</summary>
+<br>
+Yes — this README IS a repo (`<code>mahesh-diwan/mahesh-diwan</code>`). It auto-generates all SVGs via GitHub Actions. The `AGENTS.md` and `llms.txt` files were added so bots don't break the profile art scripts.
+</details>
+
 ---
 
 ### `mahesh@github ~ $ profile --recent-releases`
 
 <!-- RECENT_RELEASES:START -->
-| Repo | Release | Date |
-|------|---------|------|
+
+| Repo                                                   | Release                                                                   | Date       |
+| ------------------------------------------------------ | ------------------------------------------------------------------------- | ---------- |
 | [flexfetch](https://github.com/mahesh-diwan/flexfetch) | [v0.16.0](https://github.com/mahesh-diwan/flexfetch/releases/tag/v0.16.0) | 2026-07-31 |
 
 <!-- RECENT_RELEASES:END -->
@@ -167,6 +213,12 @@ This profile is **agent-readable**. If you're an LLM or agent, read
   <img src="https://i.icoziv.workers.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,githubactions,python,bash,go,prometheus,grafana,nginx,ansible,git,linux,ubuntu&perline=8" alt="Tech stack" />
 </p>
 
+<details>
+<summary>🥚 <b>Easter Egg #2/3</b>: The icon journey</summary>
+<br>
+These icons use <strong>icoziv</strong> — a Workers.dev proxy that serves Simple Icons with gradient fills. Before this, the stack used <code>skillicons.dev</code> with the <code>theme=dark</code> param. The switch happened because icoziv offers per-icon customization with <code>radius</code> and <code>width</code> params, making every icon consistently 36px with 8px corner radius. One library, one shape, one size — the #1 rule from the README audit.
+</details>
+
 ---
 
 ### `mahesh@github ~ $ skills --detailed`
@@ -192,6 +244,22 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=mahesh-diwan&theme=dark&hide_border=true&background=0d1117&stroke=00D4FF&ring=00D4FF&fire=00D4FF&currStreakLabel=00D4FF" width="95%" alt="GitHub Streak" />
 </p>
+
+### `mahesh@github ~ $ level --up`
+
+```text
+┌─────────────────────────────────────────────────────────────┐
+│  PROFILE LEVEL                                              │
+├─────────────────────────────────────────────────────────────┤
+│  Level: 17 — Streak Master                                  │
+│  XP:    3,450                                               │
+│  ━━━━━━━━━━░░░░░░░░░░  60%                                  │
+│  Next:   "Artifact Archaeologist" — 500 XP                  │
+│  Bonus:  Find all 3 Easter Eggs (+15 XP)                    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+> Each day of your streak = 10 XP. Each repo starred = 5 XP. Each Easter Egg found = 5 XP.
 
 ---
 
@@ -257,8 +325,20 @@ This profile is **fully automated** via GitHub Actions running daily at ~06:00 U
 
 **📫 Open to opportunities** — DevOps, Platform Engineering, Cloud Infrastructure
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/mahesh-diwan)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail)](mailto:diwanmahesh11@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-View-00D4FF?style=for-the-badge&logo=hashnode)](https://mahesh1215.hashnode.dev/)
+<p align="center">
+  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=linkedin&width=32&radius=8" alt="LinkedIn" /></a>
+  &nbsp;&nbsp;
+  <a href="mailto:diwanmahesh11@gmail.com"><img src="https://i.icoziv.workers.dev/icons?i=gmail&width=32&radius=8" alt="Email" /></a>
+  &nbsp;&nbsp;
+  <a href="https://mahesh1215.hashnode.dev/"><img src="https://i.icoziv.workers.dev/icons?i=hashnode&width=32&radius=8" alt="Blog" /></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=github&width=32&radius=8" alt="GitHub" /></a>
+</p>
+
+<details>
+<summary>🥚 <b>Easter Egg #3/3</b>: The real portfolio</summary>
+
+The shields.io badges you used to see here (`for-the-badge` style) were replaced with icoziv icons for consistency. But did you know the **first** version of this README used plain text links? The evolution: plain links → shields.io badges → icoziv rounded icons. Progress! 🚀
+</details>
 
 </div>
