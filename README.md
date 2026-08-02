@@ -9,7 +9,7 @@
 <img src="./assets/contrib-heatmap.svg" width="860" alt="GitHub contribution heatmap — auto-refreshed daily" />
 
 <a href="https://github.com/mahesh-diwan">
-<img src="https://komarev.com/ghpvc/?username=mahesh-diwan&label=PROFILE%20VIEWS&color=00D4FF&style=flat-square" alt="Profile views" />
+<img src="https://komarev.com/ghpvc/?username=mahesh-diwan&label=PROFILE%20VIEWS&color=00D4FF&style=flat-square&labelColor=161b22" alt="Profile views" />
 </a>
 
 </div>
@@ -68,7 +68,17 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
   <img alt="GitHub Contribution Snake" src="./assets/github-snake.svg" />
-</picture>
+ </picture>
+
+</div>
+
+---
+
+<div align="center">
+
+### `mahesh@github ~ $ cat /dev/activity`
+
+<img src="./assets/metrics.svg" width="860" alt="Mahesh's GitHub metrics — activity, habits, achievements" />
 
 </div>
 
