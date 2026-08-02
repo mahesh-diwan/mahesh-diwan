@@ -73,51 +73,6 @@ jobs:
               print('EOF', file=f)
           EOF
 
-      - name: Fetch recent blog posts
-        id: blog
-        run: |
-          python << 'EOF'
-          import os
-          import requests
-          import re
-
-          # Fetch Hashnode RSS feed
-          try:
-              resp = requests.get('https://mahesh1215.hashnode.dev/rss.xml', timeout=10)
-              if resp.status_code == 200:
-                  # Parse XML for recent posts
-                  from xml.etree import ElementTree as ET
-                  root = ET.fromstring(resp.content)
-                  
-                  items = root.findall('.//item')
-                  posts = []
-                  for item in items[:6]:
-                      title = item.find('title').text
-                      link = item.find('link').text
-                      pub_date = item.find('pubDate').text
-                      # Format date
-                      from email.utils import parsedate_to_datetime
-                      dt = parsedate_to_datetime(pub_date)
-                      date_str = dt.strftime('%Y-%m-%d')
-                      posts.append({'title': title, 'link': link, 'date': date_str})
-                  
-                  if posts:
-                      md = "| Post | Date |\n|------|------|\n"
-                      for p in posts:
-                          md += f"| [{p['title']}]({p['link']}) | {p['date']} |\n"
-                  else:
-                      md = "*No recent posts found*"
-              else:
-                  md = "*Unable to fetch blog feed*"
-          except Exception as e:
-              md = f"*Blog feed unavailable: {str(e)[:50]}*"
-
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-              print(f'blog_md<<EOF', file=f)
-              print(md, file=f)
-              print('EOF', file=f)
-          EOF
-
       - name: Update README
         run: |
           python << 'PYEOF'
@@ -133,15 +88,6 @@ jobs:
           content = re.sub(
               r'<!-- RECENT_RELEASES:START -->.*?<!-- RECENT_RELEASES:END -->',
               f'<!-- RECENT_RELEASES:START -->\n{releases_md}\n<!-- RECENT_RELEASES:END -->',
-              content,
-              flags=re.DOTALL
-          )
-
-          # Update recent blog section
-          blog_md = os.getenv('BLOG_MD', '')
-          content = re.sub(
-              r'<!-- RECENT_BLOG:START -->.*?<!-- RECENT_BLOG:END -->',
-              f'<!-- RECENT_BLOG:START -->\n{blog_md}\n<!-- RECENT_BLOG:END -->',
               content,
               flags=re.DOTALL
           )
@@ -163,7 +109,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASES_MD: ${{ steps.releases.outputs.releases_md }}
-          BLOG_MD: ${{ steps.blog.outputs.blog_md }}
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
