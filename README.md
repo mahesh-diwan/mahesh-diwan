@@ -8,6 +8,10 @@
 
 <img src="./assets/contrib-heatmap.svg" width="860" alt="GitHub contribution heatmap — auto-refreshed daily" />
 
+<a href="https://github.com/mahesh-diwan/mahesh-diwan/actions">
+<img src="https://github.com/mahesh-diwan/mahesh-diwan/actions/workflows/update-profile-art.yml/badge.svg" alt="Profile CI" height="20" />
+</a>
+&nbsp;&nbsp;
 <a href="https://github.com/mahesh-diwan">
 <img src="https://komarev.com/ghpvc/?username=mahesh-diwan&label=PROFILE%20VIEWS&color=00D4FF&style=flat-square&labelColor=161b22" alt="Profile views" />
 </a>
@@ -76,19 +80,11 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 <div align="center">
 
-### `mahesh@github ~ $ cat /dev/activity`
-
-<img src="./assets/metrics.svg" width="860" alt="Mahesh's GitHub metrics — activity, habits, achievements" />
-
-</div>
-
----
-
 ### `mahesh@github ~ $ metrics --terminal --theme dark`
 
-<p align="center">
-  <img src="./assets/metrics.svg" width="860" alt="GitHub metrics — terminal theme, dark mode" />
-</p>
+<img src="./assets/metrics.svg" width="860" alt="GitHub metrics — activity, habits, achievements" />
+
+</div>
 
 ---
 
@@ -108,6 +104,24 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 
 ---
 
+### `mahesh@github ~ $ cat ~/now.md`
+
+```text
+┌─────────────────────────────────────────────────────────────┐
+│  RIGHT NOW                                                  │
+├─────────────────────────────────────────────────────────────┤
+│  🔧 Building: ZeroTerm v0.17 — GPU renderer rewrite          │
+│  📖 Reading:  "Kubernetes Patterns" by Bilgin Ibry           │
+│  🎓 Learning:  eBPF for observability                       │
+│  🎯 Goal:      AWS Solutions Architect Professional         │
+│  🌐 Location:  India (IST)                                  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+> 🔄 Last updated — 02 Aug 2026
+
+---
+
 ### `mahesh@github ~ $ profile --projects --featured`
 
 | Project                                                                                                      | Type                  | Description                                                                       | Stack                           |
@@ -124,8 +138,9 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ profile --recent-releases`
 
 <!-- RECENT_RELEASES:START -->
-| Repo | Release | Date |
-|------|---------|------|
+
+| Repo                                                   | Release                                                                   | Date       |
+| ------------------------------------------------------ | ------------------------------------------------------------------------- | ---------- |
 | [flexfetch](https://github.com/mahesh-diwan/flexfetch) | [v0.16.0](https://github.com/mahesh-diwan/flexfetch/releases/tag/v0.16.0) | 2026-07-31 |
 
 <!-- RECENT_RELEASES:END -->
@@ -171,20 +186,12 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ stats --github`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mahesh-diwan&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" width="48%" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mahesh-diwan&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="48%" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=mahesh-diwan&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=00D4FF&icon_color=00D4FF&text_color=c9d1d9&count_private=true&include_all_commits=true" width="48%" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mahesh-diwan&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=00D4FF&text_color=c9d1d9&langs_count=8" width="48%" alt="Top Languages" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mahesh-diwan&theme=tokyonight&hide_border=true&background=0D1117" width="95%" alt="GitHub Streak" />
-</p>
-
----
-
-### `mahesh@github ~ $ trophy --username mahesh-diwan`
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=mahesh-diwan&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&margin-h=4" alt="GitHub Trophies" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mahesh-diwan&theme=dark&hide_border=true&background=0d1117&stroke=00D4FF&ring=00D4FF&fire=00D4FF&currStreakLabel=00D4FF" width="95%" alt="GitHub Streak" />
 </p>
 
 ---
@@ -192,7 +199,7 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ quote --dev`
 
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="860" alt="Dev Quote" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" width="860" alt="Dev Quote" />
 </p>
 
 ---

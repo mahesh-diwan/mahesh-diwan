@@ -25,7 +25,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install PyGithub requests
+        run: pip install PyGithub requests feedparser
 
       - name: Fetch recent releases
         id: releases
@@ -75,11 +75,14 @@ jobs:
           python << 'PYEOF'
           import os
           import re
+          import requests
+          from datetime import datetime
 
           readme_path = 'README.md'
           with open(readme_path, 'r') as f:
               content = f.read()
 
+          # Update recent releases
           releases_md = os.getenv('RELEASES_MD', '')
           content = re.sub(
               r'<!-- RECENT_RELEASES:START -->.*?<!-- RECENT_RELEASES:END -->',
@@ -88,7 +91,33 @@ jobs:
               flags=re.DOTALL
           )
 
-          from datetime import datetime
+          # Update blog posts from Hashnode RSS
+          try:
+              import xml.etree.ElementTree as ET
+              rss_url = 'https://mahesh1215.hashnode.dev/rss.xml'
+              resp = requests.get(rss_url, timeout=15)
+              resp.raise_for_status()
+              root = ET.fromstring(resp.content)
+              items = root.findall('.//item')[:4]
+              if items:
+                  blog_lines = []
+                  for item in items:
+                      title = item.find('title').text.strip()
+                      link = item.find('link').text.strip()
+                      pub_date = item.find('pubDate').text
+                      date_str = datetime.strptime(pub_date, '%a, %d %b %Y %H:%M:%S %Z').strftime('%Y-%m-%d')
+                      blog_lines.append(f"| [{title}]({link}) | {date_str} |")
+                  blog_md = "| Post | Date |\n|------|------|\n" + "\n".join(blog_lines)
+
+                  content = re.sub(
+                      r'### `mahesh@github ~ \$ profile --recent-blog`\n\n\| Post.*?\n\n',
+                      f'### `mahesh@github ~ $ profile --recent-blog`\n\n{blog_md}\n\n',
+                      content,
+                      flags=re.DOTALL
+                  )
+          except Exception as e:
+              print(f"Blog update skipped: {e}")
+
           now = datetime.utcnow().strftime('%Y-%m-%d')
           content = re.sub(
               r'Last updated: \d{4}-\d{2}-\d{2}',
@@ -103,6 +132,7 @@ jobs:
           PYEOF
         env:
           RELEASES_MD: ${{ steps.releases.outputs.releases_md }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push
         run: |
