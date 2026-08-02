@@ -25,8 +25,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: |
-          pip install PyGithub requests
+        run: pip install PyGithub requests
 
       - name: Fetch recent releases
         id: releases
@@ -55,11 +54,9 @@ jobs:
               except:
                   pass
 
-          # Sort by date descending, take top 8
           releases_list.sort(key=lambda x: x['date'], reverse=True)
           releases_list = releases_list[:8]
 
-          # Generate markdown table
           if releases_list:
               md = "| Repo | Release | Date |\n|------|---------|------|\n"
               for r in releases_list:
@@ -83,7 +80,6 @@ jobs:
           with open(readme_path, 'r') as f:
               content = f.read()
 
-          # Update recent releases section
           releases_md = os.getenv('RELEASES_MD', '')
           content = re.sub(
               r'<!-- RECENT_RELEASES:START -->.*?<!-- RECENT_RELEASES:END -->',
@@ -92,7 +88,6 @@ jobs:
               flags=re.DOTALL
           )
 
-          # Update last updated timestamp
           from datetime import datetime
           now = datetime.utcnow().strftime('%Y-%m-%d')
           content = re.sub(
@@ -107,13 +102,13 @@ jobs:
           print("README updated successfully")
           PYEOF
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASES_MD: ${{ steps.releases.outputs.releases_md }}
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update README dynamic sections [skip ci]"
-          file_pattern: "README.md"
-          commit_options: "--no-verify"
-          skip_fetch: true
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update README dynamic sections [skip ci]" --author="mahesh-diwan <91125460+mahesh-diwan@users.noreply.github.com>" || echo "No changes to commit"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
