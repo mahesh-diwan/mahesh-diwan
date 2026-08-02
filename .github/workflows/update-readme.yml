@@ -4,8 +4,6 @@ on:
   schedule:
     - cron: "35 6 * * *" # ~06:35 UTC daily (after other workflows)
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
   contents: write
