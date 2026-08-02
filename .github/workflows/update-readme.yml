@@ -171,3 +171,4 @@ jobs:
           commit_message: "chore: update README dynamic sections [skip ci]"
           file_pattern: "README.md"
           commit_options: "--no-verify"
+          skip_fetch: true
