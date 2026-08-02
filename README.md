@@ -114,7 +114,10 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ profile --recent-releases`
 
 <!-- RECENT_RELEASES:START -->
-<!-- Auto-updated by GitHub Actions • Last updated: 2026-08-02 -->
+| Repo | Release | Date |
+|------|---------|------|
+| [flexfetch](https://github.com/mahesh-diwan/flexfetch) | [v0.16.0](https://github.com/mahesh-diwan/flexfetch/releases/tag/v0.16.0) | 2026-07-31 |
+
 <!-- RECENT_RELEASES:END -->
 
 > 🔄 **Auto-updated daily** via GitHub Actions — shows latest releases across all repos
@@ -124,15 +127,7 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ profile --recent-blog`
 
 <!-- RECENT_BLOG:START -->
-<!-- Auto-updated by GitHub Actions • Last updated: 2026-08-02 -->
-
-| Post                                                                                                                                                              | Date |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| [AWS Resource Tracking](https://mahesh1215.hashnode.dev/automate-aws-resource-tracking-with-ease)                                                                 | 2024 |
-| [Deploy Node.js on EC2](https://mahesh1215.hashnode.dev/from-github-to-aws-deploy-your-first-nodejs-app-on-ec2)                                                   | 2024 |
-| [CI/CD with Jenkins, SonarQube, Docker](https://mahesh1215.hashnode.dev/a-beginners-guide-to-setting-up-a-cicd-pipeline-with-jenkins-sonarqube-and-docker-on-aws) | 2024 |
-| [Docker Deployments with Jenkins & Ansible](https://mahesh1215.hashnode.dev/beginners-guide-automating-docker-deployments-with-jenkins-ansible-and-github)        | 2024 |
-
+*Unable to fetch blog feed*
 <!-- RECENT_BLOG:END -->
 
 > ✍️ **Full blog:** [mahesh1215.hashnode.dev](https://mahesh1215.hashnode.dev/)
