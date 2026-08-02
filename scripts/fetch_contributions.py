@@ -17,6 +17,71 @@ USERNAME = "mahesh-diwan"
 URL = f"https://github.com/users/{USERNAME}/contributions"
 
 
+def deduplicate_days(days):
+    """Sort and deduplicate contribution days by date, keeping max level.
+
+    Args:
+        days: List of dicts with ``date`` (str) and ``level`` (int) keys.
+
+    Returns:
+        Sorted list with duplicates removed (max level wins per date).
+    """
+    days.sort(key=lambda d: d["date"])
+    seen = {}
+    for d in days:
+        date = d["date"]
+        if date not in seen or d["level"] > seen[date]["level"]:
+            seen[date] = d
+    days = list(seen.values())
+    days.sort(key=lambda d: d["date"])
+    return days
+
+
+def compute_stats(days):
+    """Compute total, streaks, best day, and monthly totals.
+
+    Args:
+        days: List of dicts with ``date`` and ``level`` keys (sorted, deduped).
+
+    Returns:
+        Dict with ``total``, ``longest_streak``, ``current_streak``,
+        ``best_day``, and ``monthly_totals``.
+    """
+    total = sum(d["level"] for d in days)
+    longest_streak = 0
+    streak = 0
+    best_day = {"date": None, "level": 0}
+
+    for d in days:
+        if d["level"] > 0:
+            streak += 1
+            longest_streak = max(longest_streak, streak)
+        else:
+            streak = 0
+        if d["level"] > best_day["level"]:
+            best_day = d
+
+    current_streak = 0
+    for d in reversed(days):
+        if d["level"] > 0:
+            current_streak += 1
+        else:
+            break
+
+    monthly = {}
+    for d in days:
+        month = d["date"][:7]
+        monthly[month] = monthly.get(month, 0) + d["level"]
+
+    return {
+        "total": total,
+        "longest_streak": longest_streak,
+        "current_streak": current_streak,
+        "best_day": best_day,
+        "monthly_totals": monthly,
+    }
+
+
 def fetch():
     """Scrape the public GitHub contribution calendar and save to JSON.
 
@@ -78,48 +143,17 @@ def fetch():
         print(resp.text[:1000])
 
     # Sort and deduplicate
-    days.sort(key=lambda d: d["date"])
-    seen = {}
-    for d in days:
-        if d["date"] not in seen or d["level"] > seen[d["date"]]["level"]:
-            seen[d["date"]] = d
-    days = list(seen.values())
-    days.sort(key=lambda d: d["date"])
-
-    total = sum(d["level"] for d in days)
-    longest_streak = 0
-    streak = 0
-    best_day = {"date": None, "level": 0}
-
-    for d in days:
-        if d["level"] > 0:
-            streak += 1
-            longest_streak = max(longest_streak, streak)
-        else:
-            streak = 0
-        if d["level"] > best_day["level"]:
-            best_day = d
-
-    current_streak = 0
-    for d in reversed(days):
-        if d["level"] > 0:
-            current_streak += 1
-        else:
-            break
-
-    monthly = {}
-    for d in days:
-        month = d["date"][:7]
-        monthly[month] = monthly.get(month, 0) + d["level"]
+    days = deduplicate_days(days)
+    stats = compute_stats(days)
 
     data = {
         "username": USERNAME,
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "total_contributions": total,
-        "current_streak": current_streak,
-        "longest_streak": longest_streak,
-        "best_day": best_day,
-        "monthly_totals": monthly,
+        "total_contributions": stats["total"],
+        "current_streak": stats["current_streak"],
+        "longest_streak": stats["longest_streak"],
+        "best_day": stats["best_day"],
+        "monthly_totals": stats["monthly_totals"],
         "days": days,
     }
 

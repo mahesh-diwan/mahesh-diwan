@@ -23,6 +23,8 @@ jobs:
           path: ~/.u2net
           key: u2net-${{ runner.os }}
       - run: pip install -r scripts/requirements.txt
+      - name: Run smoke tests
+        run: python scripts/test_smoke.py && python scripts/test_fetch_contributions.py
       - name: Generate assets (with retry)
         run: |
           for script in prep_photo.py make_ascii_svg.py make_info_card.py fetch_contributions.py render_heatmap_svg.py; do

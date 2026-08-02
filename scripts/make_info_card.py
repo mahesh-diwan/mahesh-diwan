@@ -22,8 +22,6 @@ FG = "#c9d1d9"
 ACCENT = "#58a6ff"
 GREEN = "#3fb950"
 YELLOW = "#d29922"
-PURPLE = "#a371f7"
-RED = "#f85149"
 
 TITLE = "mahesh@neofetch:~ $ whoami"
 LINES = [
