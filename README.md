@@ -183,10 +183,9 @@ Yes — this README IS a repo (`<code>mahesh-diwan/mahesh-diwan</code>`). It aut
 ### `mahesh@github ~ $ profile --recent-releases`
 
 <!-- RECENT_RELEASES:START -->
-
-| Repo                                                   | Release                                                                   | Date       |
-| ------------------------------------------------------ | ------------------------------------------------------------------------- | ---------- |
-| [flexfetch](https://github.com/mahesh-diwan/flexfetch) | [v0.16.0](https://github.com/mahesh-diwan/flexfetch/releases/tag/v0.16.0) | 2026-07-31 |
+| Repo | Release | Date |
+|------|---------|------|
+| [flexfetch](https://github.com/mahesh-diwan/flexfetch) | [v0.18.0](https://github.com/mahesh-diwan/flexfetch/releases/tag/v0.18.0) | 2026-08-02 |
 
 <!-- RECENT_RELEASES:END -->
 
