@@ -40,17 +40,15 @@ This profile is **agent-readable**. If you're an LLM or agent, read
 ### `mahesh@github ~ $ cat ~/.ssh/authorized_keys`
 
 <p align="center">
-  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=linkedin&width=32&radius=8" alt="LinkedIn" /></a>
+  <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=linkedin&cr=3" width="32" alt="LinkedIn" /></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=github&width=32&radius=8" alt="GitHub" /></a>
+  <a href="https://github.com/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=github&cr=3" width="32" alt="GitHub" /></a>
   &nbsp;&nbsp;
-  <a href="https://x.com/mahesh_diwan1/"><img src="https://i.icoziv.workers.dev/icons?i=twitter&width=32&radius=8" alt="X / Twitter" /></a>
+  <a href="https://x.com/mahesh_diwan1/"><img src="https://i.icoziv.workers.dev/icons?i=twitter&cr=3" width="32" alt="X / Twitter" /></a>
   &nbsp;&nbsp;
-  <a href="https://www.instagram.com/mahesh_diwan1"><img src="https://i.icoziv.workers.dev/icons?i=instagram&width=32&radius=8" alt="Instagram" /></a>
+  <a href="https://www.instagram.com/mahesh_diwan1"><img src="https://i.icoziv.workers.dev/icons?i=instagram&cr=3" width="32" alt="Instagram" /></a>
   &nbsp;&nbsp;
-   <a href="https://mahesh1215.hashnode.dev/"><img src="https://i.icoziv.workers.dev/icons?i=hashnode&width=32&radius=8" alt="Blog" /></a>
-  &nbsp;&nbsp;
-  <a href="mailto:diwanmahesh11@gmail.com"><img src="https://i.icoziv.workers.dev/icons?i=gmail&width=32&radius=8" alt="Email" /></a>
+  <a href="https://mahesh1215.hashnode.dev/"><img src="https://i.icoziv.workers.dev/icons?i=hashnode&cr=3" width="32" alt="Blog" /></a>
 </p>
 
 ---
@@ -209,7 +207,7 @@ Yes — this README IS a repo (`<code>mahesh-diwan/mahesh-diwan</code>`). It aut
 ### `mahesh@github ~ $ which aws docker kubectl terraform`
 
 <p align="center">
-  <img src="https://i.icoziv.workers.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,githubactions,python,bash,go,prometheus,grafana,nginx,ansible,git,linux,ubuntu&perline=8" alt="Tech stack" />
+  <img src="https://i.icoziv.workers.dev/icons?i=aws,terraform,docker,kubernetes,jenkins,githubactions,python,bash,go,prometheus,grafana,nginx,ansible,git,linux,ubuntu&perline=8&cr=3" alt="Tech stack" />
 </p>
 
 <details>

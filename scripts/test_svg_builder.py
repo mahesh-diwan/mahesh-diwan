@@ -2,7 +2,7 @@
 """Tests for svg_builder.py — pure functions for shared SVG markup."""
 
 import pytest
-from svg_builder import svg_header, title_bar, background_rect, escape, THEME
+from svg_builder import THEME, background_rect, escape, svg_header, title_bar
 
 
 class TestEscape:

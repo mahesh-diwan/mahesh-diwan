@@ -1,63 +1,53 @@
 #!/usr/bin/env python3
 """Render GitHub contribution data as an animated SVG heatmap.
 
-Reads ``data/contributions.json`` (produced by ``fetch_contributions.py``)
-and writes an animated heatmap SVG to ``assets/contrib-heatmap.svg``.
-
-Each cell slides in with a staggered CSS animation. Includes a legend
-and total contribution count.
-
-Usage::
-
-    python scripts/render_heatmap_svg.py
+Reads contribution data and writes an animated heatmap SVG.
+Each cell slides in with a staggered CSS animation.
 """
 
 import json
-import os
-from datetime import datetime
+from datetime import datetime, timezone
+from pathlib import Path
 
-from svg_builder import background_rect, svg_header, title_bar
+from core.svg import background_rect, svg_header, title_bar
 
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
-
 CELL_W = 14
 CELL_H = 14
 CELL_GAP = 3
 WEEKS = 53
 DAYS = 7
 MARGIN = 24
-
 WIDTH = MARGIN * 2 + WEEKS * (CELL_W + CELL_GAP)
 HEIGHT = MARGIN * 2 + DAYS * (CELL_H + CELL_GAP) + 40 + 32
 
 
-def render():
-    """Build the contribution heatmap SVG from JSON data.
-
-    Reads contribution days, maps them to a week/day grid, and writes
-    an SVG with animated cells and a Less/More legend.
-
-    Raises:
-        FileNotFoundError: If ``data/contributions.json`` does not exist.
-    """
-    os.makedirs("data", exist_ok=True)
-    with open("data/contributions.json") as f:
-        data = json.load(f)
+def render(
+    data: dict | None = None, output_path: str = "assets/contrib-heatmap.svg"
+) -> None:
+    """Build the contribution heatmap SVG from JSON data."""
+    if data is None:
+        cache_path = Path("data/contributions.json")
+        if not cache_path.exists():
+            print("No contribution data; writing empty heatmap")
+            data = {"days": [], "total_contributions": 0}
+        else:
+            with open(cache_path) as f:
+                data = json.load(f)
 
     days = data.get("days", [])
     total = data.get("total_contributions", 0)
 
     if not days:
-        print("No contribution data; writing empty heatmap")
-        days = []
-        base_date = datetime.now()
+        base_date = datetime.now(timezone.utc)
     else:
-        base_date = datetime.strptime(days[0]["date"], "%Y-%m-%d")
+        base_date = datetime.strptime(days[0]["date"], "%Y-%m-%d").replace(
+            tzinfo=timezone.utc
+        )
 
     grid = [[0] * WEEKS for _ in range(DAYS)]
     for d in days:
-        dt = d["date"]
-        date_obj = datetime.strptime(dt, "%Y-%m-%d")
+        date_obj = datetime.strptime(d["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
         week = (date_obj - base_date).days // 7
         dow = date_obj.weekday()
         if 0 <= week < WEEKS and 0 <= dow < DAYS:
@@ -107,7 +97,6 @@ def render():
     svg_parts.append(
         f'<text x="{MARGIN + 35 + len(PALETTE) * 18 + 6}" y="{legend_y}" fill="#8b949e" font-size="11">More</text>'
     )
-
     svg_parts.append(
         f'<text x="{WIDTH - MARGIN}" y="{legend_y}" fill="#8b949e" font-size="11" '
         f'text-anchor="end">{total:,} contributions in the last year</text>'
@@ -115,10 +104,11 @@ def render():
 
     svg_parts.append("</svg>")
 
-    with open("assets/contrib-heatmap.svg", "w") as f:
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w") as f:
         f.write("\n".join(svg_parts))
 
-    print("Wrote assets/contrib-heatmap.svg")
+    print(f"Wrote {output_path}")
 
 
 if __name__ == "__main__":

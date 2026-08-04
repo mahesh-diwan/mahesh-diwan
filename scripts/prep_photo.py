@@ -7,6 +7,7 @@ Uses rembg for background removal + OpenCV CLAHE for local contrast.
 
 import os
 import sys
+
 import cv2
 import numpy as np
 from PIL import Image, ImageOps

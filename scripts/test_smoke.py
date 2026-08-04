@@ -24,9 +24,11 @@ def test_imports():
     """Core modules must import cleanly (skips runtime deps like bs4/rembg)."""
     # These only use stdlib + pillow/numpy which are always available
     sys.path.insert(0, REPO_ROOT)
-    from scripts.make_ascii_svg import make_ascii, RAMP
-    from scripts.make_info_card import render as info_render, escape, LINES
-    from scripts.render_heatmap_svg import render as heatmap_render, PALETTE
+    from scripts.make_ascii_svg import RAMP, make_ascii
+    from scripts.make_info_card import LINES, escape
+    from scripts.make_info_card import render as info_render
+    from scripts.render_heatmap_svg import PALETTE
+    from scripts.render_heatmap_svg import render as heatmap_render
 
     assert len(RAMP) > 0, "RAMP is empty"
     assert len(PALETTE) > 0, "PALETTE is empty"

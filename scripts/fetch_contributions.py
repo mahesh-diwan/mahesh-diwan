@@ -161,7 +161,7 @@ def fetch():
         json.dump(data, f, indent=2)
 
     print(
-        f"Fetched {len(days)} days, total={total}, longest_streak={longest_streak}, current_streak={current_streak}"
+        f"Fetched {len(days)} days, total={stats['total']}, longest_streak={stats['longest_streak']}, current_streak={stats['current_streak']}"
     )
 
 

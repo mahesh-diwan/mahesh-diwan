@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: "35 6 * * *" # ~06:35 UTC daily (after other workflows)
   workflow_dispatch:
+  workflow_call:
 
 permissions:
   contents: write
@@ -136,7 +137,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main || true
+          git pull --rebase origin main
           git add README.md
           git commit -m "chore: update README dynamic sections [skip ci]" --author="mahesh-diwan <91125460+mahesh-diwan@users.noreply.github.com>" || echo "No changes to commit"
           git push origin HEAD:main

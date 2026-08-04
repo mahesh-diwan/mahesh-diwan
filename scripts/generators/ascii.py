@@ -3,44 +3,29 @@
 
 Reads a grayscale PNG, maps pixel brightness to ASCII characters, and
 writes an SVG with per-row clip-path reveal animation and a moving cursor.
-
-Usage::
-
-    python scripts/make_ascii_svg.py
 """
 
+from pathlib import Path
+
 import numpy as np
+from core.svg import background_rect, escape, svg_header, title_bar
+from core.theme import THEME
 from PIL import Image
-from svg_builder import background_rect, escape, svg_header, title_bar
 
 RAMP = " .`:-=+*cs#%@"
+CHAR_W = 8
+CHAR_H = 14
 
 
-def make_ascii(
-    input_path="assets/source-prepped.png",
-    output_path="assets/mahesh-ascii.svg",
-    width_chars=70,
-):
-    """Generate an animated ASCII SVG from a grayscale image.
-
-    Each row is revealed via a clip-path animation with a moving cursor
-    dot, producing a terminal "typing" effect.
-
-    Args:
-        input_path: Path to the prepped grayscale PNG.
-        output_path: Where to write the output SVG.
-        width_chars: Character width of the ASCII grid. Height is
-            computed to preserve aspect ratio.
-    """
+def render(
+    input_path: str = "assets/source-prepped.png",
+    output_path: str = "assets/mahesh-ascii.svg",
+    width_chars: int = 70,
+) -> None:
+    """Generate an animated ASCII SVG from a grayscale image."""
     img = Image.open(input_path).convert("L")
-
-    ramp = RAMP
-
-    char_w = 8
-    char_h = 14
     w, h = img.size
-    # Correct aspect ratio calculations based on font width/height
-    height_chars = int((h / w) * width_chars * (char_w / char_h))
+    height_chars = int((h / w) * width_chars * (CHAR_W / CHAR_H))
     img = img.resize((width_chars, height_chars), Image.LANCZOS)
     pixels = np.array(img)
 
@@ -48,13 +33,13 @@ def make_ascii(
     for row in pixels:
         ascii_row = ""
         for pixel in row:
-            idx = int((pixel / 255) * (len(ramp) - 1))
-            idx = max(0, min(idx, len(ramp) - 1))
-            ascii_row += ramp[idx]
+            idx = int((pixel / 255) * (len(RAMP) - 1))
+            idx = max(0, min(idx, len(RAMP) - 1))
+            ascii_row += RAMP[idx]
         ascii_rows.append(ascii_row)
 
-    svg_w = width_chars * char_w + 40
-    svg_h = height_chars * char_h + 40 + 32
+    svg_w = width_chars * CHAR_W + 40
+    svg_h = height_chars * CHAR_H + 40 + 32
 
     svg_parts = [
         svg_header(
@@ -65,9 +50,9 @@ def make_ascii(
                 "    .ascii-text { font-size: 12px; fill: url(#ascii-gradient); font-weight: bold; }\n"
                 "  </style>\n"
                 '  <linearGradient id="ascii-gradient" x1="0%" y1="0%" x2="0%" y2="100%">\n'
-                '    <stop offset="0%" stop-color="#58a6ff" />\n'
+                f'    <stop offset="0%" stop-color="{THEME.cyan}" />\n'
                 '    <stop offset="50%" stop-color="#ab7df8" />\n'
-                '    <stop offset="100%" stop-color="#3fb950" />\n'
+                f'    <stop offset="100%" stop-color="{THEME.green}" />\n'
                 "  </linearGradient>"
             ),
         ),
@@ -76,14 +61,14 @@ def make_ascii(
     ]
 
     for i, row in enumerate(ascii_rows):
-        y = 24 + 32 + i * char_h
+        y = 24 + 32 + i * CHAR_H
         clip_id = f"clip_{i}"
         delay = i * 0.06
         duration = 0.5
 
         svg_parts.append(f'<clipPath id="{clip_id}">')
         svg_parts.append(
-            f'  <rect x="0" y="{y - char_h}" width="{svg_w}" height="{char_h + 2}">'
+            f'  <rect x="0" y="{y - CHAR_H}" width="{svg_w}" height="{CHAR_H + 2}">'
         )
         svg_parts.append(
             f'    <animate attributeName="width" from="0" to="{svg_w}" begin="{delay}s" dur="{duration}s" fill="freeze"/>'
@@ -97,7 +82,7 @@ def make_ascii(
         )
 
         cursor_x = svg_w - 20
-        svg_parts.append('<circle r="2" fill="#58a6ff" opacity="0">')
+        svg_parts.append(f'<circle r="2" fill="{THEME.cyan}" opacity="0">')
         svg_parts.append(
             f'  <animate attributeName="cx" from="20" to="{cursor_x}" begin="{delay}s" dur="{duration}s" fill="freeze"/>'
         )
@@ -111,6 +96,7 @@ def make_ascii(
 
     svg_parts.append("</svg>")
 
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w") as f:
         f.write("\n".join(svg_parts))
 
@@ -118,4 +104,4 @@ def make_ascii(
 
 
 if __name__ == "__main__":
-    make_ascii()
+    render()

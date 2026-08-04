@@ -1,0 +1,95 @@
+name: Profile Orchestrator
+
+on:
+  schedule:
+    - cron: "17 6 * * *" # Once daily at 06:17 UTC
+  workflow_dispatch:
+    inputs:
+      skip_cache:
+        description: "Skip cache and force refresh"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    outputs:
+      assets_hash: ${{ steps.hash.outputs.assets_hash }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cache rembg model
+        uses: actions/cache@v4
+        with:
+          path: ~/.u2net
+          key: u2net-${{ runner.os }}
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run tests
+        run: pytest scripts/tests/ -v
+
+      - name: Generate all assets
+        run: |
+          cd scripts
+          python -m scripts build
+
+      - name: Validate SVGs
+        run: |
+          for svg in assets/*.svg; do
+            if [ ! -s "$svg" ]; then
+              echo "ERROR: $svg is empty" && exit 1
+            fi
+            if ! grep -q "<svg" "$svg"; then
+              echo "ERROR: $svg is not valid SVG" && exit 1
+            fi
+          done
+
+      - name: Hash outputs
+        id: hash
+        run: echo "assets_hash=${{ hashFiles('assets/*', 'data/*') }}" >> $GITHUB_OUTPUT
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-assets
+          path: |
+            assets/
+            data/
+          retention-days: 1
+
+  deploy:
+    needs: generate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: generated-assets
+          path: ./
+
+      - name: Rebase before commit
+        run: git pull --rebase origin main
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/ data/
+          git diff --staged --quiet || git commit -m "chore: refresh profile art [skip ci]"
+          git push

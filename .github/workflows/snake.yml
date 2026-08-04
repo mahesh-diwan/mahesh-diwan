@@ -3,7 +3,8 @@ name: Generate Snake
 on:
   schedule:
     - cron: "30 6 * * *" # daily ~06:30 UTC
-  workflow_dispatch: {}
+  workflow_dispatch:
+  workflow_call:
 
 permissions:
   contents: write

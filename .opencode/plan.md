@@ -34,3 +34,15 @@ Source: Research of 10 exemplary GitHub profiles + audit of mahesh-diwan profile
 - ✅ Activity section added (metrics.svg with title `cat /dev/activity`)
 - ✅ Static contribution blocks removed (the monthly table)
 - ✅ icoziv icons adopted for social + tech
+- ✅ Trophy section removed (API 402)
+- ✅ Quote theme fixed to `dark`
+- ✅ Metrics deduplicated (removed `cat /dev/activity` duplicate)
+- ✅ CI health badge added
+- ✅ Now section added
+- ✅ Blog auto-update via Hashnode RSS in update-readme.yml
+- ✅ Actions hardened (retry logic 3x/30s, SVG validation, dual schedule)
+- ✅ Workflow race condition fixed (git pull --rebase before commit)
+- ✅ Pure functions extracted from fetch_contributions.py (deduplicate_days, compute_stats)
+- ✅ SVG builder module (svg_builder.py) with svg_header(), title_bar(), background_rect()
+- ✅ 18+7 tests in test_svg_builder.py + test_fetch_contributions.py
+- ✅ Dead constants removed from make_info_card.py
