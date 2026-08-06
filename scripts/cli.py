@@ -22,7 +22,6 @@ def cmd_build(args):
     from generators.activity import render as render_activity
     from generators.header import render as render_header
     from generators.heatmap import render as render_heatmap
-    from generators.rpg_card import render as render_rpg
 
     assets_dir = Path("assets")
     assets_dir.mkdir(exist_ok=True)
@@ -32,8 +31,6 @@ def cmd_build(args):
     if target in (None, "heatmap"):
         data = fetch()
         render_heatmap(data)
-    if target in (None, "rpg_card"):
-        render_rpg()
     if target in (None, "header"):
         render_header()
     if target in (None, "activity"):
@@ -59,9 +56,7 @@ def main():
     sub = parser.add_subparsers(dest="command")
 
     build_p = sub.add_parser("build", help="Generate assets")
-    build_p.add_argument(
-        "target", nargs="?", choices=["heatmap", "rpg_card", "header", "activity"]
-    )
+    build_p.add_argument("target", nargs="?", choices=["heatmap", "header", "activity"])
 
     sub.add_parser("fetch", help="Fetch contribution data")
     sub.add_parser("test", help="Run tests")

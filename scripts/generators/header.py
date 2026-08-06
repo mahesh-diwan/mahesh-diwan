@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 """Generate the fused profile header SVG.
 
-Replaces the old whoami table (mahesh-ascii.svg + info-card.svg): one compact
-banner with a block-art avatar tile, name, class · rarity, tagline,
+One compact banner: block-art avatar tile, name, class · rarity, tagline,
 achievement pills, and LVL / COMMITS / STREAK chips.
 """
 
+import math
 from pathlib import Path
 
 from core.achievements import compute_achievements
 from core.github import fetch_profile
 from core.svg import background_rect, escape, svg_header
 from core.theme import THEME
-from generators.rpg_card import compute_character
 
 WIDTH = 760
 HEIGHT = 170
@@ -24,6 +23,106 @@ AVATAR_ART = [
     "▚▞▚▞",
     "▞▚▞▚",
 ]
+
+# === Class system (by primary language) ===
+CLASSES = {
+    "Python": ("Automancer", "Spellcaster who bends automation to their will"),
+    "Bash": ("Scriptlord", "Master of shell incantations"),
+    "Go": ("Gopher Knight", "Fast, concurrent warrior"),
+    "JavaScript": ("Web Weaver", "Crafts interactive experiences"),
+    "TypeScript": ("Type Sage", "Strongly typed sorcerer"),
+    "HTML": ("Markup Mage", "Architect of structure"),
+    "CSS": ("Style Oracle", "Weaver of visual magic"),
+    "Dockerfile": ("Container Mage", "Encapsulates worlds in layers"),
+    "YAML": ("Config Whisper", "Shapes infrastructure with words"),
+    "HCL": ("Terraform Architect", "Builds clouds from code"),
+    "Shell": ("Scriptlord", "Master of shell incantations"),
+    "Makefile": ("Build Master", "Orchestrates compilation"),
+    "Java": ("Bytecode Paladin", "Cross-platform champion"),
+    "C++": ("Memory Wizard", "Direct hardware whisperer"),
+    "Rust": ("Iron Guardian", "Safe and fearless"),
+    "Ruby": ("Gem Sorcerer", "Elegant magic"),
+    "PHP": ("Web Alchemist", "Server-side transmuter"),
+}
+
+DEFAULT_CLASS = ("DevOps Sentinel", "Guardian of pipelines and clouds")
+
+# === Rarity tiers (by level) ===
+RARITIES = [
+    (1, "Common", THEME.rarity_common),
+    (10, "Rare", THEME.rarity_rare),
+    (25, "Epic", THEME.rarity_epic),
+    (50, "Legendary", THEME.rarity_legendary),
+    (100, "Mythic", THEME.rarity_mythic),
+]
+
+
+def _get_rarity(level: int) -> tuple[str, str]:
+    """Return (name, color) for the given level."""
+    result = (RARITIES[0][1], RARITIES[0][2])
+    for threshold, name, color in RARITIES:
+        if level >= threshold:
+            result = (name, color)
+    return result
+
+
+def _get_class(primary_lang: str) -> tuple[str, str]:
+    """Return (class_name, description) for the given language."""
+    return CLASSES.get(primary_lang, DEFAULT_CLASS)
+
+
+def compute_character(profile: dict) -> dict:
+    """Compute character stats (class, rarity, level) from GitHub profile data."""
+    commits = profile["commits"]
+    prs = profile["merged_prs"]
+    reviews = profile["reviews"]
+    issues = profile["closed_issues"]
+    repos = profile["repos"]
+    stars = profile["stars"]
+    followers = profile["followers"]
+    streak = profile["current_streak"]
+    years = profile["years"]
+
+    craft_xp = commits * 10 + issues * 30 + prs * 65 + reviews * 40 + repos * 120
+    tenure_mult = 1 + min(years, 15) * 0.05
+    combo_mult = 1 + min(streak, 365) / 365 * 0.25
+    streak_xp = streak * 8
+    fame_xp = min(40000, 48 * math.sqrt(followers + stars))
+
+    total_xp = craft_xp * tenure_mult * combo_mult + streak_xp + fame_xp
+    level = int(math.sqrt(total_xp / 100))
+
+    next_level_xp = ((level + 1) ** 2) * 100
+    prev_level_xp = (level**2) * 100
+    xp_in_level = total_xp - prev_level_xp
+    xp_needed = next_level_xp - prev_level_xp
+    progress = min(xp_in_level / xp_needed, 1.0) if xp_needed > 0 else 1.0
+
+    class_name, class_desc = _get_class(profile["primary_language"])
+    rarity_name, rarity_color = _get_rarity(level)
+
+    return {
+        "name": profile["name"],
+        "login": profile["login"],
+        "class_name": class_name,
+        "class_desc": class_desc,
+        "level": level,
+        "total_xp": int(total_xp),
+        "progress": progress,
+        "rarity": rarity_name,
+        "rarity_color": rarity_color,
+        "commits": commits,
+        "prs": prs,
+        "reviews": reviews,
+        "issues": issues,
+        "repos": repos,
+        "stars": stars,
+        "followers": followers,
+        "streak": streak,
+        "longest_streak": profile["longest_streak"],
+        "primary_language": profile["primary_language"],
+        "languages": profile["languages"],
+    }
 
 
 def _fade(delay: float) -> str:
@@ -75,7 +174,7 @@ def _pill(x: float, y: float, achievement: dict) -> str:
 
 
 def _tagline(char: dict) -> str:
-    langs = [lang["name"] for lang in char.get("languages") or []][:3]
+    langs = [lang.get("name") for lang in char.get("languages") or []][:3]
     desc = char.get("class_desc") or ""
     if langs:
         return " / ".join(langs) + " — " + desc

@@ -78,7 +78,7 @@ def build_svg(lines: list[str]) -> str:
         parts.append(
             f'<text x="20" y="{56 + i * 24}" fill="{THEME.muted}" font-size="12">'
             f'<animate attributeName="opacity" from="0" to="1" dur="0.3s" '
-            f'begin="{0.2 + i * 0.2}s" fill="freeze"/>'
+            f'begin="{0.2 + i * 0.2:.1f}s" fill="freeze"/>'
             f"{escape(line)}</text>"
         )
     parts.append("</svg>")

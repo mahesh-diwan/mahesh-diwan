@@ -18,7 +18,9 @@ ACHIEVEMENTS = [
 
 
 def _cloud_lang_count(profile: dict) -> int:
-    langs = {lang["name"] for lang in profile.get("languages") or []}
+    langs = {
+        lang.get("name") for lang in profile.get("languages") or [] if lang.get("name")
+    }
     return len(langs & CLOUD_LANGS)
 
 
