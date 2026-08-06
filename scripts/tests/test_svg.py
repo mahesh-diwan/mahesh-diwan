@@ -27,9 +27,10 @@ class TestSvgHeader:
         h = svg_header(100, 50)
         assert 'viewBox="0 0 100 50"' in h
 
-    def test_font_import(self):
+    def test_font_no_external_import(self):
         h = svg_header(100, 50)
-        assert "fonts.googleapis.com" in h
+        assert "fonts.googleapis.com" not in h
+        assert "@import" not in h
 
     def test_extra_defs(self):
         h = svg_header(100, 50, extra_defs="  .test { fill: red; }")

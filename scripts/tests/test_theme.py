@@ -19,6 +19,7 @@ def test_theme_colors_are_hex():
         assert len(val) == 7, f"{attr} should be 7 chars"
 
 
-def test_font_css_contains_import():
-    assert "fonts.googleapis.com" in THEME.font_css
+def test_font_css_has_no_external_import():
+    assert "fonts.googleapis.com" not in THEME.font_css
+    assert "@import" not in THEME.font_css
     assert "Fragment Mono" in THEME.font_css

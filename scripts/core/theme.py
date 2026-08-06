@@ -40,10 +40,9 @@ class Theme:
 
     @property
     def font_css(self) -> str:
-        return (
-            f'    @import url("{self.font_url}");\n'
-            f"    text {{ font-family: {self.font_stack}; }}"
-        )
+        # No external @import: GitHub's <img> renderer blocks external
+        # resources and fails to decode the SVG entirely when one is present.
+        return f"    text {{ font-family: {self.font_stack}; }}"
 
 
 THEME = Theme()

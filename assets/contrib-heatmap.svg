@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="949" height="239" viewBox="0 0 949 239">
   <defs>
-        @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fragment+Mono:wght@400;500;700&display=swap");
-    text { font-family: "Fragment Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+        text { font-family: "Fragment Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
   </defs>
 
 <rect width="949" height="239" fill="#0d1117" rx="8"/>
