@@ -35,7 +35,7 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Run tests
-        run: pytest scripts/tests/ -v
+        run: python -m pytest scripts/tests/ -v
 
       - name: Generate all assets
         run: |
