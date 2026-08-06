@@ -38,11 +38,10 @@ jobs:
         run: python -m pytest scripts/tests/ -v
 
       - name: Generate all assets
-        run: |
-          cd scripts
-          python -m scripts build
+        run: python -m scripts build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PYTHONPATH: scripts
 
       - name: Generate Pac-Man contribution graph
         uses: abozanona/pacman-contribution-graph@main
