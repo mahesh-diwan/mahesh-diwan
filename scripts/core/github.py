@@ -1,7 +1,7 @@
 """GitHub API client with retries and caching.
 
 Wraps contribution fetching with proper error handling, retries,
-and local cache fallback.
+and local cache fallback. Also provides GraphQL profile queries.
 """
 
 import json
@@ -16,6 +16,47 @@ from bs4 import BeautifulSoup
 USERNAME = "mahesh-diwan"
 URL = f"https://github.com/users/{USERNAME}/contributions"
 CACHE_PATH = Path("data/contributions.json")
+GRAPHQL_URL = "https://api.github.com/graphql"
+
+PROFILE_QUERY = """
+query gitlevel($login: String!, $seasonFrom: DateTime!, $seasonTo: DateTime!) {
+  user(login: $login) {
+    name
+    login
+    createdAt
+    followers { totalCount }
+    contributionsCollection {
+      totalCommitContributions
+      restrictedContributionsCount
+      totalPullRequestReviewContributions
+      contributionCalendar {
+        weeks {
+          contributionDays { date contributionCount }
+        }
+      }
+    }
+    season: contributionsCollection(from: $seasonFrom, to: $seasonTo) {
+      totalCommitContributions
+      restrictedContributionsCount
+      totalPullRequestContributions
+      totalPullRequestReviewContributions
+      totalIssueContributions
+      totalRepositoryContributions
+    }
+    mergedPRs: pullRequests(states: MERGED) { totalCount }
+    closedIssues: issues(states: CLOSED) { totalCount }
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false, orderBy: { field: STARGAZERS, direction: DESC }) {
+      totalCount
+      nodes {
+        stargazers { totalCount }
+        languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
+          edges { size node { name color } }
+        }
+      }
+    }
+  }
+}
+"""
 
 
 def _retry_get(
@@ -169,4 +210,131 @@ def _compute_stats(days: list[dict]) -> dict:
         "current_streak": current_streak,
         "best_day": best_day,
         "monthly_totals": monthly,
+    }
+
+
+def fetch_profile(token: str | None = None) -> dict:
+    """Fetch full GitHub profile via GraphQL for RPG card generation.
+
+    Returns dict with user data: name, login, createdAt, followers, commits,
+    mergedPRs, closedIssues, repos, stars, languages, streak, etc.
+    Falls back to REST API if no token provided.
+    """
+    token = token or os.environ.get("GITHUB_TOKEN", "")
+    now = datetime.now(timezone.utc)
+    season_from = now.replace(year=now.year - 1).isoformat()
+    season_to = now.isoformat()
+
+    if token:
+        headers = {
+            "Authorization": f"bearer {token}",
+            "Content-Type": "application/json",
+        }
+        payload = {
+            "query": PROFILE_QUERY,
+            "variables": {
+                "login": USERNAME,
+                "seasonFrom": season_from,
+                "seasonTo": season_to,
+            },
+        }
+        try:
+            resp = requests.post(GRAPHQL_URL, json=payload, headers=headers, timeout=30)
+            resp.raise_for_status()
+            data = resp.json()
+            if "errors" in data:
+                print(f"GraphQL errors: {data['errors']}")
+                return _fallback_profile()
+            return _parse_profile(data["data"]["user"])
+        except Exception as e:
+            print(f"GraphQL fetch failed: {e}")
+            return _fallback_profile()
+    else:
+        print("No GITHUB_TOKEN, using REST fallback")
+        return _fallback_profile()
+
+
+def _parse_profile(user: dict) -> dict:
+    """Parse GraphQL response into flat dict for RPG card."""
+    contrib = user["contributionsCollection"]
+    season = user["season"]
+    cal = contrib["contributionCalendar"]
+
+    # Compute streak from contribution calendar
+    days = []
+    for week in cal["weeks"]:
+        for day in week["contributionDays"]:
+            days.append({"date": day["date"], "count": day["contributionCount"]})
+
+    current_streak = 0
+    for d in reversed(days):
+        if d["count"] > 0:
+            current_streak += 1
+        else:
+            break
+
+    longest_streak = 0
+    streak = 0
+    for d in days:
+        if d["count"] > 0:
+            streak += 1
+            longest_streak = max(longest_streak, streak)
+        else:
+            streak = 0
+
+    # Aggregate languages from top repos
+    lang_bytes: dict[str, int] = {}
+    total_stars = 0
+    for repo in user["repositories"]["nodes"]:
+        total_stars += repo["stargazers"]["totalCount"]
+        for edge in repo["languages"]["edges"]:
+            name = edge["node"]["name"]
+            lang_bytes[name] = lang_bytes.get(name, 0) + edge["size"]
+
+    top_langs = sorted(lang_bytes.items(), key=lambda x: -x[1])
+    primary_lang = top_langs[0][0] if top_langs else "Unknown"
+
+    commits = (
+        contrib["totalCommitContributions"] + contrib["restrictedContributionsCount"]
+    )
+
+    # Account age in years
+    created = datetime.fromisoformat(user["createdAt"].replace("Z", "+00:00"))
+    years = (now - created).days / 365.25
+
+    return {
+        "name": user["name"] or user["login"],
+        "login": user["login"],
+        "commits": commits,
+        "merged_prs": user["mergedPRs"]["totalCount"],
+        "reviews": contrib["totalPullRequestReviewContributions"],
+        "closed_issues": user["closedIssues"]["totalCount"],
+        "repos": user["repositories"]["totalCount"],
+        "stars": total_stars,
+        "followers": user["followers"]["totalCount"],
+        "current_streak": current_streak,
+        "longest_streak": longest_streak,
+        "languages": [{"name": n, "bytes": b} for n, b in top_langs[:5]],
+        "primary_language": primary_lang,
+        "years": round(years, 1),
+    }
+
+
+def _fallback_profile() -> dict:
+    """Minimal profile when GraphQL is unavailable."""
+    return {
+        "name": "Mahesh Diwan",
+        "login": USERNAME,
+        "commits": 0,
+        "merged_prs": 0,
+        "reviews": 0,
+        "closed_issues": 0,
+        "repos": 0,
+        "stars": 0,
+        "followers": 0,
+        "current_streak": 0,
+        "longest_streak": 0,
+        "languages": [],
+        "primary_language": "Unknown",
+        "years": 0,
     }

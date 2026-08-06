@@ -28,6 +28,16 @@ class Theme:
         "&display=swap"
     )
 
+    # RPG card tokens
+    glow: str = "#00D4FF"
+    xp_fill: str = "#00D4FF"
+    xp_bg: str = "#21262d"
+    rarity_common: str = "#8b949e"
+    rarity_rare: str = "#58a6ff"
+    rarity_epic: str = "#a371f7"
+    rarity_legendary: str = "#f0883e"
+    rarity_mythic: str = "#ff7b72"
+
     @property
     def font_css(self) -> str:
         return (

@@ -22,6 +22,7 @@ def cmd_build(args):
     from generators.ascii import render as render_ascii
     from generators.heatmap import render as render_heatmap
     from generators.infocard import render as render_infocard
+    from generators.rpg_card import render as render_rpg
 
     assets_dir = Path("assets")
     assets_dir.mkdir(exist_ok=True)
@@ -35,6 +36,8 @@ def cmd_build(args):
     if target in (None, "heatmap"):
         data = fetch()
         render_heatmap(data)
+    if target in (None, "rpg_card"):
+        render_rpg()
 
 
 def cmd_fetch(args):
@@ -56,7 +59,9 @@ def main():
     sub = parser.add_subparsers(dest="command")
 
     build_p = sub.add_parser("build", help="Generate assets")
-    build_p.add_argument("target", nargs="?", choices=["ascii", "infocard", "heatmap"])
+    build_p.add_argument(
+        "target", nargs="?", choices=["ascii", "infocard", "heatmap", "rpg_card"]
+    )
 
     sub.add_parser("fetch", help="Fetch contribution data")
     sub.add_parser("test", help="Run tests")

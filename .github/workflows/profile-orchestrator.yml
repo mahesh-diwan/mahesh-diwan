@@ -41,6 +41,20 @@ jobs:
         run: |
           cd scripts
           python -m scripts build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Pac-Man contribution graph
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          games: "pacman"
+          hide_month_labels: "false"
+
+      - name: Copy Pac-Man SVGs to assets
+        run: |
+          cp dist/pacman.svg assets/pacman.svg 2>/dev/null || true
+          cp dist/pacman-dark.svg assets/pacman-dark.svg 2>/dev/null || true
 
       - name: Validate SVGs
         run: |
