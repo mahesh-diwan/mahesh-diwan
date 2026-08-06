@@ -10,3 +10,6 @@ github-metrics.svg
 # playwright session artifacts
 .playwright-mcp/
 profile-full.png
+
+# brainstorm mockups
+.superpowers/
