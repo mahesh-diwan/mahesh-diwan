@@ -97,7 +97,10 @@ jobs:
           path: ./
 
       - name: Rebase before commit
-        run: git pull --rebase origin main
+        run: |
+          git stash
+          git pull --rebase origin main
+          git stash pop || true
 
       - name: Commit if changed
         run: |
