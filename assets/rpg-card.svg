@@ -2,31 +2,31 @@
   <defs>
         @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fragment+Mono:wght@400;500;700&display=swap");
     text { font-family: "Fragment Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><style>  @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }  @keyframes barGrow { from{width:0} }  @keyframes fadeSlide { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }  .stat { animation: fadeSlide 0.4s ease-out forwards; opacity: 0; }  .bar-fill { animation: barGrow 1s ease-out forwards; }  .glow { animation: pulse 2s ease-in-out infinite; }</style>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
 
 <rect width="500" height="320" fill="#0d1117" rx="8"/>
 <rect x="0" y="0" width="500" height="32" fill="#161b22" rx="8"/><text x="250" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@github:~ $ cat ~/.class</text>
-<text x="20" y="60" fill="#c9d1d9" font-size="20" font-weight="bold" class="stat" style="animation-delay:0.1s">Mahesh Diwan</text>
-<text x="20" y="80" fill="#8b949e" font-size="13" font-weight="bold" class="stat" style="animation-delay:0.2s">DevOps Sentinel — Level 0</text>
-<text x="20" y="98" fill="#8b949e" font-size="11" class="stat" style="animation-delay:0.25s">Guardian of pipelines and clouds</text>
-<rect x="400" y="45" width="80" height="24" rx="12" fill="#8b949e" opacity="0.2" class="glow"/><text x="440" y="61" fill="#8b949e" font-size="11" font-weight="bold" text-anchor="middle">Common</text>
+<text x="20" y="60" fill="#c9d1d9" font-size="20" font-weight="bold"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.1s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.1s" fill="freeze"/>Mahesh Diwan</text>
+<text x="20" y="80" fill="#8b949e" font-size="13" font-weight="bold"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.2s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.2s" fill="freeze"/>DevOps Sentinel — Level 0</text>
+<text x="20" y="98" fill="#8b949e" font-size="11"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.25s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.25s" fill="freeze"/>Guardian of pipelines and clouds</text>
+<rect x="400" y="45" width="80" height="24" rx="12" fill="#8b949e" opacity="0.2"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/></rect><text x="440" y="61" fill="#8b949e" font-size="11" font-weight="bold" text-anchor="middle">Common</text>
 <text x="20" y="124" fill="#8b949e" font-size="11">XP 0 / 100</text>
 <rect x="20" y="130" width="460" height="16" rx="4" fill="#21262d"/>
-<rect x="20" y="130" width="0" height="16" rx="4" fill="#00D4FF" class="bar-fill" filter="url(#glow)"/>
+<rect x="20" y="130" width="0" height="16" rx="4" fill="#00D4FF" filter="url(#glow)"><animate attributeName="width" from="0" to="0" dur="1s" begin="0.1s" fill="freeze"/></rect>
 <text x="476" y="142" fill="#c9d1d9" font-size="10" text-anchor="end">0%</text>
-<text x="20" y="170" fill="#8b949e" font-size="11" class="stat" style="animation-delay:0.3s">Commits</text>
-<text x="160" y="170" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end" class="stat" style="animation-delay:0.35s">0</text>
-<text x="260" y="170" fill="#8b949e" font-size="11" class="stat" style="animation-delay:0.35s">PRs Merged</text>
-<text x="400" y="170" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end" class="stat" style="animation-delay:0.39999999999999997s">0</text>
-<text x="20" y="192" fill="#8b949e" font-size="11" class="stat" style="animation-delay:0.4s">Reviews</text>
-<text x="160" y="192" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end" class="stat" style="animation-delay:0.45s">0</text>
-<text x="260" y="192" fill="#8b949e" font-size="11" class="stat" style="animation-delay:0.45s">Issues</text>
-<text x="400" y="192" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end" class="stat" style="animation-delay:0.5s">0</text>
-<text x="20" y="214" fill="#8b949e" font-size="11" class="stat" style="animation-delay:0.5s">Repos</text>
-<text x="160" y="214" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end" class="stat" style="animation-delay:0.55s">0</text>
-<text x="260" y="214" fill="#8b949e" font-size="11" class="stat" style="animation-delay:0.55s">Stars</text>
-<text x="400" y="214" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end" class="stat" style="animation-delay:0.6000000000000001s">0</text>
+<text x="20" y="170" fill="#8b949e" font-size="11"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.3s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.3s" fill="freeze"/>Commits</text>
+<text x="160" y="170" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.35s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.35s" fill="freeze"/>0</text>
+<text x="260" y="170" fill="#8b949e" font-size="11"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.35s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.35s" fill="freeze"/>PRs Merged</text>
+<text x="400" y="170" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.39999999999999997s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.39999999999999997s" fill="freeze"/>0</text>
+<text x="20" y="192" fill="#8b949e" font-size="11"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.4s" fill="freeze"/>Reviews</text>
+<text x="160" y="192" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.45s" fill="freeze"/>0</text>
+<text x="260" y="192" fill="#8b949e" font-size="11"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.45s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.45s" fill="freeze"/>Issues</text>
+<text x="400" y="192" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.5s" fill="freeze"/>0</text>
+<text x="20" y="214" fill="#8b949e" font-size="11"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.5s" fill="freeze"/>Repos</text>
+<text x="160" y="214" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.55s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.55s" fill="freeze"/>0</text>
+<text x="260" y="214" fill="#8b949e" font-size="11"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.55s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.55s" fill="freeze"/>Stars</text>
+<text x="400" y="214" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="end"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.6000000000000001s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" dur="0.4s" begin="0.6000000000000001s" fill="freeze"/>0</text>
 <text x="20" y="220" fill="#8b949e" font-size="11">Streak: 0d current / 0d best</text>
 <text x="250" y="308" fill="#8b949e" font-size="9" text-anchor="middle">Generated from mahesh-diwan's GitHub activity</text>
 </svg>

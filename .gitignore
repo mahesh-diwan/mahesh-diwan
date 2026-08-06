@@ -5,3 +5,8 @@ __pycache__/
 assets/source-prepped.png
 .playwright-cli/
 github-metrics.svg
+.playwright-mcp/
+
+# playwright session artifacts
+.playwright-mcp/
+profile-full.png

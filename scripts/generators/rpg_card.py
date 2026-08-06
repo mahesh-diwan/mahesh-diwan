@@ -60,6 +60,16 @@ def _get_class(primary_lang: str) -> tuple[str, str]:
     return CLASSES.get(primary_lang, DEFAULT_CLASS)
 
 
+def _fade(delay: float) -> str:
+    """SMIL fade-in + slide-up animation for a text element."""
+    return (
+        f'<animate attributeName="opacity" from="0" to="1" dur="0.4s" '
+        f'begin="{delay}s" fill="freeze"/>'
+        f'<animateTransform attributeName="transform" type="translate" '
+        f'from="0 8" to="0 0" dur="0.4s" begin="{delay}s" fill="freeze"/>'
+    )
+
+
 def compute_character(profile: dict) -> dict:
     """Compute RPG character stats from GitHub profile data.
 
@@ -168,14 +178,6 @@ def render(
                 f'<feGaussianBlur stdDeviation="3" result="blur"/>'
                 f'<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>'
                 f"</filter>"
-                "<style>"
-                "  @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }"
-                "  @keyframes barGrow { from{width:0} }"
-                "  @keyframes fadeSlide { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }"
-                "  .stat { animation: fadeSlide 0.4s ease-out forwards; opacity: 0; }"
-                "  .bar-fill { animation: barGrow 1s ease-out forwards; }"
-                "  .glow { animation: pulse 2s ease-in-out infinite; }"
-                "</style>"
             ),
         ),
         background_rect(width, height),
@@ -190,23 +192,29 @@ def render(
 
     # Character name + class
     svg_parts.append(
-        f'<text x="20" y="60" fill="{THEME.fg}" font-size="20" font-weight="bold" '
-        f'class="stat" style="animation-delay:0.1s">{escape(char["name"])}</text>'
+        f'<text x="20" y="60" fill="{THEME.fg}" font-size="20" font-weight="bold">'
+        f"{_fade(0.1)}"
+        f"{escape(char['name'])}</text>"
     )
     svg_parts.append(
-        f'<text x="20" y="80" fill="{char["rarity_color"]}" font-size="13" font-weight="bold" '
-        f'class="stat" style="animation-delay:0.2s">{escape(char["class_name"])} — Level {char["level"]}</text>'
+        f'<text x="20" y="80" fill="{char["rarity_color"]}" font-size="13" font-weight="bold">'
+        f"{_fade(0.2)}"
+        f"{escape(char['class_name'])} — Level {char['level']}</text>"
     )
     svg_parts.append(
-        f'<text x="20" y="98" fill="{THEME.muted}" font-size="11" '
-        f'class="stat" style="animation-delay:0.25s">{escape(char["class_desc"])}</text>'
+        f'<text x="20" y="98" fill="{THEME.muted}" font-size="11">'
+        f"{_fade(0.25)}"
+        f"{escape(char['class_desc'])}</text>"
     )
 
     # Rarity badge
     badge_x = width - 100
     svg_parts.append(
         f'<rect x="{badge_x}" y="45" width="80" height="24" rx="12" '
-        f'fill="{char["rarity_color"]}" opacity="0.2" class="glow"/>'
+        f'fill="{char["rarity_color"]}" opacity="0.2">'
+        f'<animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" '
+        f'repeatCount="indefinite"/>'
+        f"</rect>"
         f'<text x="{badge_x + 40}" y="61" fill="{char["rarity_color"]}" font-size="11" '
         f'font-weight="bold" text-anchor="middle">{escape(char["rarity"])}</text>'
     )
@@ -221,8 +229,11 @@ def render(
         f'rx="4" fill="{THEME.xp_bg}"/>'
     )
     svg_parts.append(
-        f'<rect x="{bar_x}" y="{bar_y}" width="{fill_w}" height="{bar_h}" '
-        f'rx="4" fill="{THEME.xp_fill}" class="bar-fill" filter="url(#glow)"/>'
+        f'<rect x="{bar_x}" y="{bar_y}" width="0" height="{bar_h}" '
+        f'rx="4" fill="{THEME.xp_fill}" filter="url(#glow)">'
+        f'<animate attributeName="width" from="0" to="{fill_w}" dur="1s" '
+        f'begin="0.1s" fill="freeze"/>'
+        f"</rect>"
     )
     svg_parts.append(
         f'<text x="{bar_x + bar_w - 4}" y="{bar_y + 12}" fill="{THEME.fg}" font-size="10" '
@@ -246,12 +257,14 @@ def render(
         sy = 170 + row * 22
 
         svg_parts.append(
-            f'<text x="{sx}" y="{sy}" fill="{THEME.muted}" font-size="11" '
-            f'class="stat" style="animation-delay:{delay}s">{label}</text>'
+            f'<text x="{sx}" y="{sy}" fill="{THEME.muted}" font-size="11">'
+            f"{_fade(delay)}"
+            f"{label}</text>"
         )
         svg_parts.append(
             f'<text x="{sx + 140}" y="{sy}" fill="{THEME.cyan}" font-size="11" font-weight="bold" '
-            f'text-anchor="end" class="stat" style="animation-delay:{delay + 0.05}s">{value}</text>'
+            f'text-anchor="end">{_fade(delay + 0.05)}'
+            f"{value}</text>"
         )
 
     # Streak info

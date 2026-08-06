@@ -54,21 +54,7 @@ def render(
             grid[dow][week] = d["level"]
 
     svg_parts = [
-        svg_header(
-            WIDTH,
-            HEIGHT,
-            extra_defs=(
-                "    .cell { rx: 3; ry: 3; }\n"
-                "    @keyframes slideIn {\n"
-                "      from { opacity: 0; transform: translateY(-12px); }\n"
-                "      to   { opacity: 1; transform: translateY(0); }\n"
-                "    }\n"
-                "    .anim-cell {\n"
-                "      animation: slideIn 0.4s ease-out forwards;\n"
-                "      opacity: 0;\n"
-                "    }"
-            ),
-        ),
+        svg_header(WIDTH, HEIGHT),
         background_rect(WIDTH, HEIGHT),
         title_bar(WIDTH, "mahesh@contributions:~ $ ./contributions.sh"),
     ]
@@ -81,8 +67,13 @@ def render(
             y = MARGIN + dow * (CELL_H + CELL_GAP) + 32
             delay = (dow + week) * 0.015
             svg_parts.append(
-                f'  <rect class="anim-cell cell" x="{x}" y="{y}" width="{CELL_W}" height="{CELL_H}" '
-                f'fill="{color}" style="animation-delay: {delay:.3f}s"/>'
+                f'  <rect x="{x}" y="{y}" width="{CELL_W}" height="{CELL_H}" rx="3" ry="3" '
+                f'fill="{color}" opacity="0">'
+                f'<animate attributeName="opacity" from="0" to="1" dur="0.4s" '
+                f'begin="{delay:.3f}s" fill="freeze"/>'
+                f'<animateTransform attributeName="transform" type="translate" '
+                f'from="0 -12" to="0 0" dur="0.4s" begin="{delay:.3f}s" fill="freeze"/>'
+                f"</rect>"
             )
 
     legend_y = HEIGHT - 50

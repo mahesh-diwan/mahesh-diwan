@@ -47,13 +47,15 @@ jobs:
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: ${{ github.repository_owner }}
-          games: "pacman"
+          games: "pacman,breakout"
           hide_month_labels: "false"
 
       - name: Copy Pac-Man SVGs to assets
         run: |
           cp dist/pacman-contribution-graph.svg assets/pacman.svg 2>/dev/null || true
           cp dist/pacman-contribution-graph-dark.svg assets/pacman-dark.svg 2>/dev/null || true
+          cp dist/breakout-contribution-graph.svg assets/breakout.svg 2>/dev/null || true
+          cp dist/breakout-contribution-graph-dark.svg assets/breakout-dark.svg 2>/dev/null || true
 
       - name: Validate SVGs
         run: |
