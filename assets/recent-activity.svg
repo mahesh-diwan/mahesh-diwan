@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="172" viewBox="0 0 760 172">
+  <defs>
+        text { font-family: "Fragment Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </defs>
+
+<rect width="760" height="172" fill="#0d1117" rx="8"/>
+<rect x="0" y="0" width="760" height="32" fill="#161b22" rx="8"/>
+<circle cx="16" cy="16" r="6" fill="#ff5f56"/>
+<circle cx="36" cy="16" r="6" fill="#ffbd2e"/>
+<circle cx="56" cy="16" r="6" fill="#27c93f"/>
+<text x="380" y="22" fill="#8b949e" font-size="12" text-anchor="middle">mahesh@github ~ $ tail -f ~/.github.log</text>
+
+<text x="20" y="56" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.2s" fill="freeze"/>- pushed 1 commit → ZeroTerm</text>
+<text x="20" y="80" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.4s" fill="freeze"/>- pushed 1 commit → ZeroTerm</text>
+<text x="20" y="104" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6000000000000001s" fill="freeze"/>- pushed 1 commit → ZeroTerm</text>
+<text x="20" y="128" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.8s" fill="freeze"/>- pushed 1 commit → ZeroTerm</text>
+<text x="20" y="152" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.0s" fill="freeze"/>- pushed 1 commit → mahesh-diwan</text>
+</svg>

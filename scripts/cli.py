@@ -2,10 +2,10 @@
 """Unified CLI entrypoint for all profile art generators.
 
 Usage:
-    python -m scripts build          # Generate all assets
-    python -m scripts build ascii    # Generate one asset
-    python -m scripts fetch          # Fetch contribution data only
-    python -m scripts test           # Run tests
+    python -m scripts build               # Generate all assets
+    python -m scripts build heatmap       # Generate one asset
+    python -m scripts fetch               # Fetch contribution data only
+    python -m scripts test                # Run tests
 """
 
 import argparse
@@ -19,9 +19,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 def cmd_build(args):
     """Generate all assets (or a specific one)."""
     from core.github import fetch
-    from generators.ascii import render as render_ascii
+    from generators.activity import render as render_activity
+    from generators.header import render as render_header
     from generators.heatmap import render as render_heatmap
-    from generators.infocard import render as render_infocard
     from generators.rpg_card import render as render_rpg
 
     assets_dir = Path("assets")
@@ -29,15 +29,15 @@ def cmd_build(args):
 
     target = args.target if hasattr(args, "target") else None
 
-    if target in (None, "ascii"):
-        render_ascii()
-    if target in (None, "infocard"):
-        render_infocard()
     if target in (None, "heatmap"):
         data = fetch()
         render_heatmap(data)
     if target in (None, "rpg_card"):
         render_rpg()
+    if target in (None, "header"):
+        render_header()
+    if target in (None, "activity"):
+        render_activity()
 
 
 def cmd_fetch(args):
@@ -60,7 +60,7 @@ def main():
 
     build_p = sub.add_parser("build", help="Generate assets")
     build_p.add_argument(
-        "target", nargs="?", choices=["ascii", "infocard", "heatmap", "rpg_card"]
+        "target", nargs="?", choices=["heatmap", "rpg_card", "header", "activity"]
     )
 
     sub.add_parser("fetch", help="Fetch contribution data")
