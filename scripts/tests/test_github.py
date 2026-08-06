@@ -1,6 +1,56 @@
 """Tests for core.github — contribution fetching logic."""
 
-from core.github import _compute_stats, _deduplicate_days
+from datetime import datetime, timezone
+
+from core.github import _compute_stats, _deduplicate_days, _parse_profile
+
+
+def _sample_user() -> dict:
+    """Minimal GraphQL user payload matching PROFILE_QUERY shape."""
+    day = {"date": "2026-08-05", "contributionCount": 3}
+    return {
+        "name": "Mahesh Diwan",
+        "login": "mahesh-diwan",
+        "createdAt": "2021-06-01T00:00:00Z",
+        "contributionsCollection": {
+            "totalCommitContributions": 100,
+            "restrictedContributionsCount": 5,
+            "totalPullRequestReviewContributions": 2,
+            "contributionCalendar": {
+                "weeks": [{"contributionDays": [day]}],
+            },
+        },
+        "mergedPRs": {"totalCount": 10},
+        "closedIssues": {"totalCount": 4},
+        "season": {"totalContributions": 3},
+        "repositories": {
+            "totalCount": 6,
+            "nodes": [
+                {
+                    "stargazers": {"totalCount": 50},
+                    "languages": {"edges": [{"node": {"name": "Python"}, "size": 900}]},
+                }
+            ],
+        },
+        "followers": {"totalCount": 12},
+    }
+
+
+def test_parse_profile_does_not_raise_nameerror():
+    profile = _parse_profile(_sample_user())
+    assert profile["commits"] == 105
+    assert profile["years"] > 0
+    assert profile["languages"] == [{"name": "Python", "bytes": 900}]
+    assert profile["current_streak"] == 1
+
+
+def test_parse_profile_empty_calendar():
+    user = _sample_user()
+    user["contributionsCollection"]["contributionCalendar"]["weeks"] = []
+    profile = _parse_profile(user)
+    assert profile["current_streak"] == 0
+    assert profile["longest_streak"] == 0
+    assert isinstance(profile["years"], float)
 
 
 def test_deduplicate_keeps_max_level():

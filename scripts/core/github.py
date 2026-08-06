@@ -256,6 +256,7 @@ def fetch_profile(token: str | None = None) -> dict:
 
 def _parse_profile(user: dict) -> dict:
     """Parse GraphQL response into flat dict for RPG card."""
+    now = datetime.now(timezone.utc)
     contrib = user["contributionsCollection"]
     season = user["season"]
     cal = contrib["contributionCalendar"]
