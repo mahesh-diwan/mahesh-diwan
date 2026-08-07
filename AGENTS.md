@@ -27,7 +27,7 @@
 
 ## Notable Work
 
-- **GitHub Profile Art Generator** — Python scripts + GitHub Actions that auto-generate ASCII portrait, contribution heatmap, neofetch info card, and terminal-layout README daily
+- **GitHub Profile Art Generator** — Python scripts + GitHub Actions that auto-generate a themed profile header, contribution heatmap, Pac-Man graph, recent-activity, and SVG section banners daily
 - **Blog:** 4 published posts on AWS deployment, CI/CD pipelines, Docker automation
 - **AWS Resource Tracking** — Automated AWS resource inventory system
 

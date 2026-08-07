@@ -2,7 +2,6 @@
 __pycache__/
 *.pyc
 .DS_Store
-assets/source-prepped.png
 .playwright-cli/
 .playwright-mcp/
 assets/metrics.svg
