@@ -4,11 +4,10 @@ on:
   schedule:
     - cron: "17 6 * * *" # Once daily at 06:17 UTC
   workflow_dispatch:
-    inputs:
-      skip_cache:
-        description: "Skip cache and force refresh"
-        type: boolean
-        default: false
+
+concurrency:
+  group: profile-main
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -16,20 +15,12 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    outputs:
-      assets_hash: ${{ steps.hash.outputs.assets_hash }}
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Cache rembg model
-        uses: actions/cache@v4
-        with:
-          path: ~/.u2net
-          key: u2net-${{ runner.os }}
 
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
@@ -44,7 +35,7 @@ jobs:
           PYTHONPATH: scripts
 
       - name: Generate Pac-Man contribution graph
-        uses: abozanona/pacman-contribution-graph@main
+        uses: abozanona/pacman-contribution-graph@v5.3.2
         with:
           github_user_name: ${{ github.repository_owner }}
           games: "pacman"
@@ -65,10 +56,6 @@ jobs:
               echo "ERROR: $svg is not valid SVG" && exit 1
             fi
           done
-
-      - name: Hash outputs
-        id: hash
-        run: echo "assets_hash=${{ hashFiles('assets/*', 'data/*') }}" >> $GITHUB_OUTPUT
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -96,16 +83,14 @@ jobs:
           name: generated-assets
           path: ./
 
-      - name: Rebase before commit
-        run: |
-          git stash
-          git pull --rebase origin main
-          git stash pop || true
-
-      - name: Commit if changed
+      - name: Commit and push generated assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/ data/
-          git diff --staged --quiet || git commit -m "chore: refresh profile art [skip ci]"
+          git add -A assets/ data/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh profile art [skip ci]"
+          fi
+          git fetch origin main
+          git rebase origin/main
           git push
