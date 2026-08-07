@@ -87,6 +87,27 @@ def _retry_get(
     raise last_err
 
 
+def _load_cache() -> dict | None:
+    """Read cached contribution data; return None on any failure."""
+    if not CACHE_PATH.exists():
+        return None
+    try:
+        return json.loads(CACHE_PATH.read_text())
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"WARNING: cache unreadable ({e}); using live data")
+        return None
+
+
+def _extract_total(soup: BeautifulSoup) -> int | None:
+    """GitHub's own total from the 'N contributions in the last year' heading."""
+    h2 = soup.select_one("h2#js-contribution-activity-description")
+    if not h2:
+        return None
+    text = " ".join(h2.get_text().split())
+    m = re.search(r"([\d,]+)\s+contributions?", text)
+    return int(m.group(1).replace(",", "")) if m else None
+
+
 def fetch() -> dict:
     """Scrape the public GitHub contribution calendar.
 
@@ -101,19 +122,27 @@ def fetch() -> dict:
         days = _parse_contributions(soup, resp.text)
     except Exception as e:
         print(f"Network fetch failed: {e}")
-        if CACHE_PATH.exists():
+        cached = _load_cache()
+        if cached is not None:
             print(f"Falling back to cache: {CACHE_PATH}")
-            return json.loads(CACHE_PATH.read_text())
+            return cached
         raise
 
     if not days:
         print("WARNING: No contribution data found.")
-        if CACHE_PATH.exists():
-            return json.loads(CACHE_PATH.read_text())
+        cached = _load_cache()
+        if cached is not None:
+            return cached
         return {"days": [], "total_contributions": 0}
 
     days = _deduplicate_days(days)
     stats = _compute_stats(days)
+    # Per-day data-count is absent in current GitHub HTML; fall back to the
+    # page's own year total so the headline isn't understated by level buckets.
+    if not any("count" in d for d in days):
+        total = _extract_total(soup)
+        if total is not None:
+            stats["total"] = total
 
     data = {
         "username": USERNAME,
@@ -146,7 +175,11 @@ def _parse_contributions(soup: BeautifulSoup, raw_html: str) -> list[dict]:
             date = cell.get("data-date")
             level_str = cell.get("data-level", "0")
             if date:
-                days.append({"date": date, "level": int(level_str)})
+                day = {"date": date, "level": int(level_str)}
+                count = cell.get("data-count")
+                if count is not None:
+                    day["count"] = int(count)
+                days.append(day)
         return days
 
     # Old SVG rect structure
@@ -154,7 +187,11 @@ def _parse_contributions(soup: BeautifulSoup, raw_html: str) -> list[dict]:
         date = rect.get("data-date")
         level_str = rect.get("data-level", "0")
         if date:
-            days.append({"date": date, "level": int(level_str)})
+            day = {"date": date, "level": int(level_str)}
+            count = rect.get("data-count")
+            if count is not None:
+                day["count"] = int(count)
+            days.append(day)
 
     # Regex fallback
     if not days:
@@ -178,7 +215,7 @@ def _deduplicate_days(days: list[dict]) -> list[dict]:
 
 def _compute_stats(days: list[dict]) -> dict:
     """Compute total, streaks, best day, and monthly totals."""
-    total = sum(d["level"] for d in days)
+    total = sum(d.get("count", d["level"]) for d in days)
     longest_streak = 0
     streak = 0
     best_day = {"date": None, "level": 0}
@@ -202,7 +239,7 @@ def _compute_stats(days: list[dict]) -> dict:
     monthly: dict[str, int] = {}
     for d in days:
         month = d["date"][:7]
-        monthly[month] = monthly.get(month, 0) + d["level"]
+        monthly[month] = monthly.get(month, 0) + d.get("count", d["level"])
 
     return {
         "total": total,

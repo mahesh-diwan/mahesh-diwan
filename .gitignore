@@ -4,12 +4,9 @@ __pycache__/
 .DS_Store
 assets/source-prepped.png
 .playwright-cli/
-github-metrics.svg
 .playwright-mcp/
-
-# playwright session artifacts
-.playwright-mcp/
-profile-full.png
+assets/metrics.svg
+assets/github-snake*.svg
 
 # brainstorm mockups
 .superpowers/

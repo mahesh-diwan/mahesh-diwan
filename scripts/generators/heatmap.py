@@ -10,8 +10,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from core.svg import background_rect, svg_header, title_bar
+from core.theme import THEME
 
-PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+PALETTE = [THEME.surface, "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 CELL_W = 14
 CELL_H = 14
 CELL_GAP = 3
@@ -38,20 +39,26 @@ def render(
     days = data.get("days", [])
     total = data.get("total_contributions", 0)
 
+    def _parse_date(date_str: str) -> datetime | None:
+        try:
+            return datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        except (TypeError, ValueError):
+            return None
+
     if not days:
         base_date = datetime.now(timezone.utc)
     else:
-        base_date = datetime.strptime(days[0]["date"], "%Y-%m-%d").replace(
-            tzinfo=timezone.utc
-        )
+        base_date = _parse_date(days[0].get("date")) or datetime.now(timezone.utc)
 
     grid = [[0] * WEEKS for _ in range(DAYS)]
     for d in days:
-        date_obj = datetime.strptime(d["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        date_obj = _parse_date(d.get("date"))
+        if date_obj is None:
+            continue
         week = (date_obj - base_date).days // 7
         dow = date_obj.weekday()
         if 0 <= week < WEEKS and 0 <= dow < DAYS:
-            grid[dow][week] = d["level"]
+            grid[dow][week] = d.get("level", 0)
 
     svg_parts = [
         svg_header(WIDTH, HEIGHT),
@@ -78,7 +85,7 @@ def render(
 
     legend_y = HEIGHT - 50
     svg_parts.append(
-        f'<text x="{MARGIN}" y="{legend_y}" fill="#8b949e" font-size="11">Less</text>'
+        f'<text x="{MARGIN}" y="{legend_y}" fill="{THEME.muted}" font-size="11">Less</text>'
     )
     for i, color in enumerate(PALETTE):
         lx = MARGIN + 35 + i * 18
@@ -86,10 +93,10 @@ def render(
             f'  <rect x="{lx}" y="{legend_y - 9}" width="12" height="12" rx="3" fill="{color}"/>'
         )
     svg_parts.append(
-        f'<text x="{MARGIN + 35 + len(PALETTE) * 18 + 6}" y="{legend_y}" fill="#8b949e" font-size="11">More</text>'
+        f'<text x="{MARGIN + 35 + len(PALETTE) * 18 + 6}" y="{legend_y}" fill="{THEME.muted}" font-size="11">More</text>'
     )
     svg_parts.append(
-        f'<text x="{WIDTH - MARGIN}" y="{legend_y}" fill="#8b949e" font-size="11" '
+        f'<text x="{WIDTH - MARGIN}" y="{legend_y}" fill="{THEME.muted}" font-size="11" '
         f'text-anchor="end">{total:,} contributions in the last year</text>'
     )
 

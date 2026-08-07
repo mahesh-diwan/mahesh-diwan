@@ -18,6 +18,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 def cmd_build(args):
     """Generate all assets (or a specific one)."""
+    import sys
+
     from core.github import fetch
     from generators.activity import render as render_activity
     from generators.banners import render as render_banners
@@ -29,15 +31,28 @@ def cmd_build(args):
 
     target = args.target if hasattr(args, "target") else None
 
+    def _run(name, fn, *fn_args):
+        try:
+            fn(*fn_args)
+        except Exception as e:
+            print(f"ERROR: {name} generation failed: {e}", file=sys.stderr)
+
     if target in (None, "heatmap"):
-        data = fetch()
-        render_heatmap(data)
+        try:
+            data = fetch()
+        except Exception as e:
+            print(f"ERROR: contribution fetch failed: {e}", file=sys.stderr)
+            data = None
+        if data is None:
+            print("ERROR: skipping heatmap render", file=sys.stderr)
+        else:
+            _run("heatmap", render_heatmap, data)
     if target in (None, "header"):
-        render_header()
+        _run("header", render_header)
     if target in (None, "activity"):
-        render_activity()
+        _run("activity", render_activity)
     if target in (None, "banners"):
-        render_banners()
+        _run("banners", render_banners)
 
 
 def cmd_fetch(args):
