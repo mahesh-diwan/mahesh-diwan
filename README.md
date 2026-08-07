@@ -1,12 +1,12 @@
 <div align="center">
 
-# **Mahesh Diwan**
+<h1 style="font-family:'DM Mono',ui-monospace,monospace;">Mahesh Diwan</h1>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00D4FF,100:0d1117&height=200&section=header&text=Mahesh%20Diwan&fontSize=36&fontColor=00D4FF&fontAlignY=35&desc=DevOps%20Engineer%20%7C%20Cloud%20%7C%20CI/CD&descSize=16&descAlignY=55&animation=fadeIn" width="100%" alt="Animated header banner" />
 
 </div>
 
-### ✓ status: currently refactoring flexfetch
+<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#8b949e;">✓ status: currently refactoring flexfetch</h3>
 
 [![Profile CI](https://github.com/mahesh-diwan/mahesh-diwan/actions/workflows/profile-orchestrator.yml/badge.svg)](https://github.com/mahesh-diwan/mahesh-diwan/actions)
 
@@ -20,7 +20,7 @@
 
 ---
 
-### `mahesh@github ~ $ ./arcade.sh`
+<h3 style="font-family:'DM Mono',ui-monospace,monospace;"><span style="color:#00D4FF;">mahesh@github ~ $</span> ./arcade.sh</h3>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/pacman-dark.svg" />
@@ -29,7 +29,7 @@
 
 ---
 
-### `mahesh@github ~ $ cat ~/.ssh/authorized_keys`
+<h3 style="font-family:'DM Mono',ui-monospace,monospace;"><span style="color:#00D4FF;">mahesh@github ~ $</span> cat ~/.ssh/authorized_keys</h3>
 
 <p align="center">
   <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=linkedin&cr=3" width="32" alt="LinkedIn" /></a>
@@ -47,15 +47,13 @@
 
 ---
 
-<details>
-<summary><strong>📜 Recent activity</strong></summary>
+<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#00D4FF;">📜 Recent activity</h3>
 
 <img src="./assets/recent-activity.svg" width="760" alt="Recent GitHub activity" />
 
-</details>
+---
 
-<details>
-<summary><strong>📦 Featured projects</strong></summary>
+<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#00D4FF;">📦 Featured projects</h3>
 
 | Project                                                                          | Description                                                                       |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -65,10 +63,9 @@
 | [**DeskTap**](https://github.com/mahesh-diwan/DeskTap)                           | Desk-tap detection via microphone, 4-zone ML classification, configurable actions |
 | [**AWS-Resource-Tracker**](https://github.com/mahesh-diwan/AWS-Resource-Tracker) | Bash script that reports AWS resource usage stats via the CLI                     |
 
-</details>
+---
 
-<details>
-<summary><strong>✍️ Blog posts</strong></summary>
+<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#00D4FF;">✍️ Blog posts</h3>
 
 | Post                                                                                                                                                              | Date |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
@@ -78,8 +75,6 @@
 | [Docker Deployments with Jenkins & Ansible](https://mahesh1215.hashnode.dev/beginners-guide-automating-docker-deployments-with-jenkins-ansible-and-github)        | 2024 |
 
 > ✍️ **Full blog:** [mahesh1215.hashnode.dev](https://mahesh1215.hashnode.dev/)
-
-</details>
 
 ---
 
@@ -97,7 +92,7 @@
 
 ---
 
-### 🤖 For agents
+<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#00D4FF;">🤖 For agents</h3>
 
 This profile is **agent-readable**. If you're an LLM or agent, read
 [`AGENTS.md`](./AGENTS.md) for structured facts and citation guidance, or
