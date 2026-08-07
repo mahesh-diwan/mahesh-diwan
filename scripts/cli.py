@@ -20,6 +20,7 @@ def cmd_build(args):
     """Generate all assets (or a specific one)."""
     from core.github import fetch
     from generators.activity import render as render_activity
+    from generators.banners import render as render_banners
     from generators.header import render as render_header
     from generators.heatmap import render as render_heatmap
 
@@ -35,6 +36,8 @@ def cmd_build(args):
         render_header()
     if target in (None, "activity"):
         render_activity()
+    if target in (None, "banners"):
+        render_banners()
 
 
 def cmd_fetch(args):
@@ -56,7 +59,9 @@ def main():
     sub = parser.add_subparsers(dest="command")
 
     build_p = sub.add_parser("build", help="Generate assets")
-    build_p.add_argument("target", nargs="?", choices=["heatmap", "header", "activity"])
+    build_p.add_argument(
+        "target", nargs="?", choices=["heatmap", "header", "activity", "banners"]
+    )
 
     sub.add_parser("fetch", help="Fetch contribution data")
     sub.add_parser("test", help="Run tests")

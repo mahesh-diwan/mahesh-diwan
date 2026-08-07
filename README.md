@@ -6,7 +6,7 @@
 
 </div>
 
-<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#8b949e;">✓ status: currently refactoring flexfetch</h3>
+<img src="./assets/header-status.svg" alt="✓ status: currently refactoring flexfetch" />
 
 [![Profile CI](https://github.com/mahesh-diwan/mahesh-diwan/actions/workflows/profile-orchestrator.yml/badge.svg)](https://github.com/mahesh-diwan/mahesh-diwan/actions)
 
@@ -20,7 +20,7 @@
 
 ---
 
-<h3 style="font-family:'DM Mono',ui-monospace,monospace;"><span style="color:#00D4FF;">mahesh@github ~ $</span> ./arcade.sh</h3>
+<img src="./assets/header-arcade.svg" alt="mahesh@github ~ $ ./arcade.sh" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/pacman-dark.svg" />
@@ -29,7 +29,7 @@
 
 ---
 
-<h3 style="font-family:'DM Mono',ui-monospace,monospace;"><span style="color:#00D4FF;">mahesh@github ~ $</span> cat ~/.ssh/authorized_keys</h3>
+<img src="./assets/header-ssh.svg" alt="mahesh@github ~ $ cat ~/.ssh/authorized_keys" />
 
 <p align="center">
   <a href="https://linkedin.com/in/mahesh-diwan"><img src="https://i.icoziv.workers.dev/icons?i=linkedin&cr=3" width="32" alt="LinkedIn" /></a>
@@ -47,13 +47,13 @@
 
 ---
 
-<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#00D4FF;">📜 Recent activity</h3>
+<img src="./assets/header-activity.svg" alt="Recent activity" />
 
 <img src="./assets/recent-activity.svg" width="760" alt="Recent GitHub activity" />
 
 ---
 
-<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#00D4FF;">📦 Featured projects</h3>
+<img src="./assets/header-projects.svg" alt="Featured projects" />
 
 | Project                                                                          | Description                                                                       |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -65,7 +65,7 @@
 
 ---
 
-<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#00D4FF;">✍️ Blog posts</h3>
+<img src="./assets/header-blog.svg" alt="Blog posts" />
 
 | Post                                                                                                                                                              | Date |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
@@ -92,7 +92,7 @@
 
 ---
 
-<h3 style="font-family:'DM Mono',ui-monospace,monospace;color:#00D4FF;">🤖 For agents</h3>
+<img src="./assets/header-agents.svg" alt="For agents" />
 
 This profile is **agent-readable**. If you're an LLM or agent, read
 [`AGENTS.md`](./AGENTS.md) for structured facts and citation guidance, or

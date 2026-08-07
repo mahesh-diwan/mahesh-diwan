@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="44" viewBox="0 0 760 44">
+  <style>
+        text { font-family: "Fragment Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+
+<rect width="760" height="44" fill="#0d1117" rx="8"/>
+<text x="16" y="28" fill="#c9d1d9" font-size="20">📜 Recent activity</text>
+</svg>
