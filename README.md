@@ -2,8 +2,6 @@
 
 <h1 style="font-family:'DM Mono',ui-monospace,monospace;">Mahesh Diwan</h1>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00D4FF,100:0d1117&height=200&section=header&text=Mahesh%20Diwan&fontSize=36&fontColor=00D4FF&fontAlignY=35&desc=DevOps%20Engineer%20%7C%20Cloud%20%7C%20CI/CD&descSize=16&descAlignY=55&animation=fadeIn" width="100%" alt="Animated header banner" />
-
 </div>
 
 <img src="./assets/header-status.svg" alt="✓ status: currently refactoring flexfetch" />
