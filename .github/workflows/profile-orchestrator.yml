@@ -46,6 +46,13 @@ jobs:
           cp dist/pacman-contribution-graph.svg assets/pacman.svg 2>/dev/null || true
           cp dist/pacman-contribution-graph-dark.svg assets/pacman-dark.svg 2>/dev/null || true
 
+      - name: Cap Pac-Man animation loop
+        run: |
+          # Indefinite SMIL loops keep 86 animation clocks running forever in
+          # <img> context -> browser jank after a while. Play 2 loops (~2.7min),
+          # then rest on the final frame.
+          sed -i 's/repeatCount="indefinite"/repeatCount="2"/g' assets/pacman.svg assets/pacman-dark.svg
+
       - name: Validate SVGs
         run: |
           for svg in assets/*.svg; do
