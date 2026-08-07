@@ -14,16 +14,16 @@ def escape(text: str) -> str:
 
 
 def svg_header(width: int, height: int, extra_defs: str = "") -> str:
-    """Build the opening ``<svg>`` tag with shared font CSS in ``<defs>``."""
-    defs = f"    {THEME.font_css}\n"
+    """Build the opening ``<svg>`` tag with shared font CSS in ``<style>``."""
+    css = f"    {THEME.font_css}\n"
     if extra_defs:
-        defs += f"    {extra_defs}\n"
+        css += f"    {extra_defs}\n"
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" '
         f'width="{width}" height="{height}" viewBox="0 0 {width} {height}">\n'
-        "  <defs>\n"
-        f"{defs}"
-        "  </defs>\n"
+        "  <style>\n"
+        f"{css}"
+        "  </style>\n"
     )
 
 

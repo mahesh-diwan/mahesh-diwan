@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="172" viewBox="0 0 760 172">
-  <defs>
+  <style>
         text { font-family: "Fragment Mono", "DM Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-  </defs>
+  </style>
 
 <rect width="760" height="172" fill="#0d1117" rx="8"/>
 <rect x="0" y="0" width="760" height="32" fill="#161b22" rx="8"/>

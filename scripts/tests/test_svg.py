@@ -21,7 +21,7 @@ class TestSvgHeader:
     def test_contains_svg_tag(self):
         h = svg_header(100, 50)
         assert "<svg" in h
-        assert "</defs>" in h
+        assert "</style>" in h
 
     def test_viewbox(self):
         h = svg_header(100, 50)
