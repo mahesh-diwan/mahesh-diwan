@@ -44,6 +44,16 @@ def test_parse_profile_does_not_raise_nameerror():
     assert profile["current_streak"] == 1
 
 
+def test_parse_profile_missing_stargazers():
+    user = _sample_user()
+    for repo in user["repositories"]["nodes"]:
+        repo.pop("stargazers")
+    profile = _parse_profile(user)
+    assert profile["stars"] == 0
+    assert profile["commits"] == 105
+    assert profile["current_streak"] == 1
+
+
 def test_parse_profile_empty_calendar():
     user = _sample_user()
     user["contributionsCollection"]["contributionCalendar"]["weeks"] = []

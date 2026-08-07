@@ -17,6 +17,7 @@ USERNAME = "mahesh-diwan"
 URL = f"https://github.com/users/{USERNAME}/contributions"
 CACHE_PATH = Path("data/contributions.json")
 GRAPHQL_URL = "https://api.github.com/graphql"
+REST_BASE = "https://api.github.com"
 
 PROFILE_QUERY = """
 query gitlevel($login: String!, $seasonFrom: DateTime!, $seasonTo: DateTime!) {
@@ -48,7 +49,6 @@ query gitlevel($login: String!, $seasonFrom: DateTime!, $seasonTo: DateTime!) {
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false, orderBy: { field: STARGAZERS, direction: DESC }) {
       totalCount
       nodes {
-        stargazers { totalCount }
         languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
           edges { size node { name color } }
         }
@@ -281,8 +281,16 @@ def fetch_profile(token: str | None = None) -> dict:
             data = resp.json()
             if "errors" in data:
                 print(f"GraphQL errors: {data['errors']}")
+            user = data.get("data", {}).get("user")
+            if not user:
                 return _fallback_profile()
-            return _parse_profile(data["data"]["user"])
+            try:
+                profile = _parse_profile(user)
+            except Exception as e:
+                print(f"GraphQL parse failed: {e}")
+                return _fallback_profile()
+            profile["stars"] = _fetch_total_stars(token)
+            return profile
         except Exception as e:
             print(f"GraphQL fetch failed: {e}")
             return _fallback_profile()
@@ -324,7 +332,7 @@ def _parse_profile(user: dict) -> dict:
     lang_bytes: dict[str, int] = {}
     total_stars = 0
     for repo in user["repositories"]["nodes"]:
-        total_stars += repo["stargazers"]["totalCount"]
+        total_stars += repo.get("stargazers", {}).get("totalCount", 0)
         for edge in repo["languages"]["edges"]:
             name = edge["node"]["name"]
             lang_bytes[name] = lang_bytes.get(name, 0) + edge["size"]
@@ -356,6 +364,25 @@ def _parse_profile(user: dict) -> dict:
         "primary_language": primary_lang,
         "years": round(years, 1),
     }
+
+
+def _fetch_total_stars(token: str) -> int:
+    """Sum stargazers_count across the user's own repos via REST."""
+    headers = {"Authorization": f"bearer {token}"}
+    params = {"per_page": 100, "affiliation": "owner", "type": "owner"}
+    url = f"{REST_BASE}/users/{USERNAME}/repos"
+    total = 0
+    try:
+        while url:
+            resp = _retry_get(url, headers=headers, params=params)
+            total += sum(r.get("stargazers_count", 0) for r in resp.json())
+            link = resp.headers.get("Link", "")
+            m = re.search(r'<([^>]+)>;\s*rel="next"', link)
+            url = m.group(1) if m else None
+            params = None
+    except Exception:
+        return 0
+    return total
 
 
 def _fallback_profile() -> dict:
