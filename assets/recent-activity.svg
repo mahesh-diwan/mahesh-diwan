@@ -12,7 +12,7 @@
 
 <text x="20" y="56" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.2s" fill="freeze"/>- pushed 1 commit → flexfetch</text>
 <text x="20" y="80" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.4s" fill="freeze"/>- pushed 1 commit → flexfetch</text>
-<text x="20" y="104" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/>- pushed 1 commit → flexfetch</text>
-<text x="20" y="128" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.8s" fill="freeze"/>- pushed 1 commit → flexfetch</text>
-<text x="20" y="152" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.0s" fill="freeze"/>- pushed 1 commit → flexfetch</text>
+<text x="20" y="104" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/>- pushed 1 commit → ZeroTerm</text>
+<text x="20" y="128" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.8s" fill="freeze"/>- pushed 1 commit → ZeroTerm</text>
+<text x="20" y="152" fill="#8b949e" font-size="12"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.0s" fill="freeze"/>- pushed 1 commit → ZeroTerm</text>
 </svg>
