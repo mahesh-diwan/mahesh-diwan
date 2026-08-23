@@ -1,8 +1,8 @@
 {
   "username": "mahesh-diwan",
-  "generated_at": "2026-08-22T07:03:12.464108Z",
-  "total_contributions": 1025,
-  "current_streak": 37,
+  "generated_at": "2026-08-23T07:05:38.586462Z",
+  "total_contributions": 1026,
+  "current_streak": 0,
   "longest_streak": 37,
   "best_day": {
     "date": "2026-07-09",
@@ -24,34 +24,6 @@
     "2026-08": 40
   },
   "days": [
-    {
-      "date": "2025-08-17",
-      "level": 0
-    },
-    {
-      "date": "2025-08-18",
-      "level": 0
-    },
-    {
-      "date": "2025-08-19",
-      "level": 0
-    },
-    {
-      "date": "2025-08-20",
-      "level": 0
-    },
-    {
-      "date": "2025-08-21",
-      "level": 0
-    },
-    {
-      "date": "2025-08-22",
-      "level": 0
-    },
-    {
-      "date": "2025-08-23",
-      "level": 0
-    },
     {
       "date": "2025-08-24",
       "level": 0
@@ -1507,6 +1479,10 @@
     {
       "date": "2026-08-22",
       "level": 1
+    },
+    {
+      "date": "2026-08-23",
+      "level": 0
     }
   ]
 }
