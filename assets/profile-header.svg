@@ -9,8 +9,8 @@
 <text x="104" y="62" fill="#58a6ff" font-size="13" font-weight="bold"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.2s" fill="freeze"/>Iron Guardian · Rare</text>
 <text x="104" y="82" fill="#8b949e" font-size="11"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.3s" fill="freeze"/>Rust / TypeScript / HTML — Safe and fearless</text>
 <rect x="654" y="20" width="86" height="26" rx="13" fill="#161b22"/><text x="662" y="37" fill="#8b949e" font-size="10">LVL</text><text x="734" y="37" fill="#00D4FF" font-size="12" font-weight="bold" text-anchor="end">12</text>
-<rect x="560" y="20" width="86" height="26" rx="13" fill="#161b22"/><text x="568" y="37" fill="#8b949e" font-size="10">COMMITS</text><text x="640" y="37" fill="#00D4FF" font-size="12" font-weight="bold" text-anchor="end">1,010</text>
-<rect x="466" y="20" width="86" height="26" rx="13" fill="#161b22"/><text x="474" y="37" fill="#8b949e" font-size="10">STREAK</text><text x="546" y="37" fill="#00D4FF" font-size="12" font-weight="bold" text-anchor="end">7d</text>
+<rect x="560" y="20" width="86" height="26" rx="13" fill="#161b22"/><text x="568" y="37" fill="#8b949e" font-size="10">COMMITS</text><text x="640" y="37" fill="#00D4FF" font-size="12" font-weight="bold" text-anchor="end">1,011</text>
+<rect x="466" y="20" width="86" height="26" rx="13" fill="#161b22"/><text x="474" y="37" fill="#8b949e" font-size="10">STREAK</text><text x="546" y="37" fill="#00D4FF" font-size="12" font-weight="bold" text-anchor="end">8d</text>
 <rect x="16" y="116" width="85" height="24" rx="12" fill="none" stroke="#8b949e" stroke-dasharray="4 3"/><text x="24" y="132" fill="#8b949e" font-size="10">🚢 Ship It</text>
 <rect x="105" y="116" width="113" height="24" rx="12" fill="#00D4FF" opacity="0.15"/><text x="113" y="132" fill="#00D4FF" font-size="10">🔥 Streak Lord</text>
 <rect x="222" y="116" width="99" height="24" rx="12" fill="none" stroke="#8b949e" stroke-dasharray="4 3"/><text x="230" y="132" fill="#8b949e" font-size="10">🦉 Night Owl</text>
